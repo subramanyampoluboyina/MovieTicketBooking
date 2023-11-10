@@ -1,1 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
+.grid-container{
+    display: grid;
+    grid-template-columns: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 92%;
+}
+.seat{
+    border: 1.5px solid #0174c6;
+    border-radius: 5px;
+    text-align: center;
+    margin: 2px;
+    padding: 5px 0 5px 0;
+    color: #0174c6;
+    font-size: small;
+}
+.row5{
+    margin-left: auto;
+    margin-right: auto;
+    width: 75.3%;
+}
+.balcony,.firstClass,.secondClass{
+    text-align: center;
+    font-weight: 700;
+    font-size: medium;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+.gap{
+    opacity: 0;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
