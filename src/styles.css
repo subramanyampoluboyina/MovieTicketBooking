@@ -6,6 +6,20 @@
     margin-right: auto;
     width: 92%;
 }
+.grid-container16{
+    display: grid;
+    grid-template-columns: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75.1%;
+}
+.grid-container14{
+    display: grid;
+    grid-template-columns: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width:66.6%;
+}
 .seat{
     border: 1.5px solid #0174c6;
     border-radius: 5px;
@@ -15,11 +29,7 @@
     color: #0174c6;
     font-size: small;
 }
-.row5{
-    margin-left: auto;
-    margin-right: auto;
-    width: 75.3%;
-}
+
 .balcony,.firstClass,.secondClass{
     text-align: center;
     font-weight: 700;
@@ -32,4 +42,49 @@
     text-align: center;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+.screen{
+    position: sticky;
+    background-color: #e3f2fd;;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    bottom: 0;
+    text-align: center;
+    margin-top: 70px;
+    width: 100%;
+}
+.seat-view{
+    display: grid;
+    grid-template-columns: 27px 100px 27px 100px 27px 100px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 29%;
+    margin-top: 30px;
+}
+.seat-view-icon1{
+    border: 1.5px solid #0174c6;
+    border-radius: 5px;
+    color: #e3f2fd;
+    font-size: small;
+}
+.seat-view-icon2{
+    border: 1.5px solid lightgray;
+    border-radius: 5px;
+    color: lightgray;
+    background-color: lightgray;
+    font-size: small;
+}
+.seat-view-icon3{
+    border: 1.5px solid deepskyblue;
+    border-radius: 5px;
+    color: deepskyblue;
+    background-color:deepskyblue;
+    font-size: small;
+}
+.seat-view-icon-name{
+    text-align: left;
+    font-weight: 600;
+    font-size: small;
+    padding-left: 3px;
+    padding-top: 1px;
 }
