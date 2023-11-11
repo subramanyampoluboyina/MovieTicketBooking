@@ -7,6 +7,7 @@ import { HomeComponent } from './component/home/home.component';
 import { LoginComponent } from './component/login/login.component';
 import { MoviesComponent } from './component/movies/movies.component';
 import { Seating1Component } from './component/seating1/seating1.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { Seating1Component } from './component/seating1/seating1.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
