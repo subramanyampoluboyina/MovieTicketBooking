@@ -122,11 +122,11 @@ a{
 .signin-content-in{
     padding:20px 20px 5px 20px;
 }
-#email,#password{
+#email,#password,#cpassword,#mobile{
     width: 100%;
     margin-top: 3px;
 }
-.email{
+.email,.password,.cpassword{
     margin: 5px 0 10px 0;
 }
 .forget-pwd{
@@ -134,11 +134,14 @@ a{
     padding-top: 10px;
     font-size: small;
 }
-.signin-button{
+.signin-button,.signup-button{
     text-align: center;
     
 }
 .signin-btn:hover{
+    background-color: rgb(0, 180, 240);
+}
+.signup-btn:hover{
     background-color: rgb(0, 180, 240);
 }
 input{
@@ -154,7 +157,7 @@ input{
     height: 0.8px;
     background: #606060;
 }
-.signin-btn{
+.signin-btn,.signup-btn{
     border: none;
     background-color: deepskyblue;
     margin-top: 20px;
@@ -166,7 +169,7 @@ input{
     width: 100%;
     color: black;
 }
-.signup{
+.signup,.login{
     text-align: center;
 }
 .footer{
@@ -174,4 +177,24 @@ input{
     text-align: center;
     font-size:small;
     font-weight: 610;
+}
+.seating-top{
+    display: grid;
+    grid-template-columns: 70% 20% 10%;
+    width: 100%;
+}
+.book-btn{
+    width: 100%;
+    border: none;
+    background-color: deepskyblue;
+    height: 100%;
+    font-size: larger;
+    font-weight: 600;
+    border-radius: 5px;
+}
+button{
+    background-color: white;
+}
+.selected{
+    background-color: deepskyblue;
 }

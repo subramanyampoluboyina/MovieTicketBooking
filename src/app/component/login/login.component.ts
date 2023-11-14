@@ -20,6 +20,9 @@ export class LoginComponent implements OnInit{
     if(form.valid){
       this.router.navigateByUrl("/movies");
     }
+    else{
+      alert("Invalid details!!!")
+    }
   }
 
 }
