@@ -1,533 +1,513 @@
-<nav class="navbar" style="background-color: #e3f2fd;">
+<!-- <nav class="navbar" style="background-color: #e3f2fd;">
     <div class="container-fluid">
+      <a routerLink="/movies"><i class="fa-solid fa-arrow-left"></i></a>
       <span class="navbar-brand mb-0 h3">Salaar</span>
     </div>
-</nav>
+</nav> -->
+<div class="seating-top" style="background-color: #e3f2fd;">
+    <div class="movie-title mt-2 ms-2">
+        <h4>Salaar</h4>
+    </div>
+    <div class="seat-and-price">
+        <div class="price">
+            <span>Cost: <span class="fw-semibold">&#x20B9;</span></span>
+        </div>
+        <div class="seats">
+            <span>Seats: <span class="fw-semibold"></span></span>
+        </div>
+    </div>
+    <div >
+        <button class="book-btn">Book</button>
+    </div>
+</div>
 <div class="container-fluid">
     <div class="main">
         <div class="content">
             <div class="balcony">BALCONY : &#x20B9;150</div>
             <div class="grid-container row1">
-                <div [style.background-color]="selectedA1? 'rgb(0, 183, 255)':'white'"  (click)="selectedA1=changecolor(selectedA1,balcony);" class="seat">A1</div>
-                <div [style.background-color]="selectedA2? 'rgb(0, 183, 255)':'white'"  (click)="selectedA2=changecolor(selectedA2,balcony);" class="seat">A2</div>
-                <div [style.background-color]="selectedA3? 'rgb(0, 183, 255)':'white'"  (click)="selectedA3=changecolor(selectedA3,balcony);" class="seat">A3</div>
-                <div [style.background-color]="selectedA4? 'rgb(0, 183, 255)':'white'"  (click)="selectedA4=changecolor(selectedA4,balcony);" class="seat">A4</div>
-                <div [style.background-color]="selectedA5? 'rgb(0, 183, 255)':'white'"  (click)="selectedA5=changecolor(selectedA5,balcony);" class="seat">A5</div>
-                <div [style.background-color]="selectedA6? 'rgb(0, 183, 255)':'white'"  (click)="selectedA6=changecolor(selectedA6,balcony);" class="seat">A6</div>
-                <div [style.background-color]="selectedA7? 'rgb(0, 183, 255)':'white'"  (click)="selectedA7=changecolor(selectedA7,balcony);" class="seat">A7</div>
-                <div [style.background-color]="selectedA8? 'rgb(0, 183, 255)':'white'"  (click)="selectedA8=changecolor(selectedA8,balcony);" class="seat">A8</div>
-                <div [style.background-color]="selectedA9? 'rgb(0, 183, 255)':'white'"  (click)="selectedA9=changecolor(selectedA9,balcony);" class="seat">A9</div>
-                <div [style.background-color]="selectedA10? 'rgb(0, 183, 255)':'white'"  (click)="selectedA10=changecolor(selectedA10,balcony);"class="seat">A10</div>
-                <div  class="space"></div>
+                <div class="seat">A1</div>
+                <div class="seat">A2</div>
+                <div class="seat">A3</div>
+                <div class="seat">A4</div>
+                <div class="seat">A5</div>
+                <div class="seat">A6</div>
+                <div class="seat">A7</div>
+                <div class="seat">A8</div>
+                <div class="seat">A9</div>
+                <div class="seat">A10</div>
                 <div class="space"></div>
-                <div [style.background-color]="selectedA11? 'rgb(0, 183, 255)':'white'"  (click)="selectedA11=changecolor(selectedA11,balcony);" class="seat">A11</div>
-                <div [style.background-color]="selectedA12? 'rgb(0, 183, 255)':'white'"  (click)="selectedA12=changecolor(selectedA12,balcony);"class="seat">A12</div>
-                <div [style.background-color]="selectedA13? 'rgb(0, 183, 255)':'white'"  (click)="selectedA13=changecolor(selectedA13,balcony);"class="seat">A13</div>
-                <div [style.background-color]="selectedA14? 'rgb(0, 183, 255)':'white'"  (click)="selectedA14=changecolor(selectedA14,balcony);"class="seat">A14</div>
-                <div [style.background-color]="selectedA15? 'rgb(0, 183, 255)':'white'"  (click)="selectedA15=changecolor(selectedA15,balcony);"class="seat">A15</div>
-                <div [style.background-color]="selectedA16? 'rgb(0, 183, 255)':'white'"  (click)="selectedA16=changecolor(selectedA16,balcony);"class="seat">A16</div>
-                <div [style.background-color]="selectedA17? 'rgb(0, 183, 255)':'white'"  (click)="selectedA17=changecolor(selectedA17,balcony);"class="seat">A17</div>
-                <div [style.background-color]="selectedA18? 'rgb(0, 183, 255)':'white'"  (click)="selectedA18=changecolor(selectedA18,balcony);"class="seat">A18</div>
-                <div [style.background-color]="selectedA19? 'rgb(0, 183, 255)':'white'"  (click)="selectedA19=changecolor(selectedA19,balcony);"class="seat">A19</div>
-                <div [style.background-color]="selectedA20? 'rgb(0, 183, 255)':'white'"  (click)="selectedA20=changecolor(selectedA20,balcony);"class="seat">A20</div>
+                <div class="space"></div>
+                <div class="seat">A11</div>
+                <div class="seat">A12</div>
+                <div class="seat">A13</div>
+                <div class="seat">A14</div>
+                <div class="seat">A15</div>
+                <div class="seat">A16</div>
+                <div class="seat">A17</div>
+                <div class="seat">A18</div>
+                <div class="seat">A19</div>
+                <div class="seat">A20</div>
             </div>
             <div class="grid-container row2">
-                <div [style.background-color]="selectedB1? 'rgb(0, 183, 255)':'white'"  (click)="selectedB1=changecolor(selectedB1,balcony);" class="seat">B1</div>
-                <div [style.background-color]="selectedB2? 'rgb(0, 183, 255)':'white'"  (click)="selectedB2=changecolor(selectedB2,balcony);" class="seat">B2</div>
-                <div [style.background-color]="selectedB3? 'rgb(0, 183, 255)':'white'"  (click)="selectedB3=changecolor(selectedB3,balcony);"class="seat">B3</div>
-                <div [style.background-color]="selectedB4? 'rgb(0, 183, 255)':'white'"  (click)="selectedB4=changecolor(selectedB4,balcony);" class="seat">B4</div>
-                <div [style.background-color]="selectedB5? 'rgb(0, 183, 255)':'white'"  (click)="selectedB5=changecolor(selectedB5,balcony);" class="seat">B5</div>
-                <div [style.background-color]="selectedB6? 'rgb(0, 183, 255)':'white'"  (click)="selectedB6=changecolor(selectedB6,balcony);" class="seat">B6</div>
-                <div [style.background-color]="selectedB7? 'rgb(0, 183, 255)':'white'"  (click)="selectedB7=changecolor(selectedB7,balcony);" class="seat">B7</div>
-                <div [style.background-color]="selectedB8? 'rgb(0, 183, 255)':'white'"  (click)="selectedB8=changecolor(selectedB8,balcony);" class="seat">B8</div>
-                <div [style.background-color]="selectedB9? 'rgb(0, 183, 255)':'white'"  (click)="selectedB9=changecolor(selectedB9,balcony);"class="seat">B9</div>
-                <div [style.background-color]="selectedB10? 'rgb(0, 183, 255)':'white'"  (click)="selectedB10=changecolor(selectedB10,balcony);" class="seat">B10</div>
+                <div class="seat">B1</div>
+                <div class="seat">B2</div>
+                <div class="seat">B3</div>
+                <div class="seat">B4</div>
+                <div class="seat">B5</div>
+                <div class="seat">B6</div>
+                <div class="seat">B7</div>
+                <div class="seat">B8</div>
+                <div class="seat">B9</div>
+                <div class="seat">B10</div>
                 <div class="space"></div>
                 <div class="space"></div>
-                <div [style.background-color]="selectedB11? 'rgb(0, 183, 255)':'white'"  (click)="selectedB11=changecolor(selectedA1,balcony);"class="seat">B11</div>
-                <div [style.background-color]="selectedB12? 'rgb(0, 183, 255)':'white'"  (click)="selectedB12=changecolor(selectedA1,balcony);"class="seat">B12</div>
-                <div [style.background-color]="selectedB13? 'rgb(0, 183, 255)':'white'"  (click)="selectedB13=changecolor(selectedA1,balcony);"class="seat">B13</div>
-                <div [style.background-color]="selectedB14? 'rgb(0, 183, 255)':'white'"  (click)="selectedB14=changecolor(selectedA1,balcony);"class="seat">B14</div>
-                <div [style.background-color]="selectedB15? 'rgb(0, 183, 255)':'white'"  (click)="selectedB15=changecolor(selectedA1,balcony);"class="seat">B15</div>
-                <div [style.background-color]="selectedB16? 'rgb(0, 183, 255)':'white'"  (click)="selectedB16=changecolor(selectedA1,balcony);"class="seat">B16</div>
-                <div [style.background-color]="selectedB17? 'rgb(0, 183, 255)':'white'"  (click)="selectedB17=changecolor(selectedA1,balcony);" class="seat">B17</div>
-                <div [style.background-color]="selectedB18? 'rgb(0, 183, 255)':'white'"  (click)="selectedB18=changecolor(selectedA1,balcony);" class="seat">B18</div>
-                <div [style.background-color]="selectedB19? 'rgb(0, 183, 255)':'white'"  (click)="selectedB19=changecolor(selectedA1,balcony);"class="seat">B19</div>
-                <div [style.background-color]="selectedB20? 'rgb(0, 183, 255)':'white'"  (click)="selectedB20=changecolor(selectedA1,balcony);"class="seat">B20</div>
+                <div class="seat">B11</div>
+                <div class="seat">B12</div>
+                <div class="seat">B13</div>
+                <div class="seat">B14</div>
+                <div class="seat">B15</div>
+                <div class="seat">B16</div>
+                <div class="seat">B17</div>
+                <div class="seat">B18</div>
+                <div class="seat">B19</div>
+                <div class="seat">B20</div>
             </div>
             <div class="grid-container row3">
-                <div [style.background-color]="selectedC1? 'rgb(0, 183, 255)':'white'"  (click)="selectedC1=changecolor(selectedC1,balcony);"class="seat">C1</div>
-                <div [style.background-color]="selectedC2? 'rgb(0, 183, 255)':'white'"  (click)="selectedC2=changecolor(selectedC2,balcony);"class="seat">C2</div>
-                <div [style.background-color]="selectedC3? 'rgb(0, 183, 255)':'white'"  (click)="selectedC3=changecolor(selectedC3,balcony);" class="seat">C3</div>
-                <div [style.background-color]="selectedC4? 'rgb(0, 183, 255)':'white'"  (click)="selectedC4=changecolor(selectedC4,balcony);"class="seat">C4</div>
-                <div [style.background-color]="selectedC5? 'rgb(0, 183, 255)':'white'"  (click)="selectedC5=changecolor(selectedC5,balcony);"class="seat">C5</div>
-                <div [style.background-color]="selectedC6? 'rgb(0, 183, 255)':'white'"  (click)="selectedC6=changecolor(selectedC6,balcony);"class="seat">C6</div>
-                <div [style.background-color]="selectedC7? 'rgb(0, 183, 255)':'white'"  (click)="selectedC7=changecolor(selectedC7,balcony);"class="seat">C7</div>
-                <div [style.background-color]="selectedC8? 'rgb(0, 183, 255)':'white'"  (click)="selectedC8=changecolor(selectedC8,balcony);"class="seat">C8</div>
-                <div [style.background-color]="selectedC9? 'rgb(0, 183, 255)':'white'"  (click)="selectedC9=changecolor(selectedC9,balcony);" class="seat">C9</div>
-                <div [style.background-color]="selectedC10? 'rgb(0, 183, 255)':'white'"  (click)="selectedC10=changecolor(selectedC10,balcony);"class="seat">C10</div>
+                <div class="seat">C1</div>
+                <div class="seat">C2</div>
+                <div class="seat">C3</div>
+                <div class="seat">C4</div>
+                <div class="seat">C5</div>
+                <div class="seat">C6</div>
+                <div class="seat">C7</div>
+                <div class="seat">C8</div>
+                <div class="seat">C9</div>
+                <div class="seat">C10</div>
                 <div class="space"></div>
-                <div  class="space"></div>
-                <div [style.background-color]="selectedC11? 'rgb(0, 183, 255)':'white'"  (click)="selectedC11=changecolor(selectedC11,balcony);"class="seat">C11</div>
-                <div [style.background-color]="selectedC12? 'rgb(0, 183, 255)':'white'"  (click)="selectedC12=changecolor(selectedC12,balcony);" class="seat">C12</div>
-                <div [style.background-color]="selectedC13? 'rgb(0, 183, 255)':'white'"  (click)="selectedC13=changecolor(selectedC13,balcony);"class="seat">C13</div>
-                <div [style.background-color]="selectedC14? 'rgb(0, 183, 255)':'white'"  (click)="selectedC14=changecolor(selectedC14,balcony);"class="seat">C14</div>
-                <div [style.background-color]="selectedC15? 'rgb(0, 183, 255)':'white'"  (click)="selectedC15=changecolor(selectedC15,balcony);"class="seat">C15</div>
-                <div [style.background-color]="selectedC16? 'rgb(0, 183, 255)':'white'"  (click)="selectedC16=changecolor(selectedC16,balcony);" class="seat">C16</div>
-                <div [style.background-color]="selectedC17? 'rgb(0, 183, 255)':'white'"  (click)="selectedC17=changecolor(selectedC17,balcony);" class="seat">C17</div>
-                <div [style.background-color]="selectedC18? 'rgb(0, 183, 255)':'white'"  (click)="selectedC18=changecolor(selectedC18,balcony);"class="seat">C18</div>
-                <div [style.background-color]="selectedC19? 'rgb(0, 183, 255)':'white'"  (click)="selectedC19=changecolor(selectedC19,balcony);" class="seat">C19</div>
-                <div [style.background-color]="selectedC20? 'rgb(0, 183, 255)':'white'"  (click)="selectedC20=changecolor(selectedC20,balcony);"class="seat">C20</div>
+                <div class="space"></div>
+                <div class="seat">C11</div>
+                <div class="seat">C12</div>
+                <div class="seat">C13</div>
+                <div class="seat">C14</div>
+                <div class="seat">C15</div>
+                <div class="seat">C16</div>
+                <div class="seat">C17</div>
+                <div class="seat">C18</div>
+                <div class="seat">C19</div>
+                <div class="seat">C20</div>
             </div>
             <div class="grid-container row4">
-                <div [style.background-color]="selectedD1? 'rgb(0, 183, 255)':'white'"  (click)="selectedD1=changecolor(selectedD1,balcony);"class="seat">D1</div>
-                <div [style.background-color]="selectedD2? 'rgb(0, 183, 255)':'white'"  (click)="selectedD2=changecolor(selectedD2,balcony);"class="seat">D2</div>
-                <div [style.background-color]="selectedD3? 'rgb(0, 183, 255)':'white'"  (click)="selectedD3=changecolor(selectedD3,balcony);" class="seat">D3</div>
-                <div [style.background-color]="selectedD4? 'rgb(0, 183, 255)':'white'"  (click)="selectedD4=changecolor(selectedD4,balcony);"class="seat">D4</div>
-                <div [style.background-color]="selectedD5? 'rgb(0, 183, 255)':'white'"  (click)="selectedD5=changecolor(selectedD5,balcony);"class="seat">D5</div>
-                <div [style.background-color]="selectedD6? 'rgb(0, 183, 255)':'white'"  (click)="selectedD6=changecolor(selectedD6,balcony);"class="seat">D6</div>
-                <div [style.background-color]="selectedD7? 'rgb(0, 183, 255)':'white'"  (click)="selectedD7=changecolor(selectedD7,balcony);"class="seat">D7</div>
-                <div [style.background-color]="selectedD8? 'rgb(0, 183, 255)':'white'"  (click)="selectedD8=changecolor(selectedD8,balcony);"class="seat">D8</div>
-                <div [style.background-color]="selectedD9? 'rgb(0, 183, 255)':'white'"  (click)="selectedD9=changecolor(selectedD9,balcony);"class="seat">D9</div>
-                <div [style.background-color]="selectedD10? 'rgb(0, 183, 255)':'white'"  (click)="selectedD10=changecolor(selectedD10,balcony);"class="seat">D10</div>
+                <div class="seat">D1</div>
+                <div class="seat">D2</div>
+                <div class="seat">D3</div>
+                <div class="seat">D4</div>
+                <div class="seat">D5</div>
+                <div class="seat">D6</div>
+                <div class="seat">D7</div>
+                <div class="seat">D8</div>
+                <div class="seat">D9</div>
+                <div class="seat">D10</div>
                 <div class="space"></div>
                 <div class="space"></div>
-                <div [style.background-color]="selectedD11? 'rgb(0, 183, 255)':'white'"  (click)="selectedD11=changecolor(selectedD11,balcony);"class="seat">D11</div>
-                <div [style.background-color]="selectedD12? 'rgb(0, 183, 255)':'white'"  (click)="selectedD12=changecolor(selectedD12,balcony);"class="seat">D12</div>
-                <div [style.background-color]="selectedD13? 'rgb(0, 183, 255)':'white'"  (click)="selectedD13=changecolor(selectedD13,balcony);"class="seat">D13</div>
-                <div [style.background-color]="selectedD14? 'rgb(0, 183, 255)':'white'"  (click)="selectedD14=changecolor(selectedD14,balcony);"class="seat">D14</div>
-                <div [style.background-color]="selectedD15? 'rgb(0, 183, 255)':'white'"  (click)="selectedD15=changecolor(selectedD15,balcony);"class="seat">D15</div>
-                <div [style.background-color]="selectedD16? 'rgb(0, 183, 255)':'white'"  (click)="selectedD16=changecolor(selectedD16,balcony);"class="seat">D16</div>
-                <div [style.background-color]="selectedD17? 'rgb(0, 183, 255)':'white'"  (click)="selectedD17=changecolor(selectedD17,balcony);"class="seat">D17</div>
-                <div [style.background-color]="selectedD18? 'rgb(0, 183, 255)':'white'"  (click)="selectedD18=changecolor(selectedD18,balcony);"class="seat">D18</div>
-                <div [style.background-color]="selectedD19? 'rgb(0, 183, 255)':'white'"  (click)="selectedD19=changecolor(selectedD19,balcony);"class="seat">D19</div>
-                <div [style.background-color]="selectedD20? 'rgb(0, 183, 255)':'white'"  (click)="selectedD20=changecolor(selectedD20,balcony);"class="seat">D20</div>
-                
+                <div class="seat">D11</div>
+                <div class="seat">D12</div>
+                <div class="seat">D13</div>
+                <div class="seat">D14</div>
+                <div class="seat">D15</div>
+                <div class="seat">D16</div>
+                <div class="seat">D17</div>
+                <div class="seat">D18</div>
+                <div class="seat">D19</div>
+                <div class="seat">D20</div>
             </div>
             <div class="grid-container16 row5">
-                <div [style.background-color]="selectedE1? 'rgb(0, 183, 255)':'white'"  (click)="selectedE1=changecolor(selectedE1,balcony);"class="seat">E1</div>
-                <div [style.background-color]="selectedE2? 'rgb(0, 183, 255)':'white'"  (click)="selectedE2=changecolor(selectedE2,balcony);"class="seat">E2</div>
-                <div [style.background-color]="selectedE3? 'rgb(0, 183, 255)':'white'"  (click)="selectedE3=changecolor(selectedE3,balcony);"class="seat">E3</div>
-                <div [style.background-color]="selectedE4? 'rgb(0, 183, 255)':'white'"  (click)="selectedE4=changecolor(selectedE4,balcony);"class="seat">E4</div>
-                <div [style.background-color]="selectedE5? 'rgb(0, 183, 255)':'white'"  (click)="selectedE5=changecolor(selectedE5,balcony);"class="seat">E5</div>
-                <div [style.background-color]="selectedE6? 'rgb(0, 183, 255)':'white'"  (click)="selectedE6=changecolor(selectedE6,balcony);"class="seat">E6</div>
-                <div [style.background-color]="selectedE7? 'rgb(0, 183, 255)':'white'"  (click)="selectedE7=changecolor(selectedE7,balcony);"class="seat">E7</div>
-                <div [style.background-color]="selectedE8? 'rgb(0, 183, 255)':'white'"  (click)="selectedE8=changecolor(selectedE8,balcony);"class="seat">E8</div>
-              
+                <div class="seat">E1</div>
+                <div class="seat">E2</div>
+                <div class="seat">E3</div>
+                <div class="seat">E4</div>
+                <div class="seat">E5</div>
+                <div class="seat">E6</div>
+                <div class="seat">E7</div>
+                <div class="seat">E8</div>
                 <div class="space"></div>
                 <div class="space"></div>
-                <div [style.background-color]="selectedE9? 'rgb(0, 183, 255)':'white'"  (click)="selectedE9=changecolor(selectedE9,balcony);"class="seat">E9</div>
-                <div [style.background-color]="selectedE10? 'rgb(0, 183, 255)':'white'"  (click)="selectedE10=changecolor(selectedE10,balcony);"class="seat">E10</div>
-                <div [style.background-color]="selectedE11? 'rgb(0, 183, 255)':'white'"  (click)="selectedE11=changecolor(selectedE11,balcony);"class="seat">E11</div>
-                <div [style.background-color]="selectedE12? 'rgb(0, 183, 255)':'white'"  (click)="selectedE12=changecolor(selectedE12,balcony);"class="seat">E12</div>
-                <div [style.background-color]="selectedE13? 'rgb(0, 183, 255)':'white'"  (click)="selectedE13=changecolor(selectedE13,balcony);"class="seat">E13</div>
-                <div [style.background-color]="selectedE14? 'rgb(0, 183, 255)':'white'"  (click)="selectedE14=changecolor(selectedE14,balcony);"class="seat">E14</div>
-                <div [style.background-color]="selectedE15? 'rgb(0, 183, 255)':'white'"  (click)="selectedE15=changecolor(selectedE15,balcony);"class="seat">E15</div>
-                <div [style.background-color]="selectedE16? 'rgb(0, 183, 255)':'white'"  (click)="selectedE16=changecolor(selectedE16,balcony);"class="seat">E16</div>
-                
+                <div class="seat">E9</div>
+                <div class="seat">E10</div>
+                <div class="seat">E11</div>
+                <div class="seat">E12</div>
+                <div class="seat">E13</div>
+                <div class="seat">E14</div>
+                <div class="seat">E15</div>
+                <div class="seat">E16</div>
             </div>
             <div class="firstClass">FIRST CLASS : &#x20B9;120</div>
             <div class="grid-container row6">
-                <div [style.background-color]="selectedF1? 'rgb(0, 183, 255)':'white'"  (click)="selectedF1=changecolor(selectedF1,firstclass);"class="seat">F1</div>
-                <div [style.background-color]="selectedF2? 'rgb(0, 183, 255)':'white'"  (click)="selectedF2=changecolor(selectedF2,firstclass);"class="seat">F2</div>
-                <div [style.background-color]="selectedF3? 'rgb(0, 183, 255)':'white'"  (click)="selectedF3=changecolor(selectedF3,firstclass);"class="seat">F3</div>
-                <div [style.background-color]="selectedF4? 'rgb(0, 183, 255)':'white'"  (click)="selectedF4=changecolor(selectedF4,firstclass);"class="seat">F4</div>
-                <div [style.background-color]="selectedF5? 'rgb(0, 183, 255)':'white'"  (click)="selectedF5=changecolor(selectedF5,firstclass);"class="seat">F5</div>
-                <div [style.background-color]="selectedF6? 'rgb(0, 183, 255)':'white'"  (click)="selectedF6=changecolor(selectedF6,firstclass);"class="seat">F6</div>
-                <div [style.background-color]="selectedF7? 'rgb(0, 183, 255)':'white'"  (click)="selectedF7=changecolor(selectedF7,firstclass);"class="seat">F7</div>
-                <div [style.background-color]="selectedF8? 'rgb(0, 183, 255)':'white'"  (click)="selectedF8=changecolor(selectedF8,firstclass);"class="seat">F8</div>
-                <div [style.background-color]="selectedF9? 'rgb(0, 183, 255)':'white'"  (click)="selectedF9=changecolor(selectedF9,firstclass);"class="seat">F9</div>
-                <div [style.background-color]="selectedF10? 'rgb(0, 183, 255)':'white'"  (click)="selectedF10=changecolor(selectedF10,firstclass);"class="seat">F10</div>
-                
+                <div class="seat">F1</div>
+                <div class="seat">F2</div>
+                <div class="seat">F3</div>
+                <div class="seat">F4</div>
+                <div class="seat">F5</div>
+                <div class="seat">F6</div>
+                <div class="seat">F7</div>
+                <div class="seat">F8</div>
+                <div class="seat">F9</div>
+                <div class="seat">F10</div>
                 <div class="space"></div>
                 <div class="space"></div>
-                <div [style.background-color]="selectedF11? 'rgb(0, 183, 255)':'white'"  (click)="selectedF11=changecolor(selectedF11,firstclass);"class="seat">F11</div>
-                <div [style.background-color]="selectedF12? 'rgb(0, 183, 255)':'white'"  (click)="selectedF12=changecolor(selectedF12,firstclass);"class="seat">F12</div>
-                <div [style.background-color]="selectedF13? 'rgb(0, 183, 255)':'white'"  (click)="selectedF13=changecolor(selectedF13,firstclass);"class="seat">F13</div>
-                <div [style.background-color]="selectedF14? 'rgb(0, 183, 255)':'white'"  (click)="selectedF14=changecolor(selectedF14,firstclass);"class="seat">F14</div>
-                <div [style.background-color]="selectedF15? 'rgb(0, 183, 255)':'white'"  (click)="selectedF15=changecolor(selectedF15,firstclass);"class="seat">F15</div>
-                <div [style.background-color]="selectedF16? 'rgb(0, 183, 255)':'white'"  (click)="selectedF16=changecolor(selectedF16,firstclass);"class="seat">F16</div>
-                <div [style.background-color]="selectedF17? 'rgb(0, 183, 255)':'white'"  (click)="selectedF17=changecolor(selectedF17,firstclass);"class="seat">F17</div>
-                <div [style.background-color]="selectedF18? 'rgb(0, 183, 255)':'white'"  (click)="selectedF18=changecolor(selectedF18,firstclass);"class="seat">F18</div>
-                <div [style.background-color]="selectedF19? 'rgb(0, 183, 255)':'white'"  (click)="selectedF19=changecolor(selectedF19,firstclass);"class="seat">F19</div>
-                <div [style.background-color]="selectedF20? 'rgb(0, 183, 255)':'white'"  (click)="selectedF20=changecolor(selectedF20,firstclass);"class="seat">F20</div>
-                
+                <div class="seat">F11</div>
+                <div class="seat">F12</div>
+                <div class="seat">F13</div>
+                <div class="seat">F14</div>
+                <div class="seat">F15</div>
+                <div class="seat">F16</div>
+                <div class="seat">F17</div>
+                <div class="seat">F18</div>
+                <div class="seat">F19</div>
+                <div class="seat">F20</div>
             </div>
             <div class="grid-container row7">
-                <div [style.background-color]="selectedG1? 'rgb(0, 183, 255)':'white'"  (click)="selectedG1=changecolor(selectedG1,firstclass);"class="seat">G1</div>
-                <div [style.background-color]="selectedG2? 'rgb(0, 183, 255)':'white'"  (click)="selectedG2=changecolor(selectedG2,firstclass);"class="seat">G2</div>
-                <div [style.background-color]="selectedG3? 'rgb(0, 183, 255)':'white'"  (click)="selectedG3=changecolor(selectedG3,firstclass);"class="seat">G3</div>
-                <div [style.background-color]="selectedG4? 'rgb(0, 183, 255)':'white'"  (click)="selectedG4=changecolor(selectedG4,firstclass);"class="seat">G4</div>
-                <div [style.background-color]="selectedG5? 'rgb(0, 183, 255)':'white'"  (click)="selectedG5=changecolor(selectedG5,firstclass);"class="seat">G5</div>
-                <div [style.background-color]="selectedG6? 'rgb(0, 183, 255)':'white'"  (click)="selectedG6=changecolor(selectedG6,firstclass);"class="seat">G6</div>
-                <div [style.background-color]="selectedG7? 'rgb(0, 183, 255)':'white'"  (click)="selectedG7=changecolor(selectedG7,firstclass);"class="seat">G7</div>
-                <div [style.background-color]="selectedG8? 'rgb(0, 183, 255)':'white'"  (click)="selectedG8=changecolor(selectedG8,firstclass);"class="seat">G8</div>
-                <div [style.background-color]="selectedG9? 'rgb(0, 183, 255)':'white'"  (click)="selectedG9=changecolor(selectedG9,firstclass);"class="seat">G9</div>
-                <div [style.background-color]="selectedG10? 'rgb(0, 183, 255)':'white'"  (click)="selectedG10=changecolor(selectedG10,firstclass);"class="seat">G10</div>
-                
+                <div class="seat">G1</div>
+                <div class="seat">G2</div>
+                <div class="seat">G3</div>
+                <div class="seat">G4</div>
+                <div class="seat">G5</div>
+                <div class="seat">G6</div>
+                <div class="seat">G7</div>
+                <div class="seat">G8</div>
+                <div class="seat">G9</div>
+                <div class="seat">G10</div>
                 <div class="space"></div>
                 <div class="space"></div>
-                <div [style.background-color]="selectedG11? 'rgb(0, 183, 255)':'white'"  (click)="selectedG11=changecolor(selectedG11,firstclass);"class="seat">G11</div>
-                <div [style.background-color]="selectedG12? 'rgb(0, 183, 255)':'white'"  (click)="selectedG12=changecolor(selectedG12,firstclass);"class="seat">G12</div>
-                <div [style.background-color]="selectedG13? 'rgb(0, 183, 255)':'white'"  (click)="selectedG13=changecolor(selectedG13,firstclass);"class="seat">G13</div>
-                <div [style.background-color]="selectedG14? 'rgb(0, 183, 255)':'white'"  (click)="selectedG14=changecolor(selectedG14,firstclass);"class="seat">G14</div>
-                <div [style.background-color]="selectedG15? 'rgb(0, 183, 255)':'white'"  (click)="selectedG15=changecolor(selectedG15,firstclass);"class="seat">G15</div>
-                <div [style.background-color]="selectedG16? 'rgb(0, 183, 255)':'white'"  (click)="selectedG16=changecolor(selectedG16,firstclass);"class="seat">G16</div>
-                <div [style.background-color]="selectedG17? 'rgb(0, 183, 255)':'white'"  (click)="selectedG17=changecolor(selectedG17,firstclass);"class="seat">G17</div>
-                <div [style.background-color]="selectedG18? 'rgb(0, 183, 255)':'white'"  (click)="selectedG18=changecolor(selectedG18,firstclass);"class="seat">G18</div>
-                <div [style.background-color]="selectedG19? 'rgb(0, 183, 255)':'white'"  (click)="selectedG19=changecolor(selectedG19,firstclass);"class="seat">G19</div>
-                <div [style.background-color]="selectedG20? 'rgb(0, 183, 255)':'white'"  (click)="selectedG20=changecolor(selectedG20,firstclass);"class="seat">G20</div>
-               
+                <div class="seat">G11</div>
+                <div class="seat">G12</div>
+                <div class="seat">G13</div>
+                <div class="seat">G14</div>
+                <div class="seat">G15</div>
+                <div class="seat">G16</div>
+                <div class="seat">G17</div>
+                <div class="seat">G18</div>
+                <div class="seat">G19</div>
+                <div class="seat">G20</div>
             </div>
             <div class="grid-container row8">
-                <div [style.background-color]="selectedH1? 'rgb(0, 183, 255)':'white'"  (click)="selectedH1=changecolor(selectedH1,firstclass);" class="seat">H1</div>
-                <div [style.background-color]="selectedH2? 'rgb(0, 183, 255)':'white'"  (click)="selectedH2=changecolor(selectedH2,firstclass);" class="seat">H2</div>
-                <div [style.background-color]="selectedH3? 'rgb(0, 183, 255)':'white'"  (click)="selectedH3=changecolor(selectedH3,firstclass);" class="seat">H3</div>
-                <div [style.background-color]="selectedH4? 'rgb(0, 183, 255)':'white'"  (click)="selectedH4=changecolor(selectedH4,firstclass);" class="seat">H4</div>
-                <div [style.background-color]="selectedH5? 'rgb(0, 183, 255)':'white'"  (click)="selectedH5=changecolor(selectedH5,firstclass);" class="seat">H5</div>
-                <div [style.background-color]="selectedH6? 'rgb(0, 183, 255)':'white'"  (click)="selectedH6=changecolor(selectedH6,firstclass);" class="seat">H6</div>
-                <div [style.background-color]="selectedH7? 'rgb(0, 183, 255)':'white'"  (click)="selectedH7=changecolor(selectedH7,firstclass);" class="seat">H7</div>
-                <div [style.background-color]="selectedH8? 'rgb(0, 183, 255)':'white'"  (click)="selectedH8=changecolor(selectedH8,firstclass);" class="seat">H8</div>
-                <div [style.background-color]="selectedH9? 'rgb(0, 183, 255)':'white'"  (click)="selectedH9=changecolor(selectedH9,firstclass);" class="seat">H9</div>
-                <div [style.background-color]="selectedH10? 'rgb(0, 183, 255)':'white'"  (click)="selectedH10=changecolor(selectedH10,firstclass);" class="seat">H10</div>
-                
+                <div class="seat">H1</div>
+                <div class="seat">H2</div>
+                <div class="seat">H3</div>
+                <div class="seat">H4</div>
+                <div class="seat">H5</div>
+                <div class="seat">H6</div>
+                <div class="seat">H7</div>
+                <div class="seat">H8</div>
+                <div class="seat">H9</div>
+                <div class="seat">H10</div>
                 <div class="space"></div>
                 <div class="space"></div>
-                <div [style.background-color]="selectedH11? 'rgb(0, 183, 255)':'white'"  (click)="selectedH11=changecolor(selectedH11,firstclass);"class="seat">H11</div>
-                <div [style.background-color]="selectedH12? 'rgb(0, 183, 255)':'white'"  (click)="selectedH12=changecolor(selectedH12,firstclass);"class="seat">H12</div>
-                <div [style.background-color]="selectedH13? 'rgb(0, 183, 255)':'white'"  (click)="selectedH13=changecolor(selectedH13,firstclass);"class="seat">H13</div>
-                <div [style.background-color]="selectedH14? 'rgb(0, 183, 255)':'white'"  (click)="selectedH14=changecolor(selectedH14,firstclass);"class="seat">H14</div>
-                <div [style.background-color]="selectedH15? 'rgb(0, 183, 255)':'white'"  (click)="selectedH15=changecolor(selectedH15,firstclass);"class="seat">H15</div>
-                <div [style.background-color]="selectedH16? 'rgb(0, 183, 255)':'white'"  (click)="selectedH16=changecolor(selectedH16,firstclass);"class="seat">H16</div>
-                <div [style.background-color]="selectedH17? 'rgb(0, 183, 255)':'white'"  (click)="selectedH17=changecolor(selectedH17,firstclass);"class="seat">H17</div>
-                <div [style.background-color]="selectedH18? 'rgb(0, 183, 255)':'white'"  (click)="selectedH18=changecolor(selectedH18,firstclass);"class="seat">H18</div>
-                <div [style.background-color]="selectedH19? 'rgb(0, 183, 255)':'white'"  (click)="selectedH19=changecolor(selectedH19,firstclass);"class="seat">H19</div>
-                <div [style.background-color]="selectedH20? 'rgb(0, 183, 255)':'white'"  (click)="selectedH20=changecolor(selectedH20,firstclass);"class="seat">H20</div>
-                
+                <div class="seat">H11</div>
+                <div class="seat">H12</div>
+                <div class="seat">H13</div>
+                <div class="seat">H14</div>
+                <div class="seat">H15</div>
+                <div class="seat">H16</div>
+                <div class="seat">H17</div>
+                <div class="seat">H18</div>
+                <div class="seat">H19</div>
+                <div class="seat">H20</div>
             </div>
             <div class="grid-container row9">
-                <div [style.background-color]="selectedI1? 'rgb(0, 183, 255)':'white'"  (click)="selectedI1=changecolor(selectedI1,firstclass);"class="seat">I1</div>
-                <div [style.background-color]="selectedI2? 'rgb(0, 183, 255)':'white'"  (click)="selectedI2=changecolor(selectedI2,firstclass);"class="seat">I2</div>
-                <div [style.background-color]="selectedI3? 'rgb(0, 183, 255)':'white'"  (click)="selectedI3=changecolor(selectedI3,firstclass);"class="seat">I3</div>
-                <div [style.background-color]="selectedI4? 'rgb(0, 183, 255)':'white'"  (click)="selectedI4=changecolor(selectedI4,firstclass);"class="seat">I4</div>
-                <div [style.background-color]="selectedI5? 'rgb(0, 183, 255)':'white'"  (click)="selectedI5=changecolor(selectedI5,firstclass);"class="seat">I5</div>
-                <div [style.background-color]="selectedI6? 'rgb(0, 183, 255)':'white'"  (click)="selectedI6=changecolor(selectedI6,firstclass);"class="seat">I6</div>
-                <div [style.background-color]="selectedI7? 'rgb(0, 183, 255)':'white'"  (click)="selectedI7=changecolor(selectedI7,firstclass);"class="seat">I7</div>
-                <div [style.background-color]="selectedI8? 'rgb(0, 183, 255)':'white'"  (click)="selectedI8=changecolor(selectedI8,firstclass);"class="seat">I8</div>
-                <div [style.background-color]="selectedI9? 'rgb(0, 183, 255)':'white'"  (click)="selectedI9=changecolor(selectedI9,firstclass);"class="seat">I9</div>
-                <div [style.background-color]="selectedI10? 'rgb(0, 183, 255)':'white'"  (click)="selectedI10=changecolor(selectedI10,firstclass);"class="seat">I10</div>
-               
-              
+                <div class="seat">I1</div>
+                <div class="seat">I2</div>
+                <div class="seat">I3</div>
+                <div class="seat">I4</div>
+                <div class="seat">I5</div>
+                <div class="seat">I6</div>
+                <div class="seat">I7</div>
+                <div class="seat">I8</div>
+                <div class="seat">I9</div>
+                <div class="seat">I10</div>
                 <div class="space"></div>
                 <div class="space"></div>
-                <div [style.background-color]="selectedI11? 'rgb(0, 183, 255)':'white'"  (click)="selectedI11=changecolor(selectedI11,firstclass);"class="seat">I11</div>
-                <div [style.background-color]="selectedI12? 'rgb(0, 183, 255)':'white'"  (click)="selectedI12=changecolor(selectedI12,firstclass);"class="seat">I12</div>
-                <div [style.background-color]="selectedI13? 'rgb(0, 183, 255)':'white'"  (click)="selectedI13=changecolor(selectedI13,firstclass);"class="seat">I13</div>
-                <div [style.background-color]="selectedI14? 'rgb(0, 183, 255)':'white'"  (click)="selectedI14=changecolor(selectedI14,firstclass);"class="seat">I14</div>
-                <div [style.background-color]="selectedI15? 'rgb(0, 183, 255)':'white'"  (click)="selectedI15=changecolor(selectedI15,firstclass);"class="seat">I15</div>
-                <div [style.background-color]="selectedI16? 'rgb(0, 183, 255)':'white'"  (click)="selectedI16=changecolor(selectedI16,firstclass);"class="seat">I16</div>
-                <div [style.background-color]="selectedI17? 'rgb(0, 183, 255)':'white'"  (click)="selectedI17=changecolor(selectedI17,firstclass);"class="seat">I17</div>
-                <div [style.background-color]="selectedI18? 'rgb(0, 183, 255)':'white'"  (click)="selectedI18=changecolor(selectedI18,firstclass);"class="seat">I18</div>
-                <div [style.background-color]="selectedI19? 'rgb(0, 183, 255)':'white'"  (click)="selectedI19=changecolor(selectedI19,firstclass);"class="seat">I19</div>
-                <div [style.background-color]="selectedI20? 'rgb(0, 183, 255)':'white'"  (click)="selectedI20=changecolor(selectedI20,firstclass);"class="seat">I20</div>
-                
+                <div class="seat">I11</div>
+                <div class="seat">I12</div>
+                <div class="seat">I13</div>
+                <div class="seat">I14</div>
+                <div class="seat">I15</div>
+                <div class="seat">I16</div>
+                <div class="seat">I17</div>
+                <div class="seat">I18</div>
+                <div class="seat">I19</div>
+                <div class="seat">I20</div>
             </div>
             <div class="grid-container row10">
-                <div [style.background-color]="selectedJ1? 'rgb(0, 183, 255)':'white'"  (click)="selectedJ1=changecolor(selectedJ1,firstclass);" class="seat">J1</div>
-                <div [style.background-color]="selectedJ2? 'rgb(0, 183, 255)':'white'"  (click)="selectedJ2=changecolor(selectedJ2,firstclass);" class="seat">J2</div>
-                <div [style.background-color]="selectedJ3? 'rgb(0, 183, 255)':'white'"  (click)="selectedJ3=changecolor(selectedJ3,firstclass);" class="seat">J3</div>
-                <div [style.background-color]="selectedJ4? 'rgb(0, 183, 255)':'white'"  (click)="selectedJ4=changecolor(selectedJ4,firstclass);" class="seat">J4</div>
-                <div [style.background-color]="selectedJ5? 'rgb(0, 183, 255)':'white'"  (click)="selectedJ5=changecolor(selectedJ5,firstclass);" class="seat">J5</div>
-                <div [style.background-color]="selectedJ6? 'rgb(0, 183, 255)':'white'"  (click)="selectedJ6=changecolor(selectedJ6,firstclass);" class="seat">J6</div>
-                <div [style.background-color]="selectedJ7? 'rgb(0, 183, 255)':'white'"  (click)="selectedJ7=changecolor(selectedJ7,firstclass);" class="seat">J7</div>
-                <div [style.background-color]="selectedJ8? 'rgb(0, 183, 255)':'white'"  (click)="selectedJ8=changecolor(selectedJ8,firstclass);" class="seat">J8</div>
-                <div [style.background-color]="selectedJ9? 'rgb(0, 183, 255)':'white'"  (click)="selectedJ9=changecolor(selectedJ9,firstclass);" class="seat">J9</div>
-                <div [style.background-color]="selectedJ10? 'rgb(0, 183, 255)':'white'"  (click)="selectedJ10=changecolor(selectedJ10,firstclass);" class="seat">J10</div>
-                
+                <div class="seat">J1</div>
+                <div class="seat">J2</div>
+                <div class="seat">J3</div>
+                <div class="seat">J4</div>
+                <div class="seat">J5</div>
+                <div class="seat">J6</div>
+                <div class="seat">J7</div>
+                <div class="seat">J8</div>
+                <div class="seat">J9</div>
+                <div class="seat">J10</div>
                 <div class="space"></div>
                 <div class="space"></div>
-                <div [style.background-color]="selectedJ11? 'rgb(0, 183, 255)':'white'"  (click)="selectedJ11=changecolor(selectedJ11,firstclass);"class="seat">J11</div>
-                <div [style.background-color]="selectedJ12? 'rgb(0, 183, 255)':'white'"  (click)="selectedJ12=changecolor(selectedJ12,firstclass);"class="seat">J12</div>
-                <div [style.background-color]="selectedJ13? 'rgb(0, 183, 255)':'white'"  (click)="selectedJ13=changecolor(selectedJ13,firstclass);"class="seat">J13</div>
-                <div [style.background-color]="selectedJ14? 'rgb(0, 183, 255)':'white'"  (click)="selectedJ14=changecolor(selectedJ14,firstclass);"class="seat">J14</div>
-                <div [style.background-color]="selectedJ15? 'rgb(0, 183, 255)':'white'"  (click)="selectedJ15=changecolor(selectedJ15,firstclass);"class="seat">J15</div>
-                <div [style.background-color]="selectedJ16? 'rgb(0, 183, 255)':'white'"  (click)="selectedJ16=changecolor(selectedJ16,firstclass);"class="seat">J16</div>
-                <div [style.background-color]="selectedJ17? 'rgb(0, 183, 255)':'white'"  (click)="selectedJ17=changecolor(selectedJ17,firstclass);"class="seat">J17</div>
-                <div [style.background-color]="selectedJ18? 'rgb(0, 183, 255)':'white'"  (click)="selectedJ18=changecolor(selectedJ18,firstclass);"class="seat">J18</div>
-                <div [style.background-color]="selectedJ19? 'rgb(0, 183, 255)':'white'"  (click)="selectedJ19=changecolor(selectedJ19,firstclass);"class="seat">J19</div>
-                <div [style.background-color]="selectedJ20? 'rgb(0, 183, 255)':'white'"  (click)="selectedJ20=changecolor(selectedJ20,firstclass);"class="seat">J20</div>
-                
+                <div class="seat">J11</div>
+                <div class="seat">J12</div>
+                <div class="seat">J13</div>
+                <div class="seat">J14</div>
+                <div class="seat">J15</div>
+                <div class="seat">J16</div>
+                <div class="seat">J17</div>
+                <div class="seat">J18</div>
+                <div class="seat">J19</div>
+                <div class="seat">J20</div>
             </div>
             <div class="grid-container row11">
-                <div [style.background-color]="selectedK1? 'rgb(0, 183, 255)':'white'"  (click)="selectedK1=changecolor(selectedK1,firstclass);"class="seat">K1</div>
-                <div [style.background-color]="selectedK2? 'rgb(0, 183, 255)':'white'"  (click)="selectedK2=changecolor(selectedK2,firstclass);"class="seat">K2</div>
-                <div [style.background-color]="selectedK3? 'rgb(0, 183, 255)':'white'"  (click)="selectedK3=changecolor(selectedK3,firstclass);"class="seat">K3</div>
-                <div [style.background-color]="selectedK4? 'rgb(0, 183, 255)':'white'"  (click)="selectedK4=changecolor(selectedK4,firstclass);"class="seat">K4</div>
-                <div [style.background-color]="selectedK5? 'rgb(0, 183, 255)':'white'"  (click)="selectedK5=changecolor(selectedK5,firstclass);"class="seat">K5</div>
-                <div [style.background-color]="selectedK6? 'rgb(0, 183, 255)':'white'"  (click)="selectedK6=changecolor(selectedK6,firstclass);"class="seat">K6</div>
-                <div [style.background-color]="selectedK7? 'rgb(0, 183, 255)':'white'"  (click)="selectedK7=changecolor(selectedK7,firstclass);"class="seat">K7</div>
-                <div [style.background-color]="selectedK8? 'rgb(0, 183, 255)':'white'"  (click)="selectedK8=changecolor(selectedK8,firstclass);"class="seat">K8</div>
-                <div [style.background-color]="selectedK9? 'rgb(0, 183, 255)':'white'"  (click)="selectedK9=changecolor(selectedK9,firstclass);"class="seat">K9</div>
-                <div [style.background-color]="selectedK10? 'rgb(0, 183, 255)':'white'"  (click)="selectedK10=changecolor(selectedK10,firstclass);"class="seat">K10</div>
-                
+                <div class="seat">K1</div>
+                <div class="seat">K2</div>
+                <div class="seat">K3</div>
+                <div class="seat">K4</div>
+                <div class="seat">K5</div>
+                <div class="seat">K6</div>
+                <div class="seat">K7</div>
+                <div class="seat">K8</div>
+                <div class="seat">K9</div>
+                <div class="seat">K10</div>
                 <div class="space"></div>
                 <div class="space"></div>
-                <div [style.background-color]="selectedK11? 'rgb(0, 183, 255)':'white'"  (click)="selectedK11=changecolor(selectedK11,firstclass);"class="seat">K11</div>
-                <div [style.background-color]="selectedK12? 'rgb(0, 183, 255)':'white'"  (click)="selectedK12=changecolor(selectedK12,firstclass);"class="seat">K12</div>
-                <div [style.background-color]="selectedK13? 'rgb(0, 183, 255)':'white'"  (click)="selectedK13=changecolor(selectedK13,firstclass);"class="seat">K13</div>
-                <div [style.background-color]="selectedK14? 'rgb(0, 183, 255)':'white'"  (click)="selectedK14=changecolor(selectedK14,firstclass);"class="seat">K14</div>
-                <div [style.background-color]="selectedK15? 'rgb(0, 183, 255)':'white'"  (click)="selectedK15=changecolor(selectedK15,firstclass);"class="seat">K15</div>
-                <div [style.background-color]="selectedK16? 'rgb(0, 183, 255)':'white'"  (click)="selectedK16=changecolor(selectedK16,firstclass);"class="seat">K16</div>
-                <div [style.background-color]="selectedK17? 'rgb(0, 183, 255)':'white'"  (click)="selectedK17=changecolor(selectedK17,firstclass);"class="seat">K17</div>
-                <div [style.background-color]="selectedK18? 'rgb(0, 183, 255)':'white'"  (click)="selectedK18=changecolor(selectedK18,firstclass);"class="seat">K18</div>
-                <div [style.background-color]="selectedK19? 'rgb(0, 183, 255)':'white'"  (click)="selectedK19=changecolor(selectedK19,firstclass);"class="seat">K19</div>
-                <div [style.background-color]="selectedK20? 'rgb(0, 183, 255)':'white'"  (click)="selectedK20=changecolor(selectedK20,firstclass);"class="seat">K20</div>
-                
+                <div class="seat">K11</div>
+                <div class="seat">K12</div>
+                <div class="seat">K13</div>
+                <div class="seat">K14</div>
+                <div class="seat">K15</div>
+                <div class="seat">K16</div>
+                <div class="seat">K17</div>
+                <div class="seat">K18</div>
+                <div class="seat">K19</div>
+                <div class="seat">K20</div>
             </div>
             <div class="gap">
                 Space
             </div>
             <div class="grid-container row12">
-                <div [style.background-color]="selectedL1? 'rgb(0, 183, 255)':'white'"  (click)="selectedL1=changecolor(selectedL1,firstclass);"class="seat">L1</div>
-                <div [style.background-color]="selectedL2? 'rgb(0, 183, 255)':'white'"  (click)="selectedL2=changecolor(selectedL2,firstclass);"class="seat">L2</div>
-                <div [style.background-color]="selectedL3? 'rgb(0, 183, 255)':'white'"  (click)="selectedL3=changecolor(selectedL3,firstclass);"class="seat">L3</div>
-                <div [style.background-color]="selectedL4? 'rgb(0, 183, 255)':'white'"  (click)="selectedL4=changecolor(selectedL4,firstclass);"class="seat">L4</div>
-                <div [style.background-color]="selectedL5? 'rgb(0, 183, 255)':'white'"  (click)="selectedL5=changecolor(selectedL5,firstclass);"class="seat">L5</div>
-                <div [style.background-color]="selectedL6? 'rgb(0, 183, 255)':'white'"  (click)="selectedL6=changecolor(selectedL6,firstclass);"class="seat">L6</div>
-                <div [style.background-color]="selectedL7? 'rgb(0, 183, 255)':'white'"  (click)="selectedL7=changecolor(selectedL7,firstclass);"class="seat">L7</div>
-                <div [style.background-color]="selectedL8? 'rgb(0, 183, 255)':'white'"  (click)="selectedL8=changecolor(selectedL8,firstclass);"class="seat">L8</div>
-                <div [style.background-color]="selectedL9? 'rgb(0, 183, 255)':'white'"  (click)="selectedL9=changecolor(selectedL9,firstclass);"class="seat">L9</div>
-                <div [style.background-color]="selectedL10? 'rgb(0, 183, 255)':'white'"  (click)="selectedL10=changecolor(selectedL10,firstclass);"class="seat">L10</div>
-                
+                <div class="seat">L1</div>
+                <div class="seat">L2</div>
+                <div class="seat">L3</div>
+                <div class="seat">L4</div>
+                <div class="seat">L5</div>
+                <div class="seat">L6</div>
+                <div class="seat">L7</div>
+                <div class="seat">L8</div>
+                <div class="seat">L9</div>
+                <div class="seat">L10</div>
                 <div class="space"></div>
                 <div class="space"></div>
-                <div [style.background-color]="selectedL11? 'rgb(0, 183, 255)':'white'"  (click)="selectedL11=changecolor(selectedL11,firstclass);"class="seat">L11</div>
-                <div [style.background-color]="selectedL12? 'rgb(0, 183, 255)':'white'"  (click)="selectedL12=changecolor(selectedL12,firstclass);"class="seat">L12</div>
-                <div [style.background-color]="selectedL13? 'rgb(0, 183, 255)':'white'"  (click)="selectedL13=changecolor(selectedL13,firstclass);"class="seat">L13</div>
-                <div [style.background-color]="selectedL14? 'rgb(0, 183, 255)':'white'"  (click)="selectedL14=changecolor(selectedL14,firstclass);"class="seat">L14</div>
-                <div [style.background-color]="selectedL15? 'rgb(0, 183, 255)':'white'"  (click)="selectedL15=changecolor(selectedL15,firstclass);"class="seat">L15</div>
-                <div [style.background-color]="selectedL16? 'rgb(0, 183, 255)':'white'"  (click)="selectedL16=changecolor(selectedL16,firstclass);"class="seat">L16</div>
-                <div [style.background-color]="selectedL17? 'rgb(0, 183, 255)':'white'"  (click)="selectedL17=changecolor(selectedL17,firstclass);"class="seat">L17</div>
-                <div [style.background-color]="selectedL18? 'rgb(0, 183, 255)':'white'"  (click)="selectedL18=changecolor(selectedL18,firstclass);"class="seat">L18</div>
-                <div [style.background-color]="selectedL19? 'rgb(0, 183, 255)':'white'"  (click)="selectedL19=changecolor(selectedL19,firstclass);"class="seat">L19</div>
-                <div [style.background-color]="selectedL10? 'rgb(0, 183, 255)':'white'"  (click)="selectedL20=changecolor(selectedL20,firstclass);"class="seat">L20</div>
-                
+                <div class="seat">L11</div>
+                <div class="seat">L12</div>
+                <div class="seat">L13</div>
+                <div class="seat">L14</div>
+                <div class="seat">L15</div>
+                <div class="seat">L16</div>
+                <div class="seat">L17</div>
+                <div class="seat">L18</div>
+                <div class="seat">L19</div>
+                <div class="seat">L20</div>
             </div>
             <div class="grid-container row13">
-                <div [style.background-color]="selectedM1? 'rgb(0, 183, 255)':'white'"  (click)="selectedM1=changecolor(selectedM1,firstclass);"class="seat">M1</div>
-                <div [style.background-color]="selectedM2? 'rgb(0, 183, 255)':'white'"  (click)="selectedM2=changecolor(selectedM2,firstclass);"class="seat">M2</div>
-                <div [style.background-color]="selectedM3? 'rgb(0, 183, 255)':'white'"  (click)="selectedM3=changecolor(selectedM3,firstclass);"class="seat">M3</div>
-                <div [style.background-color]="selectedM4? 'rgb(0, 183, 255)':'white'"  (click)="selectedM4=changecolor(selectedM4,firstclass);"class="seat">M4</div>
-                <div [style.background-color]="selectedM5? 'rgb(0, 183, 255)':'white'"  (click)="selectedM5=changecolor(selectedM5,firstclass);"class="seat">M5</div>
-                <div [style.background-color]="selectedM6? 'rgb(0, 183, 255)':'white'"  (click)="selectedM6=changecolor(selectedM6,firstclass);"class="seat">M6</div>
-                <div [style.background-color]="selectedM7? 'rgb(0, 183, 255)':'white'"  (click)="selectedM7=changecolor(selectedM7,firstclass);"class="seat">M7</div>
-                <div [style.background-color]="selectedM8? 'rgb(0, 183, 255)':'white'"  (click)="selectedM8=changecolor(selectedM8,firstclass);"class="seat">M8</div>
-                <div [style.background-color]="selectedM9? 'rgb(0, 183, 255)':'white'"  (click)="selectedM9=changecolor(selectedM9,firstclass);"class="seat">M9</div>
-                <div [style.background-color]="selectedM10? 'rgb(0, 183, 255)':'white'"  (click)="selectedM10=changecolor(selectedM10,firstclass);"class="seat">M10</div>
-                
+                <div class="seat">M1</div>
+                <div class="seat">M2</div>
+                <div class="seat">M3</div>
+                <div class="seat">M4</div>
+                <div class="seat">M5</div>
+                <div class="seat">M6</div>
+                <div class="seat">M7</div>
+                <div class="seat">M8</div>
+                <div class="seat">M9</div>
+                <div class="seat">M10</div>
                 <div class="space"></div>
                 <div class="space"></div>
-                <div [style.background-color]="selectedM11? 'rgb(0, 183, 255)':'white'"  (click)="selectedM11=changecolor(selectedM11,firstclass);"class="seat">M11</div>
-                <div [style.background-color]="selectedM12? 'rgb(0, 183, 255)':'white'"  (click)="selectedM12=changecolor(selectedM12,firstclass);"class="seat">M12</div>
-                <div [style.background-color]="selectedM13? 'rgb(0, 183, 255)':'white'"  (click)="selectedM13=changecolor(selectedM13,firstclass);"class="seat">M13</div>
-                <div [style.background-color]="selectedM14? 'rgb(0, 183, 255)':'white'"  (click)="selectedM14=changecolor(selectedM14,firstclass);"class="seat">M14</div>
-                <div [style.background-color]="selectedM15? 'rgb(0, 183, 255)':'white'"  (click)="selectedM15=changecolor(selectedM15,firstclass);"class="seat">M15</div>
-                <div [style.background-color]="selectedM16? 'rgb(0, 183, 255)':'white'"  (click)="selectedM16=changecolor(selectedM16,firstclass);"class="seat">M16</div>
-                <div [style.background-color]="selectedM17? 'rgb(0, 183, 255)':'white'"  (click)="selectedM17=changecolor(selectedM17,firstclass);"class="seat">M17</div>
-                <div [style.background-color]="selectedM18? 'rgb(0, 183, 255)':'white'"  (click)="selectedM18=changecolor(selectedM18,firstclass);"class="seat">M18</div>
-                <div [style.background-color]="selectedM19? 'rgb(0, 183, 255)':'white'"  (click)="selectedM19=changecolor(selectedM19,firstclass);"class="seat">M19</div>
-                <div [style.background-color]="selectedM20? 'rgb(0, 183, 255)':'white'"  (click)="selectedM20=changecolor(selectedM20,firstclass);"class="seat">M20</div>
-            
+                <div class="seat">M11</div>
+                <div class="seat">M12</div>
+                <div class="seat">M13</div>
+                <div class="seat">M14</div>
+                <div class="seat">M15</div>
+                <div class="seat">M16</div>
+                <div class="seat">M17</div>
+                <div class="seat">M18</div>
+                <div class="seat">M19</div>
+                <div class="seat">M20</div>
             </div>
             <div class="grid-container row14">
-                <div [style.background-color]="selectedN1? 'rgb(0, 183, 255)':'white'"  (click)="selectedN1=changecolor(selectedN1,firstclass);"class="seat">N1</div>
-                <div [style.background-color]="selectedN2? 'rgb(0, 183, 255)':'white'"  (click)="selectedN2=changecolor(selectedN2,firstclass);"class="seat">N2</div>
-                <div [style.background-color]="selectedN3? 'rgb(0, 183, 255)':'white'"  (click)="selectedN3=changecolor(selectedN3,firstclass);"class="seat">N3</div>
-                <div [style.background-color]="selectedN4? 'rgb(0, 183, 255)':'white'"  (click)="selectedN4=changecolor(selectedN4,firstclass);"class="seat">N4</div>
-                <div [style.background-color]="selectedN5? 'rgb(0, 183, 255)':'white'"  (click)="selectedN5=changecolor(selectedN5,firstclass);"class="seat">N5</div>
-                <div [style.background-color]="selectedN6? 'rgb(0, 183, 255)':'white'"  (click)="selectedN6=changecolor(selectedN6,firstclass);"class="seat">N6</div>
-                <div [style.background-color]="selectedN7? 'rgb(0, 183, 255)':'white'"  (click)="selectedN7=changecolor(selectedN8,firstclass);"class="seat">N7</div>
-                <div [style.background-color]="selectedN8? 'rgb(0, 183, 255)':'white'"  (click)="selectedN8=changecolor(selectedN9,firstclass);"class="seat">N8</div>
-                <div [style.background-color]="selectedN9? 'rgb(0, 183, 255)':'white'"  (click)="selectedN9=changecolor(selectedN10,firstclass);"class="seat">N9</div>
-                <div [style.background-color]="selectedN10? 'rgb(0, 183, 255)':'white'"  (click)="selectedN10=changecolor(selectedN1,firstclass);"class="seat">N10</div>
-                
-                <div  class="space"></div>
+                <div class="seat">N1</div>
+                <div class="seat">N2</div>
+                <div class="seat">N3</div>
+                <div class="seat">N4</div>
+                <div class="seat">N5</div>
+                <div class="seat">N6</div>
+                <div class="seat">N7</div>
+                <div class="seat">N8</div>
+                <div class="seat">N9</div>
+                <div class="seat">N10</div>
                 <div class="space"></div>
-                <div [style.background-color]="selectedN11? 'rgb(0, 183, 255)':'white'"  (click)="selectedN11=changecolor(selectedN11,firstclass);"class="seat">N11</div>
-                <div [style.background-color]="selectedN12? 'rgb(0, 183, 255)':'white'"  (click)="selectedN12=changecolor(selectedN11,firstclass);"class="seat">N12</div>
-                <div [style.background-color]="selectedN13? 'rgb(0, 183, 255)':'white'"  (click)="selectedN13=changecolor(selectedN11,firstclass);"class="seat">N13</div>
-                <div [style.background-color]="selectedN14? 'rgb(0, 183, 255)':'white'"  (click)="selectedN14=changecolor(selectedN11,firstclass);"class="seat">N14</div>
-                <div [style.background-color]="selectedN15? 'rgb(0, 183, 255)':'white'"  (click)="selectedN15=changecolor(selectedN11,firstclass);"class="seat">N15</div>
-                <div [style.background-color]="selectedN16? 'rgb(0, 183, 255)':'white'"  (click)="selectedN16=changecolor(selectedN11,firstclass);"class="seat">N16</div>
-                <div [style.background-color]="selectedN17? 'rgb(0, 183, 255)':'white'"  (click)="selectedN17=changecolor(selectedN11,firstclass);"class="seat">N17</div>
-                <div [style.background-color]="selectedN18? 'rgb(0, 183, 255)':'white'"  (click)="selectedN18=changecolor(selectedN11,firstclass);"class="seat">N18</div>
-                <div [style.background-color]="selectedN19? 'rgb(0, 183, 255)':'white'"  (click)="selectedN19=changecolor(selectedN11,firstclass);"class="seat">N19</div>
-                <div [style.background-color]="selectedN20? 'rgb(0, 183, 255)':'white'"  (click)="selectedN20=changecolor(selectedN11,firstclass);"class="seat">N20</div>
-                
+                <div class="space"></div>
+                <div class="seat">N11</div>
+                <div class="seat">N12</div>
+                <div class="seat">N13</div>
+                <div class="seat">N14</div>
+                <div class="seat">N15</div>
+                <div class="seat">N16</div>
+                <div class="seat">N17</div>
+                <div class="seat">N18</div>
+                <div class="seat">N19</div>
+                <div class="seat">N20</div>
             </div>
             <div class="grid-container row15">
-                <div [style.background-color]="selectedO1? 'rgb(0, 183, 255)':'white'"  (click)="selectedO1=changecolor(selectedO1,firstclass);"class="seat">O1</div>
-                <div [style.background-color]="selectedO2? 'rgb(0, 183, 255)':'white'"  (click)="selectedO2=changecolor(selectedO2,firstclass);"class="seat">O2</div>
-                <div [style.background-color]="selectedO3? 'rgb(0, 183, 255)':'white'"  (click)="selectedO3=changecolor(selectedO3,firstclass);"class="seat">O3</div>
-                <div [style.background-color]="selectedO4? 'rgb(0, 183, 255)':'white'"  (click)="selectedO4=changecolor(selectedO4,firstclass);"class="seat">O4</div>
-                <div [style.background-color]="selectedO5? 'rgb(0, 183, 255)':'white'"  (click)="selectedO5=changecolor(selectedO5,firstclass);"class="seat">O5</div>
-                <div [style.background-color]="selectedO6? 'rgb(0, 183, 255)':'white'"  (click)="selectedO6=changecolor(selectedO6,firstclass);"class="seat">O6</div>
-                <div [style.background-color]="selectedO7? 'rgb(0, 183, 255)':'white'"  (click)="selectedO7=changecolor(selectedO7,firstclass);"class="seat">O7</div>
-                <div [style.background-color]="selectedO8? 'rgb(0, 183, 255)':'white'"  (click)="selectedO8=changecolor(selectedO8,firstclass);"class="seat">O8</div>
-                <div [style.background-color]="selectedO9? 'rgb(0, 183, 255)':'white'"  (click)="selectedO9=changecolor(selectedO9,firstclass);"class="seat">O9</div>
-                <div [style.background-color]="selectedO10? 'rgb(0, 183, 255)':'white'"  (click)="selectedO10=changecolor(selectedO10,firstclass);"class="seat">O10</div>
-                
+                <div class="seat">O1</div>
+                <div class="seat">O2</div>
+                <div class="seat">O3</div>
+                <div class="seat">O4</div>
+                <div class="seat">O5</div>
+                <div class="seat">O6</div>
+                <div class="seat">O7</div>
+                <div class="seat">O8</div>
+                <div class="seat">O9</div>
+                <div class="seat">O10</div>
                 <div class="space"></div>
                 <div class="space"></div>
-                <div [style.background-color]="selectedO11? 'rgb(0, 183, 255)':'white'"  (click)="selectedO11=changecolor(selectedO11,firstclass);"class="seat">O11</div>
-                <div [style.background-color]="selectedO12? 'rgb(0, 183, 255)':'white'"  (click)="selectedO12=changecolor(selectedO12,firstclass);"class="seat">O12</div>
-                <div [style.background-color]="selectedO13? 'rgb(0, 183, 255)':'white'"  (click)="selectedO13=changecolor(selectedO13,firstclass);"class="seat">O13</div>
-                <div [style.background-color]="selectedO14? 'rgb(0, 183, 255)':'white'"  (click)="selectedO14=changecolor(selectedO14,firstclass);"class="seat">O14</div>
-                <div [style.background-color]="selectedO15? 'rgb(0, 183, 255)':'white'"  (click)="selectedO15=changecolor(selectedO15,firstclass);"class="seat">O15</div>
-                <div [style.background-color]="selectedO16? 'rgb(0, 183, 255)':'white'"  (click)="selectedO16=changecolor(selectedO16,firstclass);"class="seat">O16</div>
-                <div [style.background-color]="selectedO17? 'rgb(0, 183, 255)':'white'"  (click)="selectedO17=changecolor(selectedO17,firstclass);"class="seat">O17</div>
-                <div [style.background-color]="selectedO18? 'rgb(0, 183, 255)':'white'"  (click)="selectedO18=changecolor(selectedO18,firstclass);"class="seat">O18</div>
-                <div [style.background-color]="selectedO19? 'rgb(0, 183, 255)':'white'"  (click)="selectedO19=changecolor(selectedO19,firstclass);"class="seat">O19</div>
-                <div [style.background-color]="selectedO20? 'rgb(0, 183, 255)':'white'"  (click)="selectedO20=changecolor(selectedO20,firstclass);"class="seat">O20</div>
-                
-                
+                <div class="seat">O11</div>
+                <div class="seat">O12</div>
+                <div class="seat">O13</div>
+                <div class="seat">O14</div>
+                <div class="seat">O15</div>
+                <div class="seat">O16</div>
+                <div class="seat">O17</div>
+                <div class="seat">O18</div>
+                <div class="seat">O19</div>
+                <div class="seat">O20</div>
             </div>
             <div class="grid-container row16">
-                <div [style.background-color]="selectedP1? 'rgb(0, 183, 255)':'white'"  (click)="selectedP1=changecolor(selectedP1,firstclass);"class="seat">P1</div>
-                <div [style.background-color]="selectedP2? 'rgb(0, 183, 255)':'white'"  (click)="selectedP2=changecolor(selectedP2,firstclass);"class="seat">P2</div>
-                <div [style.background-color]="selectedP3? 'rgb(0, 183, 255)':'white'"  (click)="selectedP3=changecolor(selectedP3,firstclass);"class="seat">P3</div>
-                <div [style.background-color]="selectedP4? 'rgb(0, 183, 255)':'white'"  (click)="selectedP4=changecolor(selectedP4,firstclass);"class="seat">P4</div>
-                <div [style.background-color]="selectedP5? 'rgb(0, 183, 255)':'white'"  (click)="selectedP5=changecolor(selectedP5,firstclass);"class="seat">P5</div>
-                <div [style.background-color]="selectedP6? 'rgb(0, 183, 255)':'white'"  (click)="selectedP6=changecolor(selectedP6,firstclass);"class="seat">P6</div>
-                <div [style.background-color]="selectedP7? 'rgb(0, 183, 255)':'white'"  (click)="selectedP7=changecolor(selectedP7,firstclass);"class="seat">P7</div>
-                <div [style.background-color]="selectedP8? 'rgb(0, 183, 255)':'white'"  (click)="selectedP8=changecolor(selectedP8,firstclass);"class="seat">P8</div>
-                <div [style.background-color]="selectedP9? 'rgb(0, 183, 255)':'white'"  (click)="selectedP9=changecolor(selectedP9,firstclass);"class="seat">P9</div>
-                <div [style.background-color]="selectedP10? 'rgb(0, 183, 255)':'white'"  (click)="selectedP10=changecolor(selectedP10,firstclass);"class="seat">P10</div>
-               
+                <div class="seat">P1</div>
+                <div class="seat">P2</div>
+                <div class="seat">P3</div>
+                <div class="seat">P4</div>
+                <div class="seat">P5</div>
+                <div class="seat">P6</div>
+                <div class="seat">P7</div>
+                <div class="seat">P8</div>
+                <div class="seat">P9</div>
+                <div class="seat">P10</div>
                 <div class="space"></div>
                 <div class="space"></div>
-                <div [style.background-color]="selectedP11? 'rgb(0, 183, 255)':'white'"  (click)="selectedP11=changecolor(selectedP11,firstclass);"class="seat">P11</div>
-                <div [style.background-color]="selectedP12? 'rgb(0, 183, 255)':'white'"  (click)="selectedP12=changecolor(selectedP12,firstclass);"class="seat">P12</div>
-                <div [style.background-color]="selectedP13? 'rgb(0, 183, 255)':'white'"  (click)="selectedP13=changecolor(selectedP13,firstclass);"class="seat">P13</div>
-                <div [style.background-color]="selectedP14? 'rgb(0, 183, 255)':'white'"  (click)="selectedP14=changecolor(selectedP14,firstclass);"class="seat">P14</div>
-                <div [style.background-color]="selectedP15? 'rgb(0, 183, 255)':'white'"  (click)="selectedP15=changecolor(selectedP15,firstclass);"class="seat">P15</div>
-                <div [style.background-color]="selectedP16? 'rgb(0, 183, 255)':'white'"  (click)="selectedP16=changecolor(selectedP16,firstclass);"class="seat">P16</div>
-                <div [style.background-color]="selectedP17? 'rgb(0, 183, 255)':'white'"  (click)="selectedP17=changecolor(selectedP17,firstclass);"class="seat">P17</div>
-                <div [style.background-color]="selectedP18? 'rgb(0, 183, 255)':'white'"  (click)="selectedP18=changecolor(selectedP18,firstclass);"class="seat">P18</div>
-                <div [style.background-color]="selectedP19? 'rgb(0, 183, 255)':'white'"  (click)="selectedP19=changecolor(selectedP19,firstclass);"class="seat">P19</div>
-                <div [style.background-color]="selectedP20? 'rgb(0, 183, 255)':'white'"  (click)="selectedP20=changecolor(selectedP20,firstclass);"class="seat">P20</div>
-                
+                <div class="seat">P11</div>
+                <div class="seat">P12</div>
+                <div class="seat">P13</div>
+                <div class="seat">P14</div>
+                <div class="seat">P15</div>
+                <div class="seat">P16</div>
+                <div class="seat">P17</div>
+                <div class="seat">P18</div>
+                <div class="seat">P19</div>
+                <div class="seat">P20</div>
             </div>
             <div class="secondClass">SECOND CLASS : &#x20B9;100</div>
             <div class="grid-container row17">
-                <div [style.background-color]="selectedQ1? 'rgb(0, 183, 255)':'white'"  (click)="selectedQ1=changecolor(selectedQ1,secondclass);"class="seat">Q1</div>
-                <div [style.background-color]="selectedQ2? 'rgb(0, 183, 255)':'white'"  (click)="selectedQ2=changecolor(selectedQ2,secondclass);"class="seat">Q2</div>
-                <div [style.background-color]="selectedQ3? 'rgb(0, 183, 255)':'white'"  (click)="selectedQ3=changecolor(selectedQ3,secondclass);"class="seat">Q3</div>
-                <div [style.background-color]="selectedQ4? 'rgb(0, 183, 255)':'white'"  (click)="selectedQ4=changecolor(selectedQ4,secondclass);"class="seat">Q4</div>
-                <div [style.background-color]="selectedQ5? 'rgb(0, 183, 255)':'white'"  (click)="selectedQ5=changecolor(selectedQ5,secondclass);"class="seat">Q5</div>
-                <div [style.background-color]="selectedQ6? 'rgb(0, 183, 255)':'white'"  (click)="selectedQ6=changecolor(selectedQ6,secondclass);"class="seat">Q6</div>
-                <div [style.background-color]="selectedQ7? 'rgb(0, 183, 255)':'white'"  (click)="selectedQ7=changecolor(selectedQ7,secondclass);"class="seat">Q7</div>
-                <div [style.background-color]="selectedQ8? 'rgb(0, 183, 255)':'white'"  (click)="selectedQ8=changecolor(selectedQ8,secondclass);"class="seat">Q8</div>
-                <div [style.background-color]="selectedQ9? 'rgb(0, 183, 255)':'white'"  (click)="selectedQ9=changecolor(selectedQ9,secondclass);"class="seat">Q9</div>
-                <div [style.background-color]="selectedQ10? 'rgb(0, 183, 255)':'white'"  (click)="selectedQ10=changecolor(selectedQ10,secondclass);"class="seat">Q10</div>
-                
+                <div class="seat">Q1</div>
+                <div class="seat">Q2</div>
+                <div class="seat">Q3</div>
+                <div class="seat">Q4</div>
+                <div class="seat">Q5</div>
+                <div class="seat">Q6</div>
+                <div class="seat">Q7</div>
+                <div class="seat">Q8</div>
+                <div class="seat">Q9</div>
+                <div class="seat">Q10</div>
                 <div class="space"></div>
                 <div class="space"></div>
-                <div [style.background-color]="selectedQ11? 'rgb(0, 183, 255)':'white'"  (click)="selectedQ11=changecolor(selectedQ11,secondclass);"class="seat">Q11</div>
-                <div [style.background-color]="selectedQ12? 'rgb(0, 183, 255)':'white'"  (click)="selectedQ12=changecolor(selectedQ12,secondclass);"class="seat">Q12</div>
-                <div [style.background-color]="selectedQ13? 'rgb(0, 183, 255)':'white'"  (click)="selectedQ13=changecolor(selectedQ13,secondclass);"class="seat">Q13</div>
-                <div [style.background-color]="selectedQ14? 'rgb(0, 183, 255)':'white'"  (click)="selectedQ14=changecolor(selectedQ14,secondclass);"class="seat">Q14</div>
-                <div [style.background-color]="selectedQ15? 'rgb(0, 183, 255)':'white'"  (click)="selectedQ15=changecolor(selectedQ15,secondclass);"class="seat">Q15</div>
-                <div [style.background-color]="selectedQ16? 'rgb(0, 183, 255)':'white'"  (click)="selectedQ16=changecolor(selectedQ16,secondclass);"class="seat">Q16</div>
-                <div [style.background-color]="selectedQ17? 'rgb(0, 183, 255)':'white'"  (click)="selectedQ17=changecolor(selectedQ17,secondclass);"class="seat">Q17</div>
-                <div [style.background-color]="selectedQ18? 'rgb(0, 183, 255)':'white'"  (click)="selectedQ18=changecolor(selectedQ18,secondclass);"class="seat">Q18</div>
-                <div [style.background-color]="selectedQ19? 'rgb(0, 183, 255)':'white'"  (click)="selectedQ19=changecolor(selectedQ19,secondclass);"class="seat">Q19</div>
-                <div [style.background-color]="selectedQ20? 'rgb(0, 183, 255)':'white'"  (click)="selectedQ20=changecolor(selectedQ20,secondclass);"class="seat">Q20</div>
-                
+                <div class="seat">Q11</div>
+                <div class="seat">Q12</div>
+                <div class="seat">Q13</div>
+                <div class="seat">Q14</div>
+                <div class="seat">Q15</div>
+                <div class="seat">Q16</div>
+                <div class="seat">Q17</div>
+                <div class="seat">Q18</div>
+                <div class="seat">Q19</div>
+                <div class="seat">Q20</div>
             </div>
             <div class="grid-container16 row18">
-                <div [style.background-color]="selectedR1? 'rgb(0, 183, 255)':'white'"  (click)="selectedR1=changecolor(selectedR1,secondclass);"class="seat">R1</div>
-                <div [style.background-color]="selectedR2? 'rgb(0, 183, 255)':'white'"  (click)="selectedR2=changecolor(selectedR2,secondclass);"class="seat">R2</div>
-                <div [style.background-color]="selectedR3? 'rgb(0, 183, 255)':'white'"  (click)="selectedR3=changecolor(selectedR3,secondclass);"class="seat">R3</div>
-                <div [style.background-color]="selectedR4? 'rgb(0, 183, 255)':'white'"  (click)="selectedR4=changecolor(selectedR4,secondclass);"class="seat">R4</div>
-                <div [style.background-color]="selectedR5? 'rgb(0, 183, 255)':'white'"  (click)="selectedR5=changecolor(selectedR5,secondclass);"class="seat">R5</div>
-                <div [style.background-color]="selectedR6? 'rgb(0, 183, 255)':'white'"  (click)="selectedR6=changecolor(selectedR6,secondclass);"class="seat">R6</div>
-                <div [style.background-color]="selectedR7? 'rgb(0, 183, 255)':'white'"  (click)="selectedR7=changecolor(selectedR7,secondclass);"class="seat">R7</div>
-                <div [style.background-color]="selectedR8? 'rgb(0, 183, 255)':'white'"  (click)="selectedR8=changecolor(selectedR8,secondclass);"class="seat">R8</div>
-            
+                <div class="seat">R1</div>
+                <div class="seat">R2</div>
+                <div class="seat">R3</div>
+                <div class="seat">R4</div>
+                <div class="seat">R5</div>
+                <div class="seat">R6</div>
+                <div class="seat">R7</div>
+                <div class="seat">R8</div>
                 <div class="space"></div>
                 <div class="space"></div>
-                <div [style.background-color]="selectedR9? 'rgb(0, 183, 255)':'white'"  (click)="selectedR9=changecolor(selectedR9,secondclass);"class="seat">R9</div>
-                <div [style.background-color]="selectedR10? 'rgb(0, 183, 255)':'white'"  (click)="selectedR10=changecolor(selectedR10,secondclass);"class="seat">R10</div>
-                <div [style.background-color]="selectedR11? 'rgb(0, 183, 255)':'white'"  (click)="selectedR11=changecolor(selectedR11,secondclass);"class="seat">R11</div>
-                <div [style.background-color]="selectedR12? 'rgb(0, 183, 255)':'white'"  (click)="selectedR12=changecolor(selectedR12,secondclass);"class="seat">R12</div>
-                <div [style.background-color]="selectedR13? 'rgb(0, 183, 255)':'white'"  (click)="selectedR13=changecolor(selectedR13,secondclass);"class="seat">R13</div>
-                <div [style.background-color]="selectedR14? 'rgb(0, 183, 255)':'white'"  (click)="selectedR14=changecolor(selectedR14,secondclass);"class="seat">R14</div>
-                <div [style.background-color]="selectedR15? 'rgb(0, 183, 255)':'white'"  (click)="selectedR15=changecolor(selectedR15,secondclass);"class="seat">R15</div>
-                <div [style.background-color]="selectedR16? 'rgb(0, 183, 255)':'white'"  (click)="selectedR16=changecolor(selectedR16,secondclass);"class="seat">R16</div>
-                
+                <div class="seat">R9</div>
+                <div class="seat">R10</div>
+                <div class="seat">R11</div>
+                <div class="seat">R12</div>
+                <div class="seat">R13</div>
+                <div class="seat">R14</div>
+                <div class="seat">R15</div>
+                <div class="seat">R16</div>
             </div>
             <div class="grid-container16 row19">
-                <div [style.background-color]="selectedS1? 'rgb(0, 183, 255)':'white'"  (click)="selectedS1=changecolor(selectedS1,secondclass);"class="seat">S1</div>
-                <div [style.background-color]="selectedS2? 'rgb(0, 183, 255)':'white'"  (click)="selectedS2=changecolor(selectedS2,secondclass);"class="seat">S2</div>
-                <div [style.background-color]="selectedS3? 'rgb(0, 183, 255)':'white'"  (click)="selectedS3=changecolor(selectedS3,secondclass);"class="seat">S3</div>
-                <div [style.background-color]="selectedS4? 'rgb(0, 183, 255)':'white'"  (click)="selectedS4=changecolor(selectedS4,secondclass);"class="seat">S4</div>
-                <div [style.background-color]="selectedS5? 'rgb(0, 183, 255)':'white'"  (click)="selectedS5=changecolor(selectedS5,secondclass);"class="seat">S5</div>
-                <div [style.background-color]="selectedS6? 'rgb(0, 183, 255)':'white'"  (click)="selectedS6=changecolor(selectedS6,secondclass);"class="seat">S6</div>
-                <div [style.background-color]="selectedS7? 'rgb(0, 183, 255)':'white'"  (click)="selectedS7=changecolor(selectedS7,secondclass);"class="seat">S7</div>
-                <div [style.background-color]="selectedS8? 'rgb(0, 183, 255)':'white'"  (click)="selectedS8=changecolor(selectedS8,secondclass);"class="seat">S8</div>
-                
+                <div class="seat">S1</div>
+                <div class="seat">S2</div>
+                <div class="seat">S3</div>
+                <div class="seat">S4</div>
+                <div class="seat">S5</div>
+                <div class="seat">S6</div>
+                <div class="seat">S7</div>
+                <div class="seat">S8</div>
                 <div class="space"></div>
                 <div class="space"></div>
-                <div [style.background-color]="selectedS9? 'rgb(0, 183, 255)':'white'"  (click)="selectedS9=changecolor(selectedS9,secondclass);"class="seat">S9</div>
-                <div [style.background-color]="selectedS10? 'rgb(0, 183, 255)':'white'"  (click)="selectedS10=changecolor(selectedS10,secondclass);"class="seat">S10</div>
-                <div [style.background-color]="selectedS11? 'rgb(0, 183, 255)':'white'"  (click)="selectedS11=changecolor(selectedS11,secondclass);"class="seat">S11</div>
-                <div [style.background-color]="selectedS12? 'rgb(0, 183, 255)':'white'"  (click)="selectedS12=changecolor(selectedS12,secondclass);"class="seat">S12</div>
-                <div [style.background-color]="selectedS13? 'rgb(0, 183, 255)':'white'"  (click)="selectedS13=changecolor(selectedS13,secondclass);"class="seat">S13</div>
-                <div [style.background-color]="selectedS14? 'rgb(0, 183, 255)':'white'"  (click)="selectedS14=changecolor(selectedS14,secondclass);"class="seat">S14</div>
-                <div [style.background-color]="selectedS15? 'rgb(0, 183, 255)':'white'"  (click)="selectedS15=changecolor(selectedS15,secondclass);"class="seat">S15</div>
-                <div [style.background-color]="selectedS16? 'rgb(0, 183, 255)':'white'"  (click)="selectedS16=changecolor(selectedS16,secondclass);"class="seat">S16</div>
-            
+                <div class="seat">S9</div>
+                <div class="seat">S10</div>
+                <div class="seat">S11</div>
+                <div class="seat">S12</div>
+                <div class="seat">S13</div>
+                <div class="seat">S14</div>
+                <div class="seat">S15</div>
+                <div class="seat">S16</div>
             </div>
             <div class="grid-container14 row20">
-                <div [style.background-color]="selectedT1? 'rgb(0, 183, 255)':'white'"  (click)="selectedT1=changecolor(selectedT1,secondclass);"class="seat">T1</div>
-                <div [style.background-color]="selectedT2? 'rgb(0, 183, 255)':'white'"  (click)="selectedT2=changecolor(selectedT2,secondclass);"class="seat">T2</div>
-                <div [style.background-color]="selectedT3? 'rgb(0, 183, 255)':'white'"  (click)="selectedT3=changecolor(selectedT3,secondclass);"class="seat">T3</div>
-                <div [style.background-color]="selectedT4? 'rgb(0, 183, 255)':'white'"  (click)="selectedT4=changecolor(selectedT4,secondclass);"class="seat">T4</div>
-                <div [style.background-color]="selectedT5? 'rgb(0, 183, 255)':'white'"  (click)="selectedT5=changecolor(selectedT5,secondclass);"class="seat">T5</div>
-                <div [style.background-color]="selectedT6? 'rgb(0, 183, 255)':'white'"  (click)="selectedT6=changecolor(selectedT6,secondclass);"class="seat">T6</div>
-                <div [style.background-color]="selectedT7? 'rgb(0, 183, 255)':'white'"  (click)="selectedT7=changecolor(selectedT7,secondclass);"class="seat">T7</div>
-                
+                <div class="seat">T1</div>
+                <div class="seat">T2</div>
+                <div class="seat">T3</div>
+                <div class="seat">T4</div>
+                <div class="seat">T5</div>
+                <div class="seat">T6</div>
+                <div class="seat">T7</div>
                 <div class="space"></div>
                 <div class="space"></div>
-                <div [style.background-color]="selectedT8? 'rgb(0, 183, 255)':'white'"  (click)="selectedT8=changecolor(selectedT8,secondclass);"class="seat">T8</div>
-                <div [style.background-color]="selectedT9? 'rgb(0, 183, 255)':'white'"  (click)="selectedT9=changecolor(selectedT9,secondclass);"class="seat">T9</div>
-                <div [style.background-color]="selectedT10? 'rgb(0, 183, 255)':'white'"  (click)="selectedT10=changecolor(selectedT10,secondclass);"class="seat">T10</div>
-                <div [style.background-color]="selectedT11? 'rgb(0, 183, 255)':'white'"  (click)="selectedT11=changecolor(selectedT11,secondclass);"class="seat">T11</div>
-                <div [style.background-color]="selectedT12? 'rgb(0, 183, 255)':'white'"  (click)="selectedT12=changecolor(selectedT12,secondclass);"class="seat">T12</div>
-                <div [style.background-color]="selectedT13? 'rgb(0, 183, 255)':'white'"  (click)="selectedT13=changecolor(selectedT13,secondclass);"class="seat">T13</div>
-                <div [style.background-color]="selectedT14? 'rgb(0, 183, 255)':'white'"  (click)="selectedT14=changecolor(selectedT14,secondclass);"class="seat">T14</div>
-                
+                <div class="seat">T8</div>
+                <div class="seat">T9</div>
+                <div class="seat">T10</div>
+                <div class="seat">T11</div>
+                <div class="seat">T12</div>
+                <div class="seat">T13</div>
+                <div class="seat">T14</div>
             </div>
             <div class="grid-container14 row21">
-                <div [style.background-color]="selectedU1? 'rgb(0, 183, 255)':'white'"  (click)="selectedU1=changecolor(selectedU1,secondclass);"class="seat">U1</div>
-                <div [style.background-color]="selectedU2? 'rgb(0, 183, 255)':'white'"  (click)="selectedU2=changecolor(selectedU2,secondclass);"class="seat">U2</div>
-                <div [style.background-color]="selectedU3? 'rgb(0, 183, 255)':'white'"  (click)="selectedU3=changecolor(selectedU3,secondclass);"class="seat">U3</div>
-                <div [style.background-color]="selectedU4? 'rgb(0, 183, 255)':'white'"  (click)="selectedU4=changecolor(selectedU4,secondclass);"class="seat">U4</div>
-                <div [style.background-color]="selectedU5? 'rgb(0, 183, 255)':'white'"  (click)="selectedU5=changecolor(selectedU5,secondclass);"class="seat">U5</div>
-                <div [style.background-color]="selectedU6? 'rgb(0, 183, 255)':'white'"  (click)="selectedU6=changecolor(selectedU6,secondclass);"class="seat">U6</div>
-                <div [style.background-color]="selectedU7? 'rgb(0, 183, 255)':'white'"  (click)="selectedU7=changecolor(selectedU7,secondclass);"class="seat">U7</div>
-               
+                <div class="seat">U1</div>
+                <div class="seat">U2</div>
+                <div class="seat">U3</div>
+                <div class="seat">U4</div>
+                <div class="seat">U5</div>
+                <div class="seat">U6</div>
+                <div class="seat">U7</div>
                 <div class="space"></div>
                 <div class="space"></div>
-                <div [style.background-color]="selectedU8? 'rgb(0, 183, 255)':'white'"  (click)="selectedU8=changecolor(selectedU8,secondclass);"class="seat">U8</div>
-                <div [style.background-color]="selectedU9? 'rgb(0, 183, 255)':'white'"  (click)="selectedU9=changecolor(selectedU9,secondclass);"class="seat">U9</div>
-                <div [style.background-color]="selectedU10? 'rgb(0, 183, 255)':'white'"  (click)="selectedU10=changecolor(selectedU10,secondclass);"class="seat">U10</div>
-                <div [style.background-color]="selectedU11? 'rgb(0, 183, 255)':'white'"  (click)="selectedU11=changecolor(selectedU11,secondclass);"class="seat">U11</div>
-                <div [style.background-color]="selectedU12? 'rgb(0, 183, 255)':'white'"  (click)="selectedU12=changecolor(selectedU12,secondclass);"class="seat">U12</div>
-                <div [style.background-color]="selectedU13? 'rgb(0, 183, 255)':'white'"  (click)="selectedU13=changecolor(selectedU13,secondclass);"class="seat">U13</div>
-                <div [style.background-color]="selectedU14? 'rgb(0, 183, 255)':'white'"  (click)="selectedU14=changecolor(selectedU14,secondclass);"class="seat">U14</div>
-               
+                <div class="seat">U8</div>
+                <div class="seat">U9</div>
+                <div class="seat">U10</div>
+                <div class="seat">U11</div>
+                <div class="seat">U12</div>
+                <div class="seat">U13</div>
+                <div class="seat">U14</div>
             </div>
         </div>
     </div>

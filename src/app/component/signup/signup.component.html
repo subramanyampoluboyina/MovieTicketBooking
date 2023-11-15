@@ -1,1 +1,118 @@
-<p>signup works!</p>
+<nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#" style="font-weight: 600;">MovieTicketBooking</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <!-- <li class="nav-item">
+            <a class="nav-link active" routerLink="">Menu Item</a>
+          </li> -->
+      </ul>
+      <!-- <span>
+          <a class="nav-link active fw-semibold" routerLink="/"><i class="fa-solid fa-user fa-lg pb-2" style="color: #005eff;"></i> SignIn</a>
+        </span> -->
+    </div>
+  </div>
+</nav>
+<div class="container-fluid">
+  <div class="main">
+    <div class="signin-content">
+      <div class="signin-content-in">
+        <form #signupform="ngForm" (ngSubmit)="OnSubmit(signupform)" id="form">
+          <div class="heading">
+            <h2>Sign-up</h2>
+          </div>
+          <div class="email">
+            <label for="email" class="fw-semibold">Email:</label><br>
+            <input type="email" #email="ngModel" [(ngModel)]="userdetails.email" id="email" name="email"
+              placeholder="Enter email" required
+              pattern="[A-Za-z0-9._%+-]{3,}@[a-zA-Z]{3,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})"><br>
+          </div>
+          <div class="text-danger pb-1" *ngIf="email.dirty && email.errors?.['required']">
+            *Email is required
+          </div>
+          <div class="text-danger pb-1" *ngIf="email.dirty && email.errors?.['pattern']">
+            *Invalid input
+          </div>
+          <div class="mobile">
+            <label for="mobile" class="fw-semibold">Mobile:</label><br>
+            <input type="tel" #mobile="ngModel" [(ngModel)]="userdetails.mobile" id="mobile" name="mobile"
+              placeholder="Enter mobile number" required pattern="[6-9]{1}[0-9]{9}">
+          </div>
+          <div class="text-danger pb-1" *ngIf="mobile.dirty && mobile.errors?.['required']">
+            *Mobile number is required
+          </div>
+          <div class="text-danger pb-1" *ngIf="mobile.dirty && mobile.errors?.['pattern']">
+            *Invalid input
+          </div>
+          <div class="password">
+            <label for="password" class="fw-semibold">Password:</label><br>
+            <input type="password" #password="ngModel" [(ngModel)]="userdetails.password" id="password" name="password"
+              placeholder="Enter password" required
+              pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$"><br>
+          </div>
+          <div class="text-danger pb-1" *ngIf="password.dirty && password.errors?.['required']">
+            *Password is required
+          </div>
+          <div class="text-danger pb-1" *ngIf="password.dirty && password.errors?.['pattern']">
+            *Invalid input
+          </div>
+          <div class="cpassword">
+            <label for="cpassword" class="fw-semibold">Confirm Password:</label><br>
+            <input type="password" #cpassword="ngModel" [(ngModel)]="userdetails.cpassword" id="cpassword"
+              name="cpassword" placeholder="Confirm password" required
+              pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$"><br>
+          </div>
+          <div class="text-danger pb-1" *ngIf="cpassword.dirty && cpassword.errors?.['required']">
+            *Confirm password is required
+          </div>
+          <div class="text-danger pb-1" *ngIf="cpassword.dirty && cpassword.errors?.['pattern']">
+            *Invalid input
+          </div>
+          <div class="text-danger" *ngIf="cpassword.touched && cpassword.value != password.value">
+            *Password not matched
+          </div>
+          <div class="check">
+            <input type="checkbox" #terms="ngModel" [(ngModel)]="userdetails.terms" name="terms" required><span
+              class="fw-semibold"> Terms & Conditions</span>
+            <div class="text-danger" *ngIf="terms.dirty && terms.errors?.['required']">
+              *Feild is required
+            </div>
+          </div>
+          <div class="signup-button">
+            <button class="btn2 fw-semibold signup-btn" type="submit">Sign up</button>
+          </div>
+          <div class="divider d-flex align-items-center mx-1 my-4">
+            <p class="text-center mx-3 mb-0  text-muted">OR</p>
+          </div>
+
+          <div class="button d-grid gap-2 my-3">
+            <a class="link" href="https://myaccount.google.com/?utm_source=sign_in_no_continue&pli=1"><button
+                class="btn btn2 btn-outline-info" formaction=""><i class="fa-brands fa-google"
+                  style="color: #005eff;"></i> Log in with Google </button></a>
+          </div>
+          <div class="button d-grid gap-2 my-3">
+            <a class="link" href="https://www.facebook.com/login/"><button class="btn btn2 btn-outline-info"
+                formaction=""><i class="fa-brands fa-facebook" style="color: #005eff;"></i> Log in with Facebook
+              </button></a>
+          </div>
+          <div class="button d-grid gap-2 my-3">
+            <a class="link"
+              href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoiZW4ifQ%3D%3D%22%7D"><button
+                class="btn btn2 btn-outline-info" formaction=""><i class="fa-brands fa-twitter"
+                  style="color: #005eff;"></i> Log in with Twitter </button></a>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="login my-4">
+      <span>Already have an account? </span> <a routerLink="/userlogin" class="fw-semibold"> Login here</a>
+  </div>
+  </div>
+</div>
+<div class="footer py-2">
+  <span>&copy;MovieTicketBooking. All rights reserved.</span>
+</div>
