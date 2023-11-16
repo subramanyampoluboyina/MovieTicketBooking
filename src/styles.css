@@ -180,8 +180,12 @@ input{
 }
 .seating-navbar{
     display: grid;
-    grid-template-columns: 70% 20% 10%;
+    grid-template-columns:  3% 67% 20% 10%;
     width: 100%;
+}
+.back{
+    text-align: center;
+    padding-top: 10px;
 }
 .book-btn{
     width: 100%;

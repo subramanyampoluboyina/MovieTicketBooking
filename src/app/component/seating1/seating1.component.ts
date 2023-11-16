@@ -8,10 +8,9 @@ import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/co
 })
 export class Seating1Component implements OnInit {
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+
   }
-
-
+  
   public selectedA1: boolean = false; selectedA2: boolean = false; selectedA3: boolean = false;
   public selectedA4: boolean = false; selectedA5: boolean = false; selectedA6: boolean = false;
   public selectedA7: boolean = false; selectedA8: boolean = false; selectedA9: boolean = false;
