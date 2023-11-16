@@ -178,7 +178,7 @@ input{
     font-size:small;
     font-weight: 610;
 }
-.seating-top{
+.seating-navbar{
     display: grid;
     grid-template-columns: 70% 20% 10%;
     width: 100%;
