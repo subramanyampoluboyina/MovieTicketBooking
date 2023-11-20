@@ -7,149 +7,270 @@
     </div>
     <div class="cost-seat">
         <div class="seat-count">
-            <span>Seats: <span>{{count}}</span></span>
+            <span>Seats: <span class="fw-semibold">{{userdetails.count}}</span></span>
         </div>
         <div class="cost">
-            <span>Price: <span class="fw-semibold">&#x20B9;{{totalprice}}</span></span>
+            <span>Price: <span class="fw-semibold" >&#x20B9;{{userdetails.totalprice}}</span></span>
         </div>
     </div>
-    <button class="book-btn">Book</button>
+    <button class="book-btn" (click)="bookTicket()">Book</button>
 </div>
 <div class="container-fluid">
     <div class="main">
         <div class="content">
             <div class="balcony">BALCONY : &#x20B9;150</div>
             <div class="grid-container row1">
-                <div [style.background-color]="selectedA1? 'rgb(0, 183, 255)':'white'"
-                    (click)="selectedA1=changecolor(selectedA1,balcony);" class="seat">A1</div>
-                <div [style.background-color]="selectedA2? 'rgb(0, 183, 255)':'white'"
-                    (click)="selectedA2=changecolor(selectedA2,balcony);" class="seat">A2</div>
-                <div [style.background-color]="selectedA3? 'rgb(0, 183, 255)':'white'"
-                    (click)="selectedA3=changecolor(selectedA3,balcony);" class="seat">A3</div>
-                <div [style.background-color]="selectedA4? 'rgb(0, 183, 255)':'white'"
-                    (click)="selectedA4=changecolor(selectedA4,balcony);" class="seat">A4</div>
-                <div [style.background-color]="selectedA5? 'rgb(0, 183, 255)':'white'"
-                    (click)="selectedA5=changecolor(selectedA5,balcony);" class="seat">A5</div>
-                <div [style.background-color]="selectedA6? 'rgb(0, 183, 255)':'white'"
-                    (click)="selectedA6=changecolor(selectedA6,balcony);" class="seat">A6</div>
-                <div [style.background-color]="selectedA7? 'rgb(0, 183, 255)':'white'"
-                    (click)="selectedA7=changecolor(selectedA7,balcony);" class="seat">A7</div>
-                <div [style.background-color]="selectedA8? 'rgb(0, 183, 255)':'white'"
-                    (click)="selectedA8=changecolor(selectedA8,balcony);" class="seat">A8</div>
-                <div [style.background-color]="selectedA9? 'rgb(0, 183, 255)':'white'"
-                    (click)="selectedA9=changecolor(selectedA9,balcony);" class="seat">A9</div>
-                <div [style.background-color]="selectedA10? 'rgb(0, 183, 255)':'white'"
-                    (click)="selectedA10=changecolor(selectedA10,balcony);" class="seat">A10</div>
+                <div *ngIf="!booked" [style.background-color]="selectedA1? 'deepskyblue':'white'"
+                    (click)="selectedA1=changecolor(selectedA1,balcony,$event);" class="seat">A1</div>
+                <div *ngIf="booked" [style.background-color]="selectedA1? 'lightgray':'white'" class="seat" id="A1" >A1</div>
+                
+                <div *ngIf="!booked" [style.background-color]="selectedA2? 'deepskyblue':'white'"
+                    (click)="selectedA2=changecolor(selectedA2,balcony,$event);" class="seat" >A2</div>
+                <div *ngIf="booked" [style.background-color]="selectedA2? 'lightgray':'white'" class="seat" >A2</div>
+
+                <div *ngIf="!booked" [style.background-color]="selectedA3? 'deepskyblue':'white'"
+                    (click)="selectedA3=changecolor(selectedA3,balcony,$event);" class="seat">A3</div>
+                <div *ngIf="booked" [style.background-color]="selectedA3? 'lightgray':'white'" class="seat">A3</div>
+
+                <div *ngIf="!booked" [style.background-color]="selectedA4? 'deepskyblue':'white'"
+                    (click)="selectedA4=changecolor(selectedA4,balcony,$event);" class="seat">A4</div>
+                <div *ngIf="booked" [style.background-color]="selectedA4? 'lightgray':'white'" class="seat">A4</div>
+                
+                <div *ngIf="!booked" [style.background-color]="selectedA5? 'deepskyblue':'white'"
+                    (click)="selectedA5=changecolor(selectedA5,balcony,$event);" class="seat">A5</div>
+                <div *ngIf="booked" [style.background-color]="selectedA5? 'lightgray':'white'" class="seat">A5</div>
+
+                <div *ngIf="!booked" [style.background-color]="selectedA6? 'deepskyblue':'white'"
+                    (click)="selectedA6=changecolor(selectedA6,balcony,$event);" class="seat">A6</div>
+                <div *ngIf="booked" [style.background-color]="selectedA6? 'lightgray':'white'" class="seat">A6</div>
+
+                <div *ngIf="!booked" [style.background-color]="selectedA7? 'deepskyblue':'white'"
+                    (click)="selectedA7=changecolor(selectedA7,balcony,$event);" class="seat">A7</div>
+                <div *ngIf="booked" [style.background-color]="selectedA7? 'lightgray':'white'" class="seat">A7</div>
+
+                <div *ngIf="!booked" [style.background-color]="selectedA8? 'deepskyblue':'white'"
+                    (click)="selectedA8=changecolor(selectedA8,balcony,$event);" class="seat">A8</div>
+                <div *ngIf="booked" [style.background-color]="selectedA8? 'lightgray':'white'" class="seat">A8</div>
+
+                <div *ngIf="!booked" [style.background-color]="selectedA9? 'deepskyblue':'white'"
+                    (click)="selectedA9=changecolor(selectedA9,balcony,$event);" class="seat">A9</div>
+                <div *ngIf="booked" [style.background-color]="selectedA9? 'lightgray':'white'" class="seat">A9</div>
+
+                <div *ngIf="!booked" [style.background-color]="selectedA10? 'deepskyblue':'white'"
+                    (click)="selectedA10=changecolor(selectedA10,balcony,$event);" class="seat">A10</div>
+                <div *ngIf="booked" [style.background-color]="selectedA10? 'lightgray':'white'" class="seat">A10</div>
+
                 <div class="space"></div>
                 <div class="space"></div>
-                <div [style.background-color]="selectedA11? 'rgb(0, 183, 255)':'white'"
-                    (click)="selectedA11=changecolor(selectedA11,balcony);" class="seat">A11</div>
-                <div [style.background-color]="selectedA12? 'rgb(0, 183, 255)':'white'"
-                    (click)="selectedA12=changecolor(selectedA12,balcony);" class="seat">A12</div>
-                <div [style.background-color]="selectedA13? 'rgb(0, 183, 255)':'white'"
-                    (click)="selectedA13=changecolor(selectedA13,balcony);" class="seat">A13</div>
-                <div [style.background-color]="selectedA14? 'rgb(0, 183, 255)':'white'"
-                    (click)="selectedA14=changecolor(selectedA14,balcony);" class="seat">A14</div>
-                <div [style.background-color]="selectedA15? 'rgb(0, 183, 255)':'white'"
-                    (click)="selectedA15=changecolor(selectedA15,balcony);" class="seat">A15</div>
-                <div [style.background-color]="selectedA16? 'rgb(0, 183, 255)':'white'"
-                    (click)="selectedA16=changecolor(selectedA16,balcony);" class="seat">A16</div>
-                <div [style.background-color]="selectedA17? 'rgb(0, 183, 255)':'white'"
-                    (click)="selectedA17=changecolor(selectedA17,balcony);" class="seat">A17</div>
-                <div [style.background-color]="selectedA18? 'rgb(0, 183, 255)':'white'"
-                    (click)="selectedA18=changecolor(selectedA18,balcony);" class="seat">A18</div>
-                <div [style.background-color]="selectedA19? 'rgb(0, 183, 255)':'white'"
-                    (click)="selectedA19=changecolor(selectedA19,balcony);" class="seat">A19</div>
-                <div [style.background-color]="selectedA20? 'rgb(0, 183, 255)':'white'"
-                    (click)="selectedA20=changecolor(selectedA20,balcony);" class="seat">A20</div>
+                <div *ngIf="!booked" [style.background-color]="selectedA11? 'deepskyblue':'white'"
+                    (click)="selectedA11=changecolor(selectedA11,balcony,$event);" class="seat">A11</div>
+                <div *ngIf="booked" [style.background-color]="selectedA11? 'lightgray':'white'" class="seat">A11</div>
+
+                <div *ngIf="!booked" [style.background-color]="selectedA12? 'deepskyblue':'white'"
+                    (click)="selectedA12=changecolor(selectedA12,balcony,$event);" class="seat">A12</div>
+                <div *ngIf="booked" [style.background-color]="selectedA12? 'lightgray':'white'" class="seat">A12</div>
+
+                <div *ngIf="!booked" [style.background-color]="selectedA13? 'deepskyblue':'white'"
+                    (click)="selectedA13=changecolor(selectedA13,balcony,$event);" class="seat">A13</div>
+                <div *ngIf="booked" [style.background-color]="selectedA13? 'lightgray':'white'" class="seat">A13</div>
+
+                <div *ngIf="!booked" [style.background-color]="selectedA14? 'deepskyblue':'white'"
+                    (click)="selectedA14=changecolor(selectedA14,balcony,$event);" class="seat">A14</div>
+                <div *ngIf="booked" [style.background-color]="selectedA14? 'lightgray':'white'" class="seat">A14</div>
+
+                <div *ngIf="!booked" [style.background-color]="selectedA15? 'deepskyblue':'white'"
+                    (click)="selectedA15=changecolor(selectedA15,balcony,$event);" class="seat">A15</div>
+                <div *ngIf="booked" [style.background-color]="selectedA15? 'lightgray':'white'" class="seat">A15</div>
+
+                <div *ngIf="!booked" [style.background-color]="selectedA16? 'deepskyblue':'white'"
+                    (click)="selectedA16=changecolor(selectedA16,balcony,$event);" class="seat" value="A16">A16</div>
+                <div *ngIf="booked" [style.background-color]="selectedA16? 'lightgray':'white'" class="seat" value="A16" >A16</div>
+
+                <div *ngIf="!booked" [style.background-color]="selectedA17? 'deepskyblue':'white'"
+                    (click)="selectedA17=changecolor(selectedA1,balcony,$event);" class="seat" value="A17">A17</div>
+                <div *ngIf="booked" [style.background-color]="selectedA17? 'lightgray':'white'" class="seat" value="A17" >A1</div>
+
+                <div *ngIf="!booked" [style.background-color]="selectedA18? 'deepskyblue':'white'"
+                    (click)="selectedA18=changecolor(selectedA18,balcony,$event);" class="seat">A18</div>
+                <div *ngIf="booked" [style.background-color]="selectedA18? 'lightgray':'white'" class="seat" >A18</div>
+
+                <div *ngIf="!booked" [style.background-color]="selectedA19? 'deepskyblue':'white'"
+                    (click)="selectedA19=changecolor(selectedA19,balcony,$event);" class="seat">A19</div>
+                <div *ngIf="booked" [style.background-color]="selectedA19? 'lightgray':'white'" class="seat" >A19</div>
+
+                <div *ngIf="!booked" [style.background-color]="selectedA20? 'deepskyblue':'white'"
+                    (click)="selectedA20=changecolor(selectedA20,balcony,$event);" class="seat">A20</div>
+                <div *ngIf="booked" [style.background-color]="selectedA20? 'lightgray':'white'" class="seat" >A20</div>
+
             </div>
             <div class="grid-container row2">
-                <div [style.background-color]="selectedB1? 'rgb(0, 183, 255)':'white'"
-                    (click)="selectedB1=changecolor(selectedB1,balcony);" class="seat">B1</div>
-                <div [style.background-color]="selectedB2? 'rgb(0, 183, 255)':'white'"
-                    (click)="selectedB2=changecolor(selectedB2,balcony);" class="seat">B2</div>
-                <div [style.background-color]="selectedB3? 'rgb(0, 183, 255)':'white'"
-                    (click)="selectedB3=changecolor(selectedB3,balcony);" class="seat">B3</div>
-                <div [style.background-color]="selectedB4? 'rgb(0, 183, 255)':'white'"
-                    (click)="selectedB4=changecolor(selectedB4,balcony);" class="seat">B4</div>
-                <div [style.background-color]="selectedB5? 'rgb(0, 183, 255)':'white'"
-                    (click)="selectedB5=changecolor(selectedB5,balcony);" class="seat">B5</div>
-                <div [style.background-color]="selectedB6? 'rgb(0, 183, 255)':'white'"
-                    (click)="selectedB6=changecolor(selectedB6,balcony);" class="seat">B6</div>
-                <div [style.background-color]="selectedB7? 'rgb(0, 183, 255)':'white'"
-                    (click)="selectedB7=changecolor(selectedB7,balcony);" class="seat">B7</div>
-                <div [style.background-color]="selectedB8? 'rgb(0, 183, 255)':'white'"
-                    (click)="selectedB8=changecolor(selectedB8,balcony);" class="seat">B8</div>
-                <div [style.background-color]="selectedB9? 'rgb(0, 183, 255)':'white'"
-                    (click)="selectedB9=changecolor(selectedB9,balcony);" class="seat">B9</div>
-                <div [style.background-color]="selectedB10? 'rgb(0, 183, 255)':'white'"
-                    (click)="selectedB10=changecolor(selectedB10,balcony);" class="seat">B10</div>
+                <div  [style.background-color]="selectedB1? 'deepskyblue':'white'"
+                    (click)="selectedB1=changecolor(selectedB1,balcony,$event);" class="seat" id="B1">B1</div>
+                <div *ngIf="booked" [style.background-color]="selectedB1? 'lightgray':'white'" class="seat" id="B1" >B1</div>
+                
+                <div  [style.background-color]="selectedB2? 'deepskyblue':'white'"
+                    (click)="selectedB2=changecolor(selectedB2,balcony,$event);" class="seat" id="B2" >B2</div>
+                <div *ngIf="booked" [style.background-color]="selectedB2? 'lightgray':'white'" class="seat" >B2</div>
+
+                <div  [style.background-color]="selectedB3? 'deepskyblue':'white'"
+                    (click)="selectedB3=changecolor(selectedB3,balcony,$event);" class="seat" id="B3">B3</div>
+                <div *ngIf="booked" [style.background-color]="selectedB3? 'lightgray':'white'" class="seat">B3</div>
+
+                <div *ngIf="!booked" [style.background-color]="selectedB4? 'deepskyblue':'white'"
+                    (click)="selectedB4=changecolor(selectedB4,balcony,$event);" class="seat">B4</div>
+                <div *ngIf="booked" [style.background-color]="selectedB4? 'lightgray':'white'" class="seat">B4</div>
+                
+                <div *ngIf="!booked" [style.background-color]="selectedB5? 'deepskyblue':'white'"
+                    (click)="selectedB5=changecolor(selectedB5,balcony,$event);" class="seat">B5</div>
+                <div *ngIf="booked" [style.background-color]="selectedB5? 'lightgray':'white'" class="seat">B5</div>
+
+                <div *ngIf="!booked" [style.background-color]="selectedB6? 'deepskyblue':'white'"
+                    (click)="selectedB6=changecolor(selectedB6,balcony,$event);" class="seat">B6</div>
+                <div *ngIf="booked" [style.background-color]="selectedB6? 'lightgray':'white'" class="seat">B6</div>
+
+                <div *ngIf="!booked" [style.background-color]="selectedB7? 'deepskyblue':'white'"
+                    (click)="selectedB7=changecolor(selectedB7,balcony,$event);" class="seat">B7</div>
+                <div *ngIf="booked" [style.background-color]="selectedB7? 'lightgray':'white'" class="seat">B7</div>
+
+                <div *ngIf="!booked" [style.background-color]="selectedB8? 'deepskyblue':'white'"
+                    (click)="selectedB8=changecolor(selectedA8,balcony,$event);" class="seat">B8</div>
+                <div *ngIf="booked" [style.background-color]="selectedB8? 'lightgray':'white'" class="seat">B8</div>
+
+                <div *ngIf="!booked" [style.background-color]="selectedB9? 'deepskyblue':'white'"
+                    (click)="selectedB9=changecolor(selectedB9,balcony,$event);" class="seat">B9</div>
+                <div *ngIf="booked" [style.background-color]="selectedB9? 'lightgray':'white'" class="seat">B9</div>
+
+                <div *ngIf="!booked" [style.background-color]="selectedB10? 'deepskyblue':'white'"
+                    (click)="selectedB10=changecolor(selectedB10,balcony,$event);" class="seat">B10</div>
+                <div *ngIf="booked" [style.background-color]="selectedB10? 'lightgray':'white'" class="seat">B10</div>
+
                 <div class="space"></div>
                 <div class="space"></div>
-                <div [style.background-color]="selectedB11? 'rgb(0, 183, 255)':'white'"
-                    (click)="selectedB11=changecolor(selectedA1,balcony);" class="seat">B11</div>
-                <div [style.background-color]="selectedB12? 'rgb(0, 183, 255)':'white'"
-                    (click)="selectedB12=changecolor(selectedA1,balcony);" class="seat">B12</div>
-                <div [style.background-color]="selectedB13? 'rgb(0, 183, 255)':'white'"
-                    (click)="selectedB13=changecolor(selectedA1,balcony);" class="seat">B13</div>
-                <div [style.background-color]="selectedB14? 'rgb(0, 183, 255)':'white'"
-                    (click)="selectedB14=changecolor(selectedA1,balcony);" class="seat">B14</div>
-                <div [style.background-color]="selectedB15? 'rgb(0, 183, 255)':'white'"
-                    (click)="selectedB15=changecolor(selectedA1,balcony);" class="seat">B15</div>
-                <div [style.background-color]="selectedB16? 'rgb(0, 183, 255)':'white'"
-                    (click)="selectedB16=changecolor(selectedA1,balcony);" class="seat">B16</div>
-                <div [style.background-color]="selectedB17? 'rgb(0, 183, 255)':'white'"
-                    (click)="selectedB17=changecolor(selectedA1,balcony);" class="seat">B17</div>
-                <div [style.background-color]="selectedB18? 'rgb(0, 183, 255)':'white'"
-                    (click)="selectedB18=changecolor(selectedA1,balcony);" class="seat">B18</div>
-                <div [style.background-color]="selectedB19? 'rgb(0, 183, 255)':'white'"
-                    (click)="selectedB19=changecolor(selectedA1,balcony);" class="seat">B19</div>
-                <div [style.background-color]="selectedB20? 'rgb(0, 183, 255)':'white'"
-                    (click)="selectedB20=changecolor(selectedA1,balcony);" class="seat">B20</div>
+                <div *ngIf="!booked" [style.background-color]="selectedB11? 'deepskyblue':'white'"
+                    (click)="selectedB11=changecolor(selectedB11,balcony,$event);" class="seat">B11</div>
+                <div *ngIf="booked" [style.background-color]="selectedB11? 'lightgray':'white'" class="seat">B11</div>
+
+                <div *ngIf="!booked" [style.background-color]="selectedB12? 'deepskyblue':'white'"
+                    (click)="selectedB12=changecolor(selectedB12,balcony,$event);" class="seat">B12</div>
+                <div *ngIf="booked" [style.background-color]="selectedB12? 'lightgray':'white'" class="seat">B12</div>
+
+                <div *ngIf="!booked" [style.background-color]="selectedB13? 'deepskyblue':'white'"
+                    (click)="selectedB13=changecolor(selectedB13,balcony,$event);" class="seat">B13</div>
+                <div *ngIf="booked" [style.background-color]="selectedB13? 'lightgray':'white'" class="seat">B13</div>
+
+                <div *ngIf="!booked" [style.background-color]="selectedB14? 'deepskyblue':'white'"
+                    (click)="selectedB14=changecolor(selectedB14,balcony,$event);" class="seat">B14</div>
+                <div *ngIf="booked" [style.background-color]="selectedB14? 'lightgray':'white'" class="seat">B14</div>
+
+                <div *ngIf="!booked" [style.background-color]="selectedB15? 'deepskyblue':'white'"
+                    (click)="selectedB15=changecolor(selectedB15,balcony,$event);" class="seat">B15</div>
+                <div *ngIf="booked" [style.background-color]="selectedB15? 'lightgray':'white'" class="seat">B15</div>
+
+                <div *ngIf="!booked" [style.background-color]="selectedB16? 'deepskyblue':'white'"
+                    (click)="selectedB16=changecolor(selectedB16,balcony,$event);" class="seat" value="B16">A16</div>
+                <div *ngIf="booked" [style.background-color]="selectedB16? 'lightgray':'white'" class="seat" value="B16" >A16</div>
+
+                <div *ngIf="!booked" [style.background-color]="selectedB17? 'deepskyblue':'white'"
+                    (click)="selectedB17=changecolor(selectedB17,balcony,$event);" class="seat" value="B17">B17</div>
+                <div *ngIf="booked" [style.background-color]="selectedB17? 'lightgray':'white'" class="seat" value="A17" >B17</div>
+
+                <div *ngIf="!booked" [style.background-color]="selectedB18? 'deepskyblue':'white'"
+                    (click)="selectedB18=changecolor(selectedB18,balcony,$event);" class="seat">B18</div>
+                <div *ngIf="booked" [style.background-color]="selectedB18? 'lightgray':'white'" class="seat" >B18</div>
+
+                <div *ngIf="!booked" [style.background-color]="selectedB19? 'deepskyblue':'white'"
+                    (click)="selectedB19=changecolor(selectedB19,balcony,$event);" class="seat">B19</div>
+                <div *ngIf="booked" [style.background-color]="selectedB19? 'lightgray':'white'" class="seat" >C19</div>
+
+                <div *ngIf="!booked" [style.background-color]="selectedB20? 'deepskyblue':'white'"
+                    (click)="selectedB20=changecolor(selectedB20,balcony,$event);" class="seat">B20</div>
+                <div *ngIf="booked" [style.background-color]="selectedB20? 'lightgray':'white'" class="seat" >B20</div>
+
             </div>
             <div class="grid-container row3">
-                <div [style.background-color]="selectedC1? 'rgb(0, 183, 255)':'white'"
-                    (click)="selectedC1=changecolor(selectedC1,balcony);" class="seat">C1</div>
-                <div [style.background-color]="selectedC2? 'rgb(0, 183, 255)':'white'"
-                    (click)="selectedC2=changecolor(selectedC2,balcony);" class="seat">C2</div>
-                <div [style.background-color]="selectedC3? 'rgb(0, 183, 255)':'white'"
-                    (click)="selectedC3=changecolor(selectedC3,balcony);" class="seat">C3</div>
-                <div [style.background-color]="selectedC4? 'rgb(0, 183, 255)':'white'"
-                    (click)="selectedC4=changecolor(selectedC4,balcony);" class="seat">C4</div>
-                <div [style.background-color]="selectedC5? 'rgb(0, 183, 255)':'white'"
-                    (click)="selectedC5=changecolor(selectedC5,balcony);" class="seat">C5</div>
-                <div [style.background-color]="selectedC6? 'rgb(0, 183, 255)':'white'"
-                    (click)="selectedC6=changecolor(selectedC6,balcony);" class="seat">C6</div>
-                <div [style.background-color]="selectedC7? 'rgb(0, 183, 255)':'white'"
-                    (click)="selectedC7=changecolor(selectedC7,balcony);" class="seat">C7</div>
-                <div [style.background-color]="selectedC8? 'rgb(0, 183, 255)':'white'"
-                    (click)="selectedC8=changecolor(selectedC8,balcony);" class="seat">C8</div>
-                <div [style.background-color]="selectedC9? 'rgb(0, 183, 255)':'white'"
-                    (click)="selectedC9=changecolor(selectedC9,balcony);" class="seat">C9</div>
-                <div [style.background-color]="selectedC10? 'rgb(0, 183, 255)':'white'"
-                    (click)="selectedC10=changecolor(selectedC10,balcony);" class="seat">C10</div>
-                <div class="space"></div>
-                <div class="space"></div>
-                <div [style.background-color]="selectedC11? 'rgb(0, 183, 255)':'white'"
-                    (click)="selectedC11=changecolor(selectedC11,balcony);" class="seat">C11</div>
-                <div [style.background-color]="selectedC12? 'rgb(0, 183, 255)':'white'"
-                    (click)="selectedC12=changecolor(selectedC12,balcony);" class="seat">C12</div>
-                <div [style.background-color]="selectedC13? 'rgb(0, 183, 255)':'white'"
-                    (click)="selectedC13=changecolor(selectedC13,balcony);" class="seat">C13</div>
-                <div [style.background-color]="selectedC14? 'rgb(0, 183, 255)':'white'"
-                    (click)="selectedC14=changecolor(selectedC14,balcony);" class="seat">C14</div>
-                <div [style.background-color]="selectedC15? 'rgb(0, 183, 255)':'white'"
-                    (click)="selectedC15=changecolor(selectedC15,balcony);" class="seat">C15</div>
-                <div [style.background-color]="selectedC16? 'rgb(0, 183, 255)':'white'"
-                    (click)="selectedC16=changecolor(selectedC16,balcony);" class="seat">C16</div>
-                <div [style.background-color]="selectedC17? 'rgb(0, 183, 255)':'white'"
-                    (click)="selectedC17=changecolor(selectedC17,balcony);" class="seat">C17</div>
-                <div [style.background-color]="selectedC18? 'rgb(0, 183, 255)':'white'"
-                    (click)="selectedC18=changecolor(selectedC18,balcony);" class="seat">C18</div>
-                <div [style.background-color]="selectedC19? 'rgb(0, 183, 255)':'white'"
-                    (click)="selectedC19=changecolor(selectedC19,balcony);" class="seat">C19</div>
-                <div [style.background-color]="selectedC20? 'rgb(0, 183, 255)':'white'"
-                    (click)="selectedC20=changecolor(selectedC20,balcony);" class="seat">C20</div>
+                <div class="grid-container row2">
+                    <div  [style.background-color]="selectedC1? 'deepskyblue':'white'"
+                        (click)="selectedC1=changecolor(selectedC1,balcony,$event);" class="seat" id="C1">C1</div>
+                    <div *ngIf="booked" [style.background-color]="selectedC1? 'lightgray':'white'" class="seat" id="C1" >C1</div>
+                    
+                    <div  [style.background-color]="selectedC2? 'deepskyblue':'white'"
+                        (click)="selectedC2=changecolor(selectedC2,balcony,$event);" class="seat" id="C2" >C2</div>
+                    <div *ngIf="booked" [style.background-color]="selectedC2? 'lightgray':'white'" class="seat" >C2</div>
+    
+                    <div  [style.background-color]="selectedC3? 'deepskyblue':'white'"
+                        (click)="selectedC3=changecolor(selectedC3,balcony,$event);" class="seat" id="C3">C3</div>
+                    <div *ngIf="booked" [style.background-color]="selectedC3? 'lightgray':'white'" class="seat">C3</div>
+    
+                    <div *ngIf="!booked" [style.background-color]="selectedC4? 'deepskyblue':'white'"
+                        (click)="selectedC4=changecolor(selectedC4,balcony,$event);" class="seat">C4</div>
+                    <div *ngIf="booked" [style.background-color]="selectedC4? 'lightgray':'white'" class="seat">C4</div>
+                    
+                    <div *ngIf="!booked" [style.background-color]="selectedC5? 'deepskyblue':'white'"
+                        (click)="selectedC5=changecolor(selectedC5,balcony,$event);" class="seat">C5</div>
+                    <div *ngIf="booked" [style.background-color]="selectedC5? 'lightgray':'white'" class="seat">C5</div>
+    
+                    <div *ngIf="!booked" [style.background-color]="selectedC6? 'deepskyblue':'white'"
+                        (click)="selectedC6=changecolor(selectedC6,balcony,$event);" class="seat">C6</div>
+                    <div *ngIf="booked" [style.background-color]="selectedC6? 'lightgray':'white'" class="seat">C6</div>
+    
+                    <div *ngIf="!booked" [style.background-color]="selectedC7? 'deepskyblue':'white'"
+                        (click)="selectedC7=changecolor(selectedC7,balcony,$event);" class="seat">C7</div>
+                    <div *ngIf="booked" [style.background-color]="selectedC7? 'lightgray':'white'" class="seat">C7</div>
+    
+                    <div *ngIf="!booked" [style.background-color]="selectedC8? 'deepskyblue':'white'"
+                        (click)="selectedC8=changecolor(selectedC8,balcony,$event);" class="seat">C8</div>
+                    <div *ngIf="booked" [style.background-color]="selectedC8? 'lightgray':'white'" class="seat">C8</div>
+    
+                    <div *ngIf="!booked" [style.background-color]="selectedC9? 'deepskyblue':'white'"
+                        (click)="selectedC9=changecolor(selectedC9,balcony,$event);" class="seat">C9</div>
+                    <div *ngIf="booked" [style.background-color]="selectedC9? 'lightgray':'white'" class="seat">C9</div>
+    
+                    <div *ngIf="!booked" [style.background-color]="selectedC10? 'deepskyblue':'white'"
+                        (click)="selectedC10=changecolor(selectedC10,balcony,$event);" class="seat">C10</div>
+                    <div *ngIf="booked" [style.background-color]="selectedC10? 'lightgray':'white'" class="seat">C10</div>
+    
+                    <div class="space"></div>
+                    <div class="space"></div>
+                    <div *ngIf="!booked" [style.background-color]="selectedC11? 'deepskyblue':'white'"
+                        (click)="selectedC11=changecolor(selectedC11,balcony,$event);" class="seat">C11</div>
+                    <div *ngIf="booked" [style.background-color]="selectedC11? 'lightgray':'white'" class="seat">C11</div>
+    
+                    <div *ngIf="!booked" [style.background-color]="selectedC12? 'deepskyblue':'white'"
+                        (click)="selectedC12=changecolor(selectedC12,balcony,$event);" class="seat">C12</div>
+                    <div *ngIf="booked" [style.background-color]="selectedC12? 'lightgray':'white'" class="seat">C12</div>
+    
+                    <div *ngIf="!booked" [style.background-color]="selectedC13? 'deepskyblue':'white'"
+                        (click)="selectedC13=changecolor(selectedC13,balcony,$event);" class="seat">C13</div>
+                    <div *ngIf="booked" [style.background-color]="selectedC13? 'lightgray':'white'" class="seat">C13</div>
+    
+                    <div *ngIf="!booked" [style.background-color]="selectedC14? 'deepskyblue':'white'"
+                        (click)="selectedC14=changecolor(selectedC14,balcony,$event);" class="seat">C14</div>
+                    <div *ngIf="booked" [style.background-color]="selectedC14? 'lightgray':'white'" class="seat">C14</div>
+    
+                    <div *ngIf="!booked" [style.background-color]="selectedC15? 'deepskyblue':'white'"
+                        (click)="selectedC15=changecolor(selectedC15,balcony,$event);" class="seat">C15</div>
+                    <div *ngIf="booked" [style.background-color]="selectedC15? 'lightgray':'white'" class="seat">C15</div>
+    
+                    <div *ngIf="!booked" [style.background-color]="selectedC16? 'deepskyblue':'white'"
+                        (click)="selectedC16=changecolor(selectedC16,balcony,$event);" class="seat" value="C16">C16</div>
+                    <div *ngIf="booked" [style.background-color]="selectedC16? 'lightgray':'white'" class="seat" value="C16" >A16</div>
+    
+                    <div *ngIf="!booked" [style.background-color]="selectedC17? 'deepskyblue':'white'"
+                        (click)="selectedC17=changecolor(selectedC17,balcony,$event);" class="seat" value="C17">C17</div>
+                    <div *ngIf="booked" [style.background-color]="selectedC17? 'lightgray':'white'" class="seat" value="C17" >C17</div>
+    
+                    <div *ngIf="!booked" [style.background-color]="selectedC18? 'deepskyblue':'white'"
+                        (click)="selectedC18=changecolor(selectedC18,balcony,$event);" class="seat">C18</div>
+                    <div *ngIf="booked" [style.background-color]="selectedC18? 'lightgray':'white'" class="seat" >C18</div>
+    
+                    <div *ngIf="!booked" [style.background-color]="selectedC19? 'deepskyblue':'white'"
+                        (click)="selectedC19=changecolor(selectedC19,balcony,$event);" class="seat">C19</div>
+                    <div *ngIf="booked" [style.background-color]="selectedC19? 'lightgray':'white'" class="seat" >C19</div>
+    
+                    <div *ngIf="!booked" [style.background-color]="selectedC20? 'deepskyblue':'white'"
+                        (click)="selectedC20=changecolor(selectedC20,balcony,$event);" class="seat">C20</div>
+                    <div *ngIf="booked" [style.background-color]="selectedC20? 'lightgray':'white'" class="seat" >C20</div>
+    
             </div>
             <div class="grid-container row4">
                 <div [style.background-color]="selectedD1? 'rgb(0, 183, 255)':'white'"
@@ -832,8 +953,7 @@
 
             </div>
             <div class="grid-container16 row19">
-                <div [style.background-color]="selectedS1? 'rgb(0, 183, 255)':'white'"
-                    (click)="selectedS1=changecolor(selectedS1,secondclass);" class="seat">S1</div>
+                <div (click)="selectedS1=change(selectedS1,secondclass,$event);" class="seat" id="S1">S1</div>
                 <div [style.background-color]="selectedS2? 'rgb(0, 183, 255)':'white'"
                     (click)="selectedS2=changecolor(selectedS2,secondclass);" class="seat">S2</div>
                 <div [style.background-color]="selectedS3? 'rgb(0, 183, 255)':'white'"

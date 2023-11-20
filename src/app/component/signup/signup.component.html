@@ -25,6 +25,26 @@
           <div class="heading">
             <h2>Sign-up</h2>
           </div>
+          <div class="firstname">
+            <label for="firstname"class="fw-semibold">Firstname:</label><br>
+            <input class="py-1" #firstname="ngModel" [(ngModel)]="userdetails.firstname" name="firstname" type="text" placeholder="Enter your Firstname" id="firstname" class="me-2" pattern="[a-zA-Z]{1,32}" required>
+            <div class="text-danger" *ngIf= "firstname.dirty && firstname.errors?.['required']">
+                *Firstname is required
+            </div>
+            <div class="text-danger" *ngIf= "firstname.dirty && firstname.errors?.['pattern']">
+                *Invalid input
+            </div>
+        </div>
+        <div class="lastname">
+            <label for="lastname" class="fw-semibold">Lastname:</label><br>
+            <input class="py-1" #lastname="ngModel" [(ngModel)]="userdetails.lastname" name="lastname" type="text" placeholder="Enter your Lastname" id="lastname" pattern="[a-zA-Z]{1,32}" required>
+            <div class="text-danger" *ngIf= "lastname.dirty && lastname.errors?.['required']">
+                *Lastname is required
+            </div>
+            <div class="text-danger" *ngIf= "lastname.dirty && lastname.errors?.['pattern']">
+                *Invalid input
+            </div>
+        </div>
           <div class="email">
             <label for="email" class="fw-semibold">Email:</label><br>
             <input type="email" #email="ngModel" [(ngModel)]="userdetails.email" id="email" name="email"
@@ -109,7 +129,7 @@
       </div>
     </div>
     <div class="login my-4">
-      <span>Already have an account? </span> <a routerLink="/userlogin" class="fw-semibold"> Login here</a>
+      <span>Already have an account? </span> <a routerLink="/login" class="fw-semibold"> Login here</a>
   </div>
   </div>
 </div>

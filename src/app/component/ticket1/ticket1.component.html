@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Ticket</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #e3f2fd;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .ticket {
+      background-color:white;
+      border: 2px solid #333;
+      padding: 20px;
+      max-width: 400px;
+      width: 100%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .movie-details {
+      text-align: center;
+    }
+
+    .movie-title,.barcode {
+      font-size: 1.2em;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .movie-info {
+      font-size: 0.9em;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .ticket-info {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .label {
+      color: #333;
+      font-weight: bold;
+    }
+
+    .value {
+      color: #666;
+    }
+
+    .barcode {
+      text-align: center;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="ticket" *ngFor="let s of userdetails">
+    <div class="movie-details">
+      <div class="movie-title">Salaar</div>
+      <!-- <div class="movie-info">Showtime: Today at 7:00 PM</div> -->
+    </div>
+
+    <div class="ticket-info">
+      <div class="label">Seat:</div>
+      <div class="value"><span>{{s.seats1}}</span></div>
+    </div>
+
+    <div class="ticket-info">
+      <div class="label">Price:</div>
+      <div class="value"><span>&#x20B9;{{s.totalprice}}</span></div>
+    </div>
+
+    <div class="barcode">
+      <div class="barcode">
+        <span>Booking id: <span>{{s.barcode}}</span></span>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
+

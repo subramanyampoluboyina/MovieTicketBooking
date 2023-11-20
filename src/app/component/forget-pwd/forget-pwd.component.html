@@ -1,0 +1,74 @@
+<nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#" style="font-weight: 600;">MovieTicketBooking</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <!-- <li class="nav-item">
+            <a class="nav-link active" routerLink="">Menu Item</a>
+          </li> -->
+        </ul>
+        <!-- <span>
+          <a class="nav-link active fw-semibold" routerLink="/"><i class="fa-solid fa-user fa-lg pb-2" style="color: #005eff;"></i> SignIn</a>
+        </span> -->
+      </div>
+    </div>
+</nav>
+<div class="container-fluid">
+    <div class="main">
+        <div class="signin-content">
+            <div class="signin-content-in">
+                <div class="heading mb-4">
+                    <h2 class="fw-semibold">Forget password</h2>
+                </div>
+                <form #forgetpwdform="ngForm" (ngSubmit)="OnSubmit(forgetpwdform)" id="form">
+                    <label for="email">Email</label>
+                    <div class=" mb-3">
+                        <input class="py-1" #email="ngModel" [(ngModel)]="userdetails.email" name="email"  type="email" id="email" placeholder="Enter Email" required pattern="[A-Za-z0-9._%+-]{3,}@[a-zA-Z]{3,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})" >
+                        <div class="text-danger" *ngIf= "email.dirty && email.errors?.['required']">
+                            *Email is required
+                        </div>
+                        <div class="text-danger" *ngIf= "email.dirty && email.errors?.['pattern']">
+                            *Invalid input
+                        </div>
+                    </div>
+                    <label for="password">New Password</label>
+                    <div class=" mb-3">
+                        <div class="password">
+                            <input class="py-1" #password="ngModel" [(ngModel)]="userdetails.password" name="password" type="password" id="password" placeholder="Enter your password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$" >
+                            <div class="text-danger" *ngIf= "password.dirty && password.errors?.['required']">
+                                *Password is required
+                            </div>
+                            <div class="text-danger" *ngIf= "password.dirty && password.errors?.['pattern']">
+                                *Invalid input
+                            </div>
+                        </div>
+                    </div>
+                    <label for="cpassword">Confirm Password</label>
+                    <div class=" mb-3">
+                        <div class="cpassword">
+                            <input class="py-1" #cpassword="ngModel" [(ngModel)]="userdetails.cpassword" name="cpassword" type="password" id="password" placeholder="Confirm your password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$" >
+                            <div class="text-danger" *ngIf= "cpassword.dirty && cpassword.errors?.['required']">
+                                *Password is required
+                            </div>
+                            <div class="text-danger" *ngIf= "cpassword.dirty && cpassword.errors?.['pattern']">
+                                *Invalid input
+                            </div>
+                            <div class="text-danger" *ngIf= "cpassword.touched && cpassword.value != password.value">
+                                *Password not matched
+                            </div>
+                        </div>
+                    </div>
+                    <div class="forgetpwd-button">
+                        <button class="btn2 forgetpwd-btn" type="submit" (click)="reset(userdetails.email)">Reset password</button>
+                    </div>    
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer-forgetPwd py-2">
+    <span>&copy;MovieTicketBooking. All rights reserved.</span>
+</div>

@@ -1,5 +1,8 @@
 import { NgStyle } from '@angular/common';
 import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
+import { UserDetails } from 'src/app/models/UserDetails';
+import { UserdetailsService } from 'src/app/service/userdetails.service';
 
 @Component({
   selector: 'app-seating1',
@@ -10,6 +13,10 @@ export class Seating1Component implements OnInit {
   ngOnInit(): void {
 
   }
+  constructor(private router:Router, private service:UserdetailsService){
+
+  }
+  public userdetails=new UserDetails;
   
   public selectedA1: boolean = false; selectedA2: boolean = false; selectedA3: boolean = false;
   public selectedA4: boolean = false; selectedA5: boolean = false; selectedA6: boolean = false;
@@ -180,19 +187,110 @@ export class Seating1Component implements OnInit {
   public count = 0;
   public totalprice = 0;
 
-  changecolor(color: boolean, price: number) {
-    console.log(color)
+  // changecolor(color: boolean, price: number) {
+  //   console.log(color)
+  //   if (color == true) {
+  //     color = false;
+  //     this.count--;
+  //     this.userdetails.count=this.count;
+  //     this.totalprice = this.userdetails.totalprice - price;
+  //     this.userdetails.totalprice=this.totalprice;
+  //     this.userdetails.seats1.pop();
+  //     return false;
+  //   }
+  //   else {
+  //     color = true;
+  //     this.count++;
+  //     this.userdetails.count=this.count;
+  //     this.totalprice = this.totalprice + price;
+  //     this.userdetails.totalprice=this.totalprice;
+      
+  //     // this.userdetails.seats1.push(e.target.innerHTML);
+  //     return true;
+  //   }
+  // }
+
+  // change(color: boolean, price: number,e:any) {
+  //   console.log(color);
+  //   const id=document.getElementById('e.target.id');
+  //   if (color == true) {
+  //     color = false;
+  //     this.count--;
+  //     this.userdetails.count=this.count;
+  //     this.totalprice = this.userdetails.totalprice - price;
+  //     this.userdetails.totalprice=this.totalprice;
+  //     this.userdetails.seats1.pop();
+  //     this.userdetails.booked1.pop();
+  //     id?.classList.remove('selected');
+  //     return false;
+  //   }
+  //   else {
+  //     color = true;
+  //     this.count++;
+  //     this.userdetails.count=this.count;
+  //     this.totalprice = this.totalprice + price;
+  //     this.userdetails.totalprice=this.totalprice;
+      
+  //     // this.userdetails.seats1.push(e.target.innerHTML);
+  //     this.userdetails.booked1.push(e.target.id);
+  //     if(id!=null){
+  //       id.classList.add('selected');
+  //     }
+  //     console.log(e.target.className);
+  //     return true;
+  //   }
+  // }
+
+  changecolor(color: boolean, price: number,e:any) {
+    console.log(e);
+    console.log(color);
+    
     if (color == true) {
       color = false;
       this.count--;
-      this.totalprice = this.totalprice - price;
+      this.userdetails.count=this.count;
+      this.totalprice = this.userdetails.totalprice - price;
+      this.userdetails.totalprice=this.totalprice;
+      this.userdetails.seats1.pop();
+      this.userdetails.selected1.pop();
+      
       return false;
     }
     else {
       color = true;
       this.count++;
+      this.userdetails.count=this.count;
       this.totalprice = this.totalprice + price;
+      this.userdetails.totalprice=this.totalprice;
+      
+      this.userdetails.seats1.push(e.target.innerHTML);
+      this.userdetails.selected1.push(e.target.id);
+      
       return true;
+    }
+  }
+  
+  public booked=false;
+  public temp=false;
+  bookTicket(){
+    this.booked=true;
+    this.userdetails.barcode=Math.round(1000000000+Math.random()*(9999999999-1000000000));
+    if(this.userdetails.seats1.length===0){
+      alert("Select seats!!!");
+    }
+    else{
+      this.service.addBookingDetails(this.userdetails).subscribe(data=>{
+      });
+      alert("Tickets Booked Successfully.");
+      // this.router.navigateByUrl('/ticket1');
+      for (let index = 0; index < this.userdetails.booked1.length; index++) {
+        const id = this.userdetails.booked1[index];
+        const element=document.getElementById(id);
+        if(element!=null){
+          element.classList.add('booked');
+        }
+        
+      }
     }
   }
 }

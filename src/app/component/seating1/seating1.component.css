@@ -2,3 +2,9 @@
     background-color:deepskyblue;
     cursor:pointer
 }
+.booked{
+    background-color: lightgray;
+}
+.selected{
+    background-color: deepskyblue;
+}

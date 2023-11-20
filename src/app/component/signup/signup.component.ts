@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router} from '@angular/router';
 import { UserDetails } from 'src/app/models/UserDetails';
+import { UserdetailsService } from 'src/app/service/userdetails.service';
 
 @Component({
   selector: 'app-signup',
@@ -9,7 +10,7 @@ import { UserDetails } from 'src/app/models/UserDetails';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit {
-  constructor(private router:Router){
+  constructor(private router:Router,private service:UserdetailsService){
 
   }
   public userdetails=new UserDetails;
@@ -19,7 +20,9 @@ export class SignupComponent implements OnInit {
   OnSubmit(form:NgForm){
     if(form.valid){
       if(this.userdetails.password == this.userdetails.cpassword){
-        alert("Registered successfully")
+        this.service.addUserDetails(this.userdetails).subscribe();
+        alert("Registered successfully");
+        this.router.navigateByUrl("/login");
       }
     }
     else{

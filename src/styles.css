@@ -15,14 +15,14 @@ a{
     grid-template-columns: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
     margin-left: auto;
     margin-right: auto;
-    width: 75.1%;
+    width: 75.8%;
 }
 .grid-container14{
     display: grid;
     grid-template-columns: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
     margin-left: auto;
     margin-right: auto;
-    width:66.6%;
+    width:67.6%;
 }
 .seat{
     border: 1.5px solid #0174c6;
@@ -122,11 +122,11 @@ a{
 .signin-content-in{
     padding:20px 20px 5px 20px;
 }
-#email,#password,#cpassword,#mobile{
+#email,#password,#cpassword,#mobile,#firstname,#lastname{
     width: 100%;
     margin-top: 3px;
 }
-.email,.password,.cpassword{
+.email,.password,.cpassword,.firstname,.lastname{
     margin: 5px 0 10px 0;
 }
 .forget-pwd{
@@ -138,10 +138,17 @@ a{
     text-align: center;
     
 }
+.forgetpwd-btn{
+    text-align: center;
+    margin-bottom: 20px;
+}
 .signin-btn:hover{
     background-color: rgb(0, 180, 240);
 }
 .signup-btn:hover{
+    background-color: rgb(0, 180, 240);
+}
+.forgetpwd-btn:hover{
     background-color: rgb(0, 180, 240);
 }
 input{
@@ -157,7 +164,7 @@ input{
     height: 0.8px;
     background: #606060;
 }
-.signin-btn,.signup-btn{
+.signin-btn,.signup-btn,.forgetpwd-btn{
     border: none;
     background-color: deepskyblue;
     margin-top: 20px;
@@ -177,6 +184,15 @@ input{
     text-align: center;
     font-size:small;
     font-weight: 610;
+}
+.footer-forgetPwd{
+    background-color: #e3f2fd;
+    text-align: center;
+    font-size:small;
+    font-weight: 610;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 .seating-navbar{
     display: grid;
@@ -199,6 +215,9 @@ input{
 button{
     background-color: white;
 }
-.selected{
+/* .selected{
     background-color: deepskyblue;
-}
+} */
+/* #booked{
+    background-color: lightgray;
+} */
