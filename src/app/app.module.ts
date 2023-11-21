@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { SignupComponent } from './component/signup/signup.component';
 import { ForgetPwdComponent } from './component/forget-pwd/forget-pwd.component';
 import { Ticket1Component } from './component/ticket1/ticket1.component';
+import { Seating2Component } from './component/seating2/seating2.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { Ticket1Component } from './component/ticket1/ticket1.component';
     Seating1Component,
     SignupComponent,
     ForgetPwdComponent,
-    Ticket1Component
+    Ticket1Component,
+    Seating2Component
   ],
   imports: [
     BrowserModule,
