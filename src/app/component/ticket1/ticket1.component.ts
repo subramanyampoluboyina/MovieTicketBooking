@@ -20,5 +20,6 @@ export class Ticket1Component implements OnInit {
       this.userdetails=data;
     })
   }
+  
 
 }

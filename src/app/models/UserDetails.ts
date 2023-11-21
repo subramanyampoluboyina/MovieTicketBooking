@@ -12,4 +12,6 @@ export class UserDetails{
     public barcode:any;
     public totalprice:any;
     public count:any;
+    public selected=new Map<string,string>();
+    public booked=new Map<string,string>();
 }

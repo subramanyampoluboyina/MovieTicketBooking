@@ -21,16 +21,16 @@
             <div class="balcony">BALCONY : &#x20B9;150</div>
             <div class="grid-container row1">
                 <div *ngIf="!booked" [style.background-color]="selectedA1? 'deepskyblue':'white'"
-                    (click)="selectedA1=changecolor(selectedA1,balcony,$event);" class="seat">A1</div>
-                <div *ngIf="booked" [style.background-color]="selectedA1? 'lightgray':'white'" class="seat" id="A1">A1
+                    (click)="selectedA1=changecolor(selectedA1,balcony,$event);" class="seat" id="A1">A1</div>
+                <div *ngIf="booked" [style.background-color]="selectedA1? 'lightgray':'white'" class="seat">A1
                 </div>
 
                 <div *ngIf="!booked" [style.background-color]="selectedA2? 'deepskyblue':'white'"
-                    (click)="selectedA2=changecolor(selectedA2,balcony,$event);" class="seat">A2</div>
+                    (click)="selectedA2=changecolor(selectedA2,balcony,$event);" class="seat" id="A2">A2</div>
                 <div *ngIf="booked" [style.background-color]="selectedA2? 'lightgray':'white'" class="seat">A2</div>
 
                 <div *ngIf="!booked" [style.background-color]="selectedA3? 'deepskyblue':'white'"
-                    (click)="selectedA3=changecolor(selectedA3,balcony,$event);" class="seat">A3</div>
+                    (click)="selectedA3=changecolor(selectedA3,balcony,$event);" class="seat" id="A3">A3</div>
                 <div *ngIf="booked" [style.background-color]="selectedA3? 'lightgray':'white'" class="seat">A3</div>
 
                 <div *ngIf="!booked" [style.background-color]="selectedA4? 'deepskyblue':'white'"
@@ -137,7 +137,7 @@
                 <div *ngIf="booked" [style.background-color]="selectedB7? 'lightgray':'white'" class="seat">B7</div>
 
                 <div *ngIf="!booked" [style.background-color]="selectedB8? 'deepskyblue':'white'"
-                    (click)="selectedB8=changecolor(selectedA8,balcony,$event);" class="seat">B8</div>
+                    (click)="selectedB8=changecolor(selectedB8,balcony,$event);" class="seat">B8</div>
                 <div *ngIf="booked" [style.background-color]="selectedB8? 'lightgray':'white'" class="seat">B8</div>
 
                 <div *ngIf="!booked" [style.background-color]="selectedB9? 'deepskyblue':'white'"

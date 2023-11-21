@@ -187,73 +187,14 @@ export class Seating1Component implements OnInit {
   public count = 0;
   public totalprice = 0;
 
-  // changecolor(color: boolean, price: number) {
-  //   console.log(color)
-  //   if (color == true) {
-  //     color = false;
-  //     this.count--;
-  //     this.userdetails.count=this.count;
-  //     this.totalprice = this.userdetails.totalprice - price;
-  //     this.userdetails.totalprice=this.totalprice;
-  //     this.userdetails.seats1.pop();
-  //     return false;
-  //   }
-  //   else {
-  //     color = true;
-  //     this.count++;
-  //     this.userdetails.count=this.count;
-  //     this.totalprice = this.totalprice + price;
-  //     this.userdetails.totalprice=this.totalprice;
-      
-  //     // this.userdetails.seats1.push(e.target.innerHTML);
-  //     return true;
-  //   }
-  // }
-
-  // change(color: boolean, price: number,e:any) {
-  //   console.log(color);
-  //   const id=document.getElementById('e.target.id');
-  //   if (color == true) {
-  //     color = false;
-  //     this.count--;
-  //     this.userdetails.count=this.count;
-  //     this.totalprice = this.userdetails.totalprice - price;
-  //     this.userdetails.totalprice=this.totalprice;
-  //     this.userdetails.seats1.pop();
-  //     this.userdetails.booked1.pop();
-  //     id?.classList.remove('selected');
-  //     return false;
-  //   }
-  //   else {
-  //     color = true;
-  //     this.count++;
-  //     this.userdetails.count=this.count;
-  //     this.totalprice = this.totalprice + price;
-  //     this.userdetails.totalprice=this.totalprice;
-      
-  //     // this.userdetails.seats1.push(e.target.innerHTML);
-  //     this.userdetails.booked1.push(e.target.id);
-  //     if(id!=null){
-  //       id.classList.add('selected');
-  //     }
-  //     console.log(e.target.className);
-  //     return true;
-  //   }
-  // }
-
   changecolor(color: boolean, price: number,e:any) {
-    console.log(e);
-    console.log(color);
-    
     if (color == true) {
       color = false;
       this.count--;
       this.userdetails.count=this.count;
       this.totalprice = this.userdetails.totalprice - price;
       this.userdetails.totalprice=this.totalprice;
-      this.userdetails.seats1.pop();
-      this.userdetails.selected1.pop();
-      
+      this.userdetails.selected.delete(e.target.id);
       return false;
     }
     else {
@@ -262,10 +203,10 @@ export class Seating1Component implements OnInit {
       this.userdetails.count=this.count;
       this.totalprice = this.totalprice + price;
       this.userdetails.totalprice=this.totalprice;
-      
-      this.userdetails.seats1.push(e.target.innerHTML);
-      this.userdetails.selected1.push(e.target.id);
-      
+      this.userdetails.selected.set(e.target.id,e.target.innerHTML);
+      for(let values of this.userdetails.selected.values()){
+        console.log(values);
+      }
       return true;
     }
   }
@@ -273,24 +214,19 @@ export class Seating1Component implements OnInit {
   public booked=false;
   public temp=false;
   bookTicket(){
-    this.booked=true;
+    console.log(this.userdetails.selected.size);
     this.userdetails.barcode=Math.round(1000000000+Math.random()*(9999999999-1000000000));
+    for(let val of this.userdetails.selected.values()){
+      this.userdetails.seats1.push(val);
+    }
     if(this.userdetails.seats1.length===0){
       alert("Select seats!!!");
     }
     else{
+      this.booked=true;
       this.service.addBookingDetails(this.userdetails).subscribe(data=>{
       });
       alert("Tickets Booked Successfully.");
-      // this.router.navigateByUrl('/ticket1');
-      for (let index = 0; index < this.userdetails.booked1.length; index++) {
-        const id = this.userdetails.booked1[index];
-        const element=document.getElementById(id);
-        if(element!=null){
-          element.classList.add('booked');
-        }
-        
-      }
     }
   }
 }

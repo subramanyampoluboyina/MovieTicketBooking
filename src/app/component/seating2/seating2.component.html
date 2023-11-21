@@ -1,9 +1,9 @@
-<!-- <!-- <div class="seating-navbar" style="background-color: #e3f2fd;">
+<<div class="seating-navbar" style="background-color: #e3f2fd;">
     <div class="back">
         <a routerLink="/movies"><i class="fa-solid fa-arrow-left  fa-lg"></i></a>
     </div>
     <div class="movie-title">
-        <h4 class="ms-2 mt-2">Animal</h4>
+        <h4 class="ms-2 mt-2">Salaar</h4>
     </div>
     <div class="cost-seat">
         <div class="seat-count">
@@ -14,15 +14,16 @@
         </div>
     </div>
     <button class="book-btn" (click)="bookTicket()">Book</button>
-</div> -->
-<!-- <div class="container-fluid">
+</div>
+<div class="container-fluid">
     <div class="main">
         <div class="content">
-            <!-- <div class="balcony">BALCONY : &#x20B9;150</div> -->
-            <!-- <button class="color" (click)="toggle($event,clicked1)">A1</button>
-            <button class="color" onclick="toggle($event,licked1)">A2</button>
-            <button class="color" onclick="toggle($event,isClicked)">A3</button>
-            <button class="color" onclick="toggle($event,isClicked)">A4</button> -->
-        <!-- </div>
+            <div [style.background-color]="selectedA1? 'deepskyblue':'white'"
+                    (click)="selectedA1=select(selectedA1,$event);" class="seat" id="A1">A1</div>
+            <div [style.background-color]="selectedA2? 'deepskyblue':'white'"
+                    (click)="selectedA2=select(selectedA2,$event);" class="seat" id="A2">A2</div>            
+            <div [style.background-color]="selectedA3? 'deepskyblue':'white'"
+                    (click)="selectedA3=select(selectedA3,$event);" class="seat" id="A3">A3</div>        
+        </div>
     </div>
-</div> -->  -->
+</div>
