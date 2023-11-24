@@ -3,6 +3,7 @@ import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserDetails } from 'src/app/models/UserDetails';
 import { UserdetailsService } from 'src/app/service/userdetails.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-login',
@@ -24,11 +25,13 @@ export class LoginComponent implements OnInit{
         this.router.navigateByUrl('/movies');
       },
       (error)=>{
-        alert("Invalid Credentials!!!");
+        // alert("Invalid Credentials!!!");
+        Swal.fire('Invalid Credentials','','error');
       })
     }
     else{
-      alert("Invalid Credentials!!!")
+      // alert("Invalid Credentials!!!")
+      Swal.fire('Invalid inputs','','error');
     }
   }
 

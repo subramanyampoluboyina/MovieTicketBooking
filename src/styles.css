@@ -119,12 +119,49 @@ a{
     margin-top: 50px;
     box-shadow: #bebebe 0px 3px 10px;
 }
+.ticket{
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-radius: 10px;
+    
+}
+.ticket-details{
+    background-color: #e3f2fd;
+    padding: 20px 20px 20px 20px;
+    border-radius: 5px;
+}
+.ticket-title{
+    background-color: lightgray;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 0px;
+}
+
+.ticket-details-grid{
+    display: grid;
+    grid-template-columns: 49% 2% 49%;
+}
+.exp-cvv{
+    display: grid;
+    grid-template-columns: 49% 2% 49%;
+}
+.payment-card{
+    padding: 10px;
+}
+
 .signin-content-in{
     padding:20px 20px 5px 20px;
 }
-#email,#password,#cpassword,#mobile,#firstname,#lastname{
+#email,#password,#cpassword,#mobile,#firstname,#lastname,#validity,#cvv{
     width: 100%;
     margin-top: 3px;
+}
+#card-number,#card-owner-name{
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 5px;
 }
 .email,.password,.cpassword,.firstname,.lastname{
     margin: 5px 0 10px 0;
@@ -164,7 +201,7 @@ input{
     height: 0.8px;
     background: #606060;
 }
-.signin-btn,.signup-btn,.forgetpwd-btn{
+.signin-btn,.signup-btn,.forgetpwd-btn,.pay-btn{
     border: none;
     background-color: deepskyblue;
     margin-top: 20px;
@@ -202,6 +239,7 @@ input{
 .back{
     text-align: center;
     padding-top: 10px;
+    padding-bottom: 10px;
 }
 .book-btn{
     width: 100%;
@@ -215,9 +253,7 @@ input{
 button{
     background-color: white;
 }
-/* .selected{
-    background-color: deepskyblue;
-} */
-/* #booked{
+/* .booked{
     background-color: lightgray;
+    pointer-events: none;
 } */

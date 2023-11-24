@@ -12,6 +12,7 @@ import { SignupComponent } from './component/signup/signup.component';
 import { ForgetPwdComponent } from './component/forget-pwd/forget-pwd.component';
 import { Ticket1Component } from './component/ticket1/ticket1.component';
 import { Seating2Component } from './component/seating2/seating2.component';
+import { Payment1Component } from './component/payment1/payment1.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { Seating2Component } from './component/seating2/seating2.component';
     SignupComponent,
     ForgetPwdComponent,
     Ticket1Component,
-    Seating2Component
+    Seating2Component,
+    Payment1Component
   ],
   imports: [
     BrowserModule,

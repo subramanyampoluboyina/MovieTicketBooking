@@ -14,6 +14,9 @@ export class Ticket1Component implements OnInit {
   public userdetails:any;
   ngOnInit(): void {
     this.getBookingDetails();
+    // console.log(this.userdetails.seats);
+    // console.log(this.userdetails.price);
+    // console.log(this.userdetails.barcode);
   }
   getBookingDetails(){
     this.service.getBookingDetails().subscribe(data=>{

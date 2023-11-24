@@ -3,6 +3,7 @@ import { NgForm } from '@angular/forms';
 import { Router} from '@angular/router';
 import { UserDetails } from 'src/app/models/UserDetails';
 import { UserdetailsService } from 'src/app/service/userdetails.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-signup',
@@ -21,12 +22,14 @@ export class SignupComponent implements OnInit {
     if(form.valid){
       if(this.userdetails.password == this.userdetails.cpassword){
         this.service.addUserDetails(this.userdetails).subscribe();
-        alert("Registered successfully");
+        // alert("Registered successfully");
+        Swal.fire('Registered successfully','','success');
         this.router.navigateByUrl("/login");
       }
     }
     else{
-      alert("Invalid details!!!")
+      // alert("Invalid details!!!")
+      Swal.fire('Invalid inputs','','error');
     }
   }
 

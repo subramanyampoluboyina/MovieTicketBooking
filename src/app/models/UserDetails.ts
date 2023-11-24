@@ -6,12 +6,14 @@ export class UserDetails{
     public cpassword:any;
     public mobile:any;
     public terms:any;
-    public seats1:string[]=[];
-    public booked1:string[]=[];
-    public selected1:string[]=[];
+    public seats:string[]=[];
     public barcode:any;
-    public totalprice:any;
+    public price:any;
     public count:any;
-    public selected=new Map<string,string>();
-    public booked=new Map<string,string>();
+    // public selected=new Map<string,string>();
+    // public booked=new Map<string,string>();
+    public cardOwnerName:any;
+    public cardNumber:any;
+    public validity:any;
+    public cvv:any;
 }

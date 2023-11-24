@@ -9,6 +9,11 @@ import { Observable } from 'rxjs';
 export class UserdetailsService {
 
   public userdetails=new UserDetails;
+  
+  public currentSeats:any[]=[];
+  public currentPrice:any;
+  public currentBarcode:any;
+
   requestHeader=new HttpHeaders({"No-Auth":"True"});
   // responseHeader=new HttpHeaders({"Access-control-alow-origin":"*"});
 
@@ -32,10 +37,19 @@ export class UserdetailsService {
     return this.http.post('http://localhost:8081/forgetlogin',userdetails,{responseType:'text'});
   }
   addBookingDetails(userdetails:any){
-    return this.http.post('http://localhost:8082/addBookingDetails',userdetails);
+    return this.http.post('http://localhost:8082/addBookingDetails',userdetails,{responseType:'text'});
   }
   getBookingDetails():Observable<UserDetails>{
     return this.http.get<UserDetails>('http://localhost:8082/bookingDetails');
   }
+  // getCurrentTicket(barcode: any):Observable<UserDetails>{
+  //   return this.http.get<UserDetails>(`http://localhost:8082/bookingDetails/${barcode}`);
+  // }
+
+  // getTicketDetails(){
+  //   this.getBookingDetails().subscribe(data=>{
+  //     this.bookingDetails=data;
+  //   })
+  // }
 
 }

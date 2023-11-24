@@ -3,6 +3,7 @@ import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/co
 import { Router } from '@angular/router';
 import { UserDetails } from 'src/app/models/UserDetails';
 import { UserdetailsService } from 'src/app/service/userdetails.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-seating1',
@@ -10,9 +11,7 @@ import { UserdetailsService } from 'src/app/service/userdetails.service';
   styleUrls: ['./seating1.component.css']
 })
 export class Seating1Component implements OnInit {
-  ngOnInit(): void {
-
-  }
+  
   constructor(private router:Router, private service:UserdetailsService){
 
   }
@@ -184,49 +183,83 @@ export class Seating1Component implements OnInit {
   public firstclass = 120;
   public secondclass = 100;
 
-  public count = 0;
-  public totalprice = 0;
+  public count=0;
+  public totalprice=0;
+  public barcode:any;
 
-  changecolor(color: boolean, price: number,e:any) {
+  public selected=new Map<string,string>();
+  public selectedSeats:any[]=[];
+
+  public bookingDetails:any;
+  public bookedSeats:any[]=[];
+
+  ngOnInit(): void {
+    // console.log(this.bookedSeats.toString());
+    this.getBookingDetails();
+    
+    
+  }
+  
+  getBookingDetails(){
+    this.service.getBookingDetails().subscribe(data=>{
+      this.bookingDetails=data;
+      for(let val of this.bookingDetails){
+        for(let item of val.seats){
+          this.bookedSeats.push(item);
+        }
+      }
+      console.log(this.bookedSeats.toString());
+    })
+  }
+
+  changecolor(color: boolean, amount: number,e:any) {
     if (color == true) {
       color = false;
       this.count--;
       this.userdetails.count=this.count;
-      this.totalprice = this.userdetails.totalprice - price;
-      this.userdetails.totalprice=this.totalprice;
-      this.userdetails.selected.delete(e.target.id);
+      this.totalprice = this.totalprice - amount;
+      // this.userdetails.price=this.totalprice;
+      // this.userdetails.seats.pop();
+      this.selected.delete(e.target.id);
       return false;
     }
     else {
       color = true;
       this.count++;
       this.userdetails.count=this.count;
-      this.totalprice = this.totalprice + price;
-      this.userdetails.totalprice=this.totalprice;
-      this.userdetails.selected.set(e.target.id,e.target.innerHTML);
-      for(let values of this.userdetails.selected.values()){
+      this.totalprice = this.totalprice + amount;
+      // this.userdetails.price=this.totalprice;
+      // this.userdetails.seats.push(e.target.innerHTML);
+      this.selected.set(e.target.id,e.target.innerHTML);
+      for(let values of this.selected.values()){
         console.log(values);
       }
       return true;
     }
   }
+
   
   public booked=false;
-  public temp=false;
   bookTicket(){
-    console.log(this.userdetails.selected.size);
-    this.userdetails.barcode=Math.round(1000000000+Math.random()*(9999999999-1000000000));
-    for(let val of this.userdetails.selected.values()){
-      this.userdetails.seats1.push(val);
+    // console.log(this.userdetails.booked.size);
+    this.barcode=Math.round(1000000000+Math.random()*(9999999999-1000000000));
+    for(let val of this.selected.values()){
+      this.selectedSeats.push(val);
     }
-    if(this.userdetails.seats1.length===0){
-      alert("Select seats!!!");
+    if(this.selectedSeats.length===0){
+      // alert("Select seats!!!");
+      Swal.fire('Select seats','','error');
     }
     else{
       this.booked=true;
-      this.service.addBookingDetails(this.userdetails).subscribe(data=>{
-      });
-      alert("Tickets Booked Successfully.");
+      this.service.currentSeats=this.selectedSeats;
+      this.service.currentPrice=this.totalprice;
+      this.service.currentBarcode=this.barcode;
+      // this.service.addBookingDetails(this.userdetails).subscribe(data=>{
+      // });
+      this.router.navigateByUrl('/payment1');
+      // alert("Tickets Booked Successfully.");
+      // Swal.fire('Booked','Tickets booked successfully','success');
     }
   }
 }

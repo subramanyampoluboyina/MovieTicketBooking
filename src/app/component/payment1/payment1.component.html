@@ -1,0 +1,95 @@
+<div class="seating-navbar" style="background-color: #e3f2fd;">
+    <div class="back">
+        <a routerLink="/seating1"><i class="fa-solid fa-arrow-left  fa-lg"></i></a>
+    </div>
+    <div class="movie-title">
+        <h4 class="ms-2 mt-2">Payment</h4>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="main mt-3">
+        <div class="content">
+            <div class="content-in">
+                <div class="ticket">
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row g-0">
+                          <div class="col-md-4">
+                            <img src="/assets/images/SALAAR.jpg" class="img-fluid rounded-start" alt="SALAAR">
+                          </div>
+                          <div class="col-md-8">
+                            <div class="card-body">
+                              <h5 class="card-title mb-5">Salaar</h5>
+                              <div class="card-text ticket-details-grid">
+                                <span class="fw-semibold text-end">Seats&nbsp;</span>
+                                <span>: </span>
+                                <span class="text-start">&nbsp;{{seats}}</span>
+                              </div>
+                              <div class="card-text ticket-details-grid">
+                                <span class="fw-semibold text-end">Price&nbsp;</span>
+                                <span> : </span>
+                                <span class="text-start">&nbsp;{{price}}</span>
+                              </div>
+                              <div class="card-text ticket-details-grid">
+                                <span class="fw-semibold text-end">Booking id&nbsp;</span>
+                                <span> : </span>
+                                <span class="text-start">&nbsp;{{barcode}}</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3 payment-card" style="max-width: 540px;">
+                        <form #cardform="ngForm" (ngSubmit)="OnSubmit(cardform)" id="form">
+                            <div class="card-number text-start">
+                                <label for="cardOwnername" class="fs-6">Full Name</label><br>
+                                <input type="text" #cardOwnerName="ngModel" [(ngModel)]="userdetails.cardOwnerName" id="card-owner-name" name="cardOwnerName" placeholder="Enter your full name" required pattern="[a-zA-Z]{2,32}"><br>
+                                <div class="text-danger" *ngIf= "cardOwnerName.dirty && cardOwnerName.errors?.['required']">
+                                    *Full name is required
+                                </div>
+                                <div class="text-danger" *ngIf= "cardOwnerName.dirty && cardOwnerName.errors?.['pattern']">
+                                    *Invalid input
+                                </div>
+                            </div>
+                            <div class="card-number text-start">
+                                <label for="cardNumber" class="fs-6">Card Number</label><br>
+                                <input type="number" #cardNumber="ngModel" [(ngModel)]="userdetails.cardNumber" id="card-number" name="cardNumber" placeholder="0000 0000 0000 0000" required pattern="[0-9]{16}"><br>
+                                <div class="text-danger" *ngIf= "cardNumber.dirty && cardNumber.errors?.['required']">
+                                    *Card number is required
+                                </div>
+                                <div class="text-danger" *ngIf= "cardNumber.dirty && cardNumber.errors?.['pattern']">
+                                    *Invalid input
+                                </div>
+                            </div>
+                            <div class="exp-cvv">
+                                <div class="expiry text-start">
+                                    <label for="validity" class="fs-6">Validity</label><br>
+                                    <input type="month" #validity="ngModel" [(ngModel)]="userdetails.validity" id="validity" name="validity" min="2023-11" value="11-2023" required>
+                                    <div class="text-danger" *ngIf= "validity.dirty && validity.errors?.['required']">
+                                        *Validity is required
+                                    </div>
+                                    <!-- <div class="text-danger" *ngIf= "validity.dirty && validity.errors?.['pattern']">
+                                        *Invalid input
+                                    </div> -->
+                                </div>
+                                <div></div>
+                                <div class="cvv text-start">
+                                    <label for="cvv" class="fs-6">CVV</label><br>
+                                    <input type="password" #cvv="ngModel" [(ngModel)]="userdetails.cvv" id="cvv" name="cvv" placeholder="Enter CVV" required pattern="[0-9]{3}">
+                                    <div class="text-danger" *ngIf= "cvv.dirty && cvv.errors?.['required']">
+                                        *CVV is required
+                                    </div>
+                                    <div class="text-danger" *ngIf= "cvv.dirty && cvv.errors?.['pattern']">
+                                        *Invalid input
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <button class="btn2 py-2 pay-btn" type="submit" >Proceed to Pay</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
