@@ -464,542 +464,468 @@
                     (click)="selectedG20=changecolor(selectedG20,firstclass,$event);" class="seat" id="G20">G20</div>
 
             </div>
+
             <div class="grid-container row8">
-                <div *ngIf="!booked" [style.background-color]="selectedH1? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('H1') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('H1')?'none':'auto'}" [style.background-color]="selectedH1? 'deepskyblue':'white'"
                     (click)="selectedH1=changecolor(selectedH1,firstclass,$event);" class="seat" id="H1">H1</div>
-                <div *ngIf="booked" [style.background-color]="selectedH1? 'lightgray':'white'" class="seat" id="H1">H1
-                </div>
+                
 
-                <div *ngIf="!booked" [style.background-color]="selectedH2? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('H2') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('H2')?'none':'auto'}" [style.background-color]="selectedH2? 'deepskyblue':'white'"
                     (click)="selectedH2=changecolor(selectedH2,firstclass,$event);" class="seat" id="H2">H2</div>
-                <div *ngIf="booked" [style.background-color]="selectedH2? 'lightgray':'white'" class="seat">H2</div>
+                
 
-                <div *ngIf="!booked" [style.background-color]="selectedH3? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('H3') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('H3')?'none':'auto'}" [style.background-color]="selectedH3? 'deepskyblue':'white'"
                     (click)="selectedH3=changecolor(selectedH3,firstclass,$event);" class="seat" id="H3">H3</div>
-                <div *ngIf="booked" [style.background-color]="selectedH3? 'lightgray':'white'" class="seat">H3</div>
+              
 
-                <div *ngIf="!booked" [style.background-color]="selectedH4? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('H4') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('H4')?'none':'auto'}" [style.background-color]="selectedH4? 'deepskyblue':'white'"
                     (click)="selectedH4=changecolor(selectedH4,firstclass,$event);" class="seat" id="H4">H4</div>
-                <div *ngIf="booked" [style.background-color]="selectedH4? 'lightgray':'white'" class="seat">H4</div>
+               
 
-                <div *ngIf="!booked" [style.background-color]="selectedH5? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('H5') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('H5')?'none':'auto'}"[style.background-color]="selectedH5? 'deepskyblue':'white'"
                     (click)="selectedH5=changecolor(selectedH5,firstclass,$event);" class="seat" id="H5">H5</div>
-                <div *ngIf="booked" [style.background-color]="selectedH5? 'lightgray':'white'" class="seat">H5</div>
+                
 
-                <div *ngIf="!booked" [style.background-color]="selectedH6? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('H6') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('H6')?'none':'auto'}" [style.background-color]="selectedH6? 'deepskyblue':'white'"
                     (click)="selectedH6=changecolor(selectedH6,firstclass,$event);" class="seat" id="H6">H6</div>
-                <div *ngIf="booked" [style.background-color]="selectedH6? 'lightgray':'white'" class="seat">H6</div>
+                
 
-                <div *ngIf="!booked" [style.background-color]="selectedH7? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('H7') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('H7')?'none':'auto'}" [style.background-color]="selectedH7? 'deepskyblue':'white'"
                     (click)="selectedH7=changecolor(selectedH7,firstclass,$event);" class="seat" id="H7">H7</div>
-                <div *ngIf="booked" [style.background-color]="selectedH7? 'lightgray':'white'" class="seat">H7</div>
+                
 
-                <div *ngIf="!booked" [style.background-color]="selectedH8? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('H8') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('H8')?'none':'auto'}" [style.background-color]="selectedH8? 'deepskyblue':'white'"
                     (click)="selectedH8=changecolor(selectedH8,firstclass,$event);" class="seat" id="H8">H8</div>
-                <div *ngIf="booked" [style.background-color]="selectedH8? 'lightgray':'white'" class="seat">H8</div>
+               
 
-                <div *ngIf="!booked" [style.background-color]="selectedH9? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('H9') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('H9')?'none':'auto'}" [style.background-color]="selectedH9? 'deepskyblue':'white'"
                     (click)="selectedH9=changecolor(selectedH9,firstclass,$event);" class="seat" id="H9">H9</div>
-                <div *ngIf="booked" [style.background-color]="selectedH9? 'lightgray':'white'" class="seat">H9</div>
+                
 
-                <div *ngIf="!booked" [style.background-color]="selectedH10? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('H10') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('H10')?'none':'auto'}" [style.background-color]="selectedH10? 'deepskyblue':'white'"
                     (click)="selectedH10=changecolor(selectedH10,firstclass,$event);" class="seat" id="H10">H10</div>
-                <div *ngIf="booked" [style.background-color]="selectedH10? 'lightgray':'white'" class="seat">H10</div>
+                
 
                 <div class="space"></div>
                 <div class="space"></div>
-                <div *ngIf="!booked" [style.background-color]="selectedH11? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('H11') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('H11')?'none':'auto'}"  [style.background-color]="selectedH11? 'deepskyblue':'white'"
                     (click)="selectedH11=changecolor(selectedH11,firstclass,$event);" class="seat" id="H11">H11</div>
-                <div *ngIf="booked" [style.background-color]="selectedH11? 'lightgray':'white'" class="seat">H11</div>
+                
 
-                <div *ngIf="!booked" [style.background-color]="selectedH12? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('H12') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('H12')?'none':'auto'}" [style.background-color]="selectedH12? 'deepskyblue':'white'"
                     (click)="selectedH12=changecolor(selectedH12,firstclass,$event);" class="seat" id="H12">H12</div>
-                <div *ngIf="booked" [style.background-color]="selectedH12? 'lightgray':'white'" class="seat">H12</div>
+                
 
-                <div *ngIf="!booked" [style.background-color]="selectedH13? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('H13') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('H13')?'none':'auto'}"[style.background-color]="selectedH13? 'deepskyblue':'white'"
                     (click)="selectedH13=changecolor(selectedH13,firstclass,$event);" class="seat" id="H13">H13</div>
-                <div *ngIf="booked" [style.background-color]="selectedH13? 'lightgray':'white'" class="seat">H13</div>
+                
 
-                <div *ngIf="!booked" [style.background-color]="selectedH14? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('H14') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('H14')?'none':'auto'}" [style.background-color]="selectedH14? 'deepskyblue':'white'"
                     (click)="selectedH14=changecolor(selectedH14,firstclass,$event);" class="seat" id="H14">H14</div>
-                <div *ngIf="booked" [style.background-color]="selectedH14? 'lightgray':'white'" class="seat">H14</div>
+                
 
-                <div *ngIf="!booked" [style.background-color]="selectedH15? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('H15') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('H15')?'none':'auto'}"  [style.background-color]="selectedH15? 'deepskyblue':'white'"
                     (click)="selectedH15=changecolor(selectedH15,firstclass,$event);" class="seat" id="H15">H15</div>
-                <div *ngIf="booked" [style.background-color]="selectedH15? 'lightgray':'white'" class="seat">H15</div>
+                
 
-                <div *ngIf="!booked" [style.background-color]="selectedH16? 'deepskyblue':'white'"
-                    (click)="selectedH16=changecolor(selectedH16,firstclass,$event);" class="seat" value="H16" id="H16">
-                    H16</div>
-                <div *ngIf="booked" [style.background-color]="selectedH16? 'lightgray':'white'" class="seat"
-                    value="H16">A16</div>
+                <div [ngStyle]="{'background-color': bookedSeats.includes('H16') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('H16')?'none':'auto'}"[style.background-color]="selectedH16? 'deepskyblue':'white'"
+                    (click)="selectedH16=changecolor(selectedH16,firstclass,$event);" class="seat" id="H16">H16</div>
+                
 
-                <div *ngIf="!booked" [style.background-color]="selectedH17? 'deepskyblue':'white'"
-                    (click)="selectedH17=changecolor(selectedH17,firstclass,$event);" class="seat" value="H17" id="H17">
-                    H17</div>
-                <div *ngIf="booked" [style.background-color]="selectedH17? 'lightgray':'white'" class="seat"
-                    value="H17">H17</div>
-
-                <div *ngIf="!booked" [style.background-color]="selectedH18? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('H17') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('H17')?'none':'auto'}"   [style.background-color]="selectedH17? 'deepskyblue':'white'"
+                    (click)="selectedH17=changecolor(selectedH17,firstclass,$event);" class="seat"  id="H17">H17</div>
+              
+                <div [ngStyle]="{'background-color': bookedSeats.includes('H18') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('H18')?'none':'auto'}"  [style.background-color]="selectedH18? 'deepskyblue':'white'"
                     (click)="selectedH18=changecolor(selectedH18,firstclass,$event);" class="seat" id="H18">H18</div>
-                <div *ngIf="booked" [style.background-color]="selectedH18? 'lightgray':'white'" class="seat">H18</div>
+               
 
-                <div *ngIf="!booked" [style.background-color]="selectedH19? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('H19') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('H19')?'none':'auto'}"  [style.background-color]="selectedH19? 'deepskyblue':'white'"
                     (click)="selectedH19=changecolor(selectedH19,firstclass,$event);" class="seat" id="H19">H19</div>
-                <div *ngIf="booked" [style.background-color]="selectedH19? 'lightgray':'white'" class="seat">H19</div>
+                
 
-                <div *ngIf="!booked" [style.background-color]="selectedH20? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('H20') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('H20')?'none':'auto'}" [style.background-color]="selectedH20? 'deepskyblue':'white'"
                     (click)="selectedH20=changecolor(selectedH20,firstclass,$event);" class="seat" id="H20">H20</div>
-                <div *ngIf="booked" [style.background-color]="selectedH20? 'lightgray':'white'" class="seat">H20</div>
+              
 
             </div>
             <div class="grid-container row9">
-                <div *ngIf="!booked" [style.background-color]="selectedI1? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('I1') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('I1')?'none':'auto'}" [style.background-color]="selectedI1? 'deepskyblue':'white'"
                     (click)="selectedI1=changecolor(selectedI1,firstclass,$event);" class="seat" id="I1">I1</div>
-                <div *ngIf="booked" [style.background-color]="selectedI1? 'lightgray':'white'" class="seat" id="I1">I1
-                </div>
-
-                <div *ngIf="!booked" [style.background-color]="selectedI2? 'deepskyblue':'white'"
+                
+                <div [ngStyle]="{'background-color': bookedSeats.includes('I2') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('I2')?'none':'auto'}"[style.background-color]="selectedI2? 'deepskyblue':'white'"
                     (click)="selectedI2=changecolor(selectedI2,firstclass,$event);" class="seat" id="I2">I2</div>
-                <div *ngIf="booked" [style.background-color]="selectedI2? 'lightgray':'white'" class="seat">I2</div>
+                
 
-                <div *ngIf="!booked" [style.background-color]="selectedI3? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('I3') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('I3')?'none':'auto'}"[style.background-color]="selectedI3? 'deepskyblue':'white'"
                     (click)="selectedI3=changecolor(selectedI3,firstclass,$event);" class="seat" id="I3">I3</div>
-                <div *ngIf="booked" [style.background-color]="selectedI3? 'lightgray':'white'" class="seat">I3</div>
+               
 
-                <div *ngIf="!booked" [style.background-color]="selectedI4? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('I4') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('I4')?'none':'auto'}"[style.background-color]="selectedI4? 'deepskyblue':'white'"
                     (click)="selectedI4=changecolor(selectedI4,firstclass,$event);" class="seat" id="I4">I4</div>
-                <div *ngIf="booked" [style.background-color]="selectedI4? 'lightgray':'white'" class="seat">I4</div>
-
-                <div *ngIf="!booked" [style.background-color]="selectedI5? 'deepskyblue':'white'"
+                
+                <div [ngStyle]="{'background-color': bookedSeats.includes('I5') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('I5')?'none':'auto'}"[style.background-color]="selectedI5? 'deepskyblue':'white'"
                     (click)="selectedI5=changecolor(selectedI5,firstclass,$event);" class="seat" id="I5">I5</div>
-                <div *ngIf="booked" [style.background-color]="selectedI5? 'lightgray':'white'" class="seat">I5</div>
-
-                <div *ngIf="!booked" [style.background-color]="selectedI6? 'deepskyblue':'white'"
+               
+                <div [ngStyle]="{'background-color': bookedSeats.includes('I6') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('I6')?'none':'auto'}" [style.background-color]="selectedI6? 'deepskyblue':'white'"
                     (click)="selectedI6=changecolor(selectedI6,firstclass,$event);" class="seat" id="I6">I6</div>
-                <div *ngIf="booked" [style.background-color]="selectedI6? 'lightgray':'white'" class="seat">I6</div>
+               
 
-                <div *ngIf="!booked" [style.background-color]="selectedI7? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('I7') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('I7')?'none':'auto'}" [style.background-color]="selectedI7? 'deepskyblue':'white'"
                     (click)="selectedI7=changecolor(selectedI7,firstclass,$event);" class="seat" id="I7">I7</div>
-                <div *ngIf="booked" [style.background-color]="selectedI7? 'lightgray':'white'" class="seat">I7</div>
+              
 
-                <div *ngIf="!booked" [style.background-color]="selectedI8? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('I8') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('I8')?'none':'auto'}"[style.background-color]="selectedI8? 'deepskyblue':'white'"
                     (click)="selectedI8=changecolor(selectedI8,firstclass,$event);" class="seat" id="I8">I8</div>
-                <div *ngIf="booked" [style.background-color]="selectedI8? 'lightgray':'white'" class="seat">I8</div>
-
-                <div *ngIf="!booked" [style.background-color]="selectedI9? 'deepskyblue':'white'"
+                
+                <div [ngStyle]="{'background-color': bookedSeats.includes('I9') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('I9')?'none':'auto'}"[style.background-color]="selectedI9? 'deepskyblue':'white'"
                     (click)="selectedI9=changecolor(selectedI9,firstclass,$event);" class="seat" id="I9">I9</div>
-                <div *ngIf="booked" [style.background-color]="selectedI9? 'lightgray':'white'" class="seat">I9</div>
-
-                <div *ngIf="!booked" [style.background-color]="selectedI10? 'deepskyblue':'white'"
+                
+                <div [ngStyle]="{'background-color': bookedSeats.includes('I10') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('I10')?'none':'auto'}" [style.background-color]="selectedI10? 'deepskyblue':'white'"
                     (click)="selectedI10=changecolor(selectedI10,firstclass,$event);" class="seat" id="I10">I10</div>
-                <div *ngIf="booked" [style.background-color]="selectedI10? 'lightgray':'white'" class="seat">I10</div>
-
+               
                 <div class="space"></div>
                 <div class="space"></div>
-                <div *ngIf="!booked" [style.background-color]="selectedI11? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('I11') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('I11')?'none':'auto'}" [style.background-color]="selectedI11? 'deepskyblue':'white'"
                     (click)="selectedI11=changecolor(selectedI11,firstclass,$event);" class="seat" id="I11">I11</div>
-                <div *ngIf="booked" [style.background-color]="selectedI11? 'lightgray':'white'" class="seat">I11</div>
+                
 
-                <div *ngIf="!booked" [style.background-color]="selectedI12? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('I12') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('I12')?'none':'auto'}" [style.background-color]="selectedI12? 'deepskyblue':'white'"
                     (click)="selectedI12=changecolor(selectedI12,firstclass,$event);" class="seat" id="I12">I12</div>
-                <div *ngIf="booked" [style.background-color]="selectedI12? 'lightgray':'white'" class="seat">I12</div>
-
-                <div *ngIf="!booked" [style.background-color]="selectedI13? 'deepskyblue':'white'"
+                
+                <div [ngStyle]="{'background-color': bookedSeats.includes('I13') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('I13')?'none':'auto'}" [style.background-color]="selectedI13? 'deepskyblue':'white'"
                     (click)="selectedI13=changecolor(selectedI13,firstclass,$event);" class="seat" id="I13">I13</div>
-                <div *ngIf="booked" [style.background-color]="selectedI13? 'lightgray':'white'" class="seat">I13</div>
+               
 
-                <div *ngIf="!booked" [style.background-color]="selectedI14? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('I14') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('I14')?'none':'auto'}" [style.background-color]="selectedI14? 'deepskyblue':'white'"
                     (click)="selectedI14=changecolor(selectedI14,firstclass,$event);" class="seat" id="I14">I14</div>
-                <div *ngIf="booked" [style.background-color]="selectedI14? 'lightgray':'white'" class="seat">I14</div>
+                
 
-                <div *ngIf="!booked" [style.background-color]="selectedI15? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('I15') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('I15')?'none':'auto'}"[style.background-color]="selectedI15? 'deepskyblue':'white'"
                     (click)="selectedI15=changecolor(selectedI15,firstclass,$event);" class="seat" id="I15">I15</div>
-                <div *ngIf="booked" [style.background-color]="selectedI15? 'lightgray':'white'" class="seat">I15</div>
+               
 
-                <div *ngIf="!booked" [style.background-color]="selectedI16? 'deepskyblue':'white'"
-                    (click)="selectedI16=changecolor(selectedI16,firstclass,$event);" class="seat" value="I16" id="I16">
-                    I16</div>
-                <div *ngIf="booked" [style.background-color]="selectedI16? 'lightgray':'white'" class="seat"
-                    value="I16">A16</div>
+                <div [ngStyle]="{'background-color': bookedSeats.includes('I16') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('I16')?'none':'auto'}" [style.background-color]="selectedI16? 'deepskyblue':'white'"
+                    (click)="selectedI16=changecolor(selectedI16,firstclass,$event);" class="seat" id="I16">I16</div>
+               
 
-                <div *ngIf="!booked" [style.background-color]="selectedI17? 'deepskyblue':'white'"
-                    (click)="selectedI17=changecolor(selectedI17,firstclass,$event);" class="seat" value="I17" id="I17">
-                    I17</div>
-                <div *ngIf="booked" [style.background-color]="selectedI17? 'lightgray':'white'" class="seat"
-                    value="I17">I17</div>
+                <div [ngStyle]="{'background-color': bookedSeats.includes('I17') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('I17')?'none':'auto'}"[style.background-color]="selectedI17? 'deepskyblue':'white'"
+                    (click)="selectedI17=changecolor(selectedI17,firstclass,$event);" class="seat" id="I17">I17</div>
+                
 
-                <div *ngIf="!booked" [style.background-color]="selectedI18? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('I18') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('I18')?'none':'auto'}"[style.background-color]="selectedI18? 'deepskyblue':'white'"
                     (click)="selectedI18=changecolor(selectedI18,firstclass,$event);" class="seat" id="I18">I18</div>
-                <div *ngIf="booked" [style.background-color]="selectedI18? 'lightgray':'white'" class="seat">I18</div>
+                
 
-                <div *ngIf="!booked" [style.background-color]="selectedI19? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('I19') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('I19')?'none':'auto'}" [style.background-color]="selectedI19? 'deepskyblue':'white'"
                     (click)="selectedI19=changecolor(selectedI19,firstclass,$event);" class="seat" id="I19">I19</div>
-                <div *ngIf="booked" [style.background-color]="selectedI19? 'lightgray':'white'" class="seat">I19</div>
-
-                <div *ngIf="!booked" [style.background-color]="selectedI20? 'deepskyblue':'white'"
+               
+                <div [ngStyle]="{'background-color': bookedSeats.includes('I20') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('I20')?'none':'auto'}" [style.background-color]="selectedI20? 'deepskyblue':'white'"
                     (click)="selectedI20=changecolor(selectedI20,firstclass,$event);" class="seat" id="I20">I20</div>
-                <div *ngIf="booked" [style.background-color]="selectedI20? 'lightgray':'white'" class="seat">I20</div>
+               
 
             </div>
             <div class="grid-container row10">
-                <div *ngIf="!booked" [style.background-color]="selectedJ1? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('J1') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('J1')?'none':'auto'}" [style.background-color]="selectedJ1? 'deepskyblue':'white'"
                     (click)="selectedJ1=changecolor(selectedJ1,firstclass,$event);" class="seat" id="J1">J1</div>
-                <div *ngIf="booked" [style.background-color]="selectedJ1? 'lightgray':'white'" class="seat" id="J1">J1
-                </div>
+                
 
-                <div *ngIf="!booked" [style.background-color]="selectedJ2? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('J2') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('J2')?'none':'auto'}" [style.background-color]="selectedJ2? 'deepskyblue':'white'"
                     (click)="selectedJ2=changecolor(selectedJ2,firstclass,$event);" class="seat" id="J2">J2</div>
-                <div *ngIf="booked" [style.background-color]="selectedJ2? 'lightgray':'white'" class="seat">J2</div>
+               
 
-                <div *ngIf="!booked" [style.background-color]="selectedJ3? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('J3') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('J3')?'none':'auto'}"[style.background-color]="selectedJ3? 'deepskyblue':'white'"
                     (click)="selectedJ3=changecolor(selectedJ3,firstclass,$event);" class="seat" id="J3">J3</div>
-                <div *ngIf="booked" [style.background-color]="selectedJ3? 'lightgray':'white'" class="seat">J3</div>
+               
 
-                <div *ngIf="!booked" [style.background-color]="selectedJ4? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('J4') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('J4')?'none':'auto'}"[style.background-color]="selectedJ4? 'deepskyblue':'white'"
                     (click)="selectedJ4=changecolor(selectedJ4,firstclass,$event);" class="seat" id="J4">J4</div>
-                <div *ngIf="booked" [style.background-color]="selectedJ4? 'lightgray':'white'" class="seat">J4</div>
-
-                <div *ngIf="!booked" [style.background-color]="selectedJ5? 'deepskyblue':'white'"
+                
+                <div [ngStyle]="{'background-color': bookedSeats.includes('J5') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('J5')?'none':'auto'}" [style.background-color]="selectedJ5? 'deepskyblue':'white'"
                     (click)="selectedJ5=changecolor(selectedJ5,firstclass,$event);" class="seat" id="J5">J5</div>
-                <div *ngIf="booked" [style.background-color]="selectedJ5? 'lightgray':'white'" class="seat">J5</div>
+               
 
-                <div *ngIf="!booked" [style.background-color]="selectedJ6? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('J6') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('J6')?'none':'auto'}" [style.background-color]="selectedJ6? 'deepskyblue':'white'"
                     (click)="selectedJ6=changecolor(selectedJ6,firstclass,$event);" class="seat" id="J6">J6</div>
-                <div *ngIf="booked" [style.background-color]="selectedJ6? 'lightgray':'white'" class="seat">J6</div>
-
-                <div *ngIf="!booked" [style.background-color]="selectedJ7? 'deepskyblue':'white'"
+                
+                <div [ngStyle]="{'background-color': bookedSeats.includes('J7') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('J7')?'none':'auto'}" [style.background-color]="selectedJ7? 'deepskyblue':'white'"
                     (click)="selectedJ7=changecolor(selectedJ7,firstclass,$event);" class="seat" id="J7">J7</div>
-                <div *ngIf="booked" [style.background-color]="selectedJ7? 'lightgray':'white'" class="seat">J7</div>
-
-                <div *ngIf="!booked" [style.background-color]="selectedJ8? 'deepskyblue':'white'"
+                
+                <div [ngStyle]="{'background-color': bookedSeats.includes('J8') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('J8')?'none':'auto'}"[style.background-color]="selectedJ8? 'deepskyblue':'white'"
                     (click)="selectedJ8=changecolor(selectedJ8,firstclass,$event);" class="seat" id="J8">J8</div>
-                <div *ngIf="booked" [style.background-color]="selectedJ8? 'lightgray':'white'" class="seat">J8</div>
-
-                <div *ngIf="!booked" [style.background-color]="selectedJ9? 'deepskyblue':'white'"
+              
+                <div [ngStyle]="{'background-color': bookedSeats.includes('J9') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('J9')?'none':'auto'}"[style.background-color]="selectedJ9? 'deepskyblue':'white'"
                     (click)="selectedJ9=changecolor(selectedJ9,firstclass,$event);" class="seat" id="J9">J9</div>
-                <div *ngIf="booked" [style.background-color]="selectedJ9? 'lightgray':'white'" class="seat">J9</div>
-
-                <div *ngIf="!booked" [style.background-color]="selectedJ10? 'deepskyblue':'white'"
+                
+                <div [ngStyle]="{'background-color': bookedSeats.includes('J10') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('J10')?'none':'auto'}" [style.background-color]="selectedJ10? 'deepskyblue':'white'"
                     (click)="selectedJ10=changecolor(selectedJ10,firstclass,$event);" class="seat" id="J10">J10</div>
-                <div *ngIf="booked" [style.background-color]="selectedJ10? 'lightgray':'white'" class="seat">J10</div>
+                
 
                 <div class="space"></div>
                 <div class="space"></div>
-                <div *ngIf="!booked" [style.background-color]="selectedJ11? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('J11') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('J11')?'none':'auto'}"[style.background-color]="selectedJ11? 'deepskyblue':'white'"
                     (click)="selectedJ11=changecolor(selectedJ11,firstclass,$event);" class="seat" id="J11">J11</div>
-                <div *ngIf="booked" [style.background-color]="selectedJ11? 'lightgray':'white'" class="seat">J11</div>
-
-                <div *ngIf="!booked" [style.background-color]="selectedJ12? 'deepskyblue':'white'"
+              
+                <div [ngStyle]="{'background-color': bookedSeats.includes('J12') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('J12')?'none':'auto'}" [style.background-color]="selectedJ12? 'deepskyblue':'white'"
                     (click)="selectedJ12=changecolor(selectedJ12,firstclass,$event);" class="seat" id="J12">J12</div>
-                <div *ngIf="booked" [style.background-color]="selectedJ12? 'lightgray':'white'" class="seat">J12</div>
+                
 
-                <div *ngIf="!booked" [style.background-color]="selectedJ13? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('J13') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('J13')?'none':'auto'}"[style.background-color]="selectedJ13? 'deepskyblue':'white'"
                     (click)="selectedJ13=changecolor(selectedJ13,firstclass,$event);" class="seat" id="J13">J13</div>
-                <div *ngIf="booked" [style.background-color]="selectedJ13? 'lightgray':'white'" class="seat">J13</div>
+                
 
-                <div *ngIf="!booked" [style.background-color]="selectedJ14? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('J14') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('J14')?'none':'auto'}"[style.background-color]="selectedJ14? 'deepskyblue':'white'"
                     (click)="selectedJ14=changecolor(selectedJ14,firstclass,$event);" class="seat" id="J14">J14</div>
-                <div *ngIf="booked" [style.background-color]="selectedJ14? 'lightgray':'white'" class="seat">J14</div>
+                
 
-                <div *ngIf="!booked" [style.background-color]="selectedJ15? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('J15') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('J15')?'none':'auto'}" [style.background-color]="selectedJ15? 'deepskyblue':'white'"
                     (click)="selectedJ15=changecolor(selectedJ15,firstclass,$event);" class="seat" id="J15">J15</div>
-                <div *ngIf="booked" [style.background-color]="selectedJ15? 'lightgray':'white'" class="seat">J15</div>
+                
 
-                <div *ngIf="!booked" [style.background-color]="selectedJ16? 'deepskyblue':'white'"
-                    (click)="selectedJ16=changecolor(selectedJ16,firstclass,$event);" class="seat" value="J16" id="J16">
-                    J16</div>
-                <div *ngIf="booked" [style.background-color]="selectedJ16? 'lightgray':'white'" class="seat"
-                    value="J16">A16</div>
+                <div [ngStyle]="{'background-color': bookedSeats.includes('J16') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('J16')?'none':'auto'}"[style.background-color]="selectedJ16? 'deepskyblue':'white'"
+                    (click)="selectedJ16=changecolor(selectedJ16,firstclass,$event);" class="seat" id="J16">J16</div>
+               
 
-                <div *ngIf="!booked" [style.background-color]="selectedJ17? 'deepskyblue':'white'"
-                    (click)="selectedJ17=changecolor(selectedJ17,firstclass,$event);" class="seat" value="J17" id="J17">
-                    J17</div>
-                <div *ngIf="booked" [style.background-color]="selectedJ17? 'lightgray':'white'" class="seat"
-                    value="J17">J17</div>
+                <div [ngStyle]="{'background-color': bookedSeats.includes('J17') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('J17')?'none':'auto'}" [style.background-color]="selectedJ17? 'deepskyblue':'white'"
+                    (click)="selectedJ17=changecolor(selectedJ17,firstclass,$event);" class="seat" id="J17">J17</div>
+              
 
-                <div *ngIf="!booked" [style.background-color]="selectedJ18? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('J18') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('J18')?'none':'auto'}"[style.background-color]="selectedJ18? 'deepskyblue':'white'"
                     (click)="selectedJ18=changecolor(selectedJ18,firstclass,$event);" class="seat" id="J18">J18</div>
-                <div *ngIf="booked" [style.background-color]="selectedJ18? 'lightgray':'white'" class="seat">J18</div>
+                
 
-                <div *ngIf="!booked" [style.background-color]="selectedJ19? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('J19') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('J19')?'none':'auto'}"  [style.background-color]="selectedJ19? 'deepskyblue':'white'"
                     (click)="selectedJ19=changecolor(selectedJ19,firstclass,$event);" class="seat" id="J19">J19</div>
-                <div *ngIf="booked" [style.background-color]="selectedJ19? 'lightgray':'white'" class="seat">J19</div>
+                
 
-                <div *ngIf="!booked" [style.background-color]="selectedJ20? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('J20') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('J20')?'none':'auto'}"[style.background-color]="selectedJ20? 'deepskyblue':'white'"
                     (click)="selectedJ20=changecolor(selectedJ20,firstclass,$event);" class="seat" id="J20">J20</div>
-                <div *ngIf="booked" [style.background-color]="selectedJ20? 'lightgray':'white'" class="seat">J20</div>
+               
 
             </div>
             <div class="grid-container row11">
-                <div *ngIf="!booked" [style.background-color]="selectedK1? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('K1') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('K1')?'none':'auto'}" [style.background-color]="selectedK1? 'deepskyblue':'white'"
                     (click)="selectedK1=changecolor(selectedK1,firstclass,$event);" class="seat" id="K1">K1</div>
-                <div *ngIf="booked" [style.background-color]="selectedK1? 'lightgray':'white'" class="seat" id="K1">K1
-                </div>
-
-                <div *ngIf="!booked" [style.background-color]="selectedK2? 'deepskyblue':'white'"
+               
+                <div [ngStyle]="{'background-color': bookedSeats.includes('K2') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('K2')?'none':'auto'}" [style.background-color]="selectedK2? 'deepskyblue':'white'"
                     (click)="selectedK2=changecolor(selectedK2,firstclass,$event);" class="seat" id="K2">K2</div>
-                <div *ngIf="booked" [style.background-color]="selectedK2? 'lightgray':'white'" class="seat">K2</div>
+               
 
-                <div *ngIf="!booked" [style.background-color]="selectedK3? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('K3') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('K3')?'none':'auto'}"[style.background-color]="selectedK3? 'deepskyblue':'white'"
                     (click)="selectedK3=changecolor(selectedK3,firstclass,$event);" class="seat" id="K3">K3</div>
-                <div *ngIf="booked" [style.background-color]="selectedK3? 'lightgray':'white'" class="seat">K3</div>
+                
 
-                <div *ngIf="!booked" [style.background-color]="selectedK4? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('K4') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('K4')?'none':'auto'}" [style.background-color]="selectedK4? 'deepskyblue':'white'"
                     (click)="selectedK4=changecolor(selectedK4,firstclass,$event);" class="seat" id="K4">K4</div>
-                <div *ngIf="booked" [style.background-color]="selectedK4? 'lightgray':'white'" class="seat">K4</div>
+                
 
-                <div *ngIf="!booked" [style.background-color]="selectedK5? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('K5') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('K5')?'none':'auto'}"  [style.background-color]="selectedK5? 'deepskyblue':'white'"
                     (click)="selectedK5=changecolor(selectedK5,firstclass,$event);" class="seat" id="K5">K5</div>
-                <div *ngIf="booked" [style.background-color]="selectedK5? 'lightgray':'white'" class="seat">K5</div>
-
-                <div *ngIf="!booked" [style.background-color]="selectedK6? 'deepskyblue':'white'"
+                
+                <div [ngStyle]="{'background-color': bookedSeats.includes('K6') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('K6')?'none':'auto'}" [style.background-color]="selectedK6? 'deepskyblue':'white'"
                     (click)="selectedK6=changecolor(selectedK6,firstclass,$event);" class="seat" id="K6">K6</div>
-                <div *ngIf="booked" [style.background-color]="selectedK6? 'lightgray':'white'" class="seat">K6</div>
+               
 
-                <div *ngIf="!booked" [style.background-color]="selectedK7? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('K7') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('K7')?'none':'auto'}" [style.background-color]="selectedK7? 'deepskyblue':'white'"
                     (click)="selectedK7=changecolor(selectedK7,firstclass,$event);" class="seat" id="K7">K7</div>
-                <div *ngIf="booked" [style.background-color]="selectedK7? 'lightgray':'white'" class="seat">K7</div>
+                
 
-                <div *ngIf="!booked" [style.background-color]="selectedK8? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('K8') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('K8')?'none':'auto'}"[style.background-color]="selectedK8? 'deepskyblue':'white'"
                     (click)="selectedK8=changecolor(selectedK8,firstclass,$event);" class="seat" id="K8">K8</div>
-                <div *ngIf="booked" [style.background-color]="selectedK8? 'lightgray':'white'" class="seat">K8</div>
+               
 
-                <div *ngIf="!booked" [style.background-color]="selectedK9? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('K9') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('K9')?'none':'auto'}" [style.background-color]="selectedK9? 'deepskyblue':'white'"
                     (click)="selectedK9=changecolor(selectedK9,firstclass,$event);" class="seat" id="K9">K9</div>
-                <div *ngIf="booked" [style.background-color]="selectedK9? 'lightgray':'white'" class="seat">K9</div>
-
-                <div *ngIf="!booked" [style.background-color]="selectedK10? 'deepskyblue':'white'"
+                
+                <div [ngStyle]="{'background-color': bookedSeats.includes('K10') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('K10')?'none':'auto'}"[style.background-color]="selectedK10? 'deepskyblue':'white'"
                     (click)="selectedK10=changecolor(selectedK10,firstclass,$event);" class="seat" id="K10">K10</div>
-                <div *ngIf="booked" [style.background-color]="selectedK10? 'lightgray':'white'" class="seat">K10</div>
+                
 
                 <div class="space"></div>
                 <div class="space"></div>
-                <div *ngIf="!booked" [style.background-color]="selectedK11? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('K11') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('K11')?'none':'auto'}" [style.background-color]="selectedK11? 'deepskyblue':'white'"
                     (click)="selectedK11=changecolor(selectedK11,firstclass,$event);" class="seat" id="K11">K11</div>
-                <div *ngIf="booked" [style.background-color]="selectedK11? 'lightgray':'white'" class="seat">K11</div>
+                
 
-                <div *ngIf="!booked" [style.background-color]="selectedK12? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('K12') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('K12')?'none':'auto'}" [style.background-color]="selectedK12? 'deepskyblue':'white'"
                     (click)="selectedK12=changecolor(selectedK12,firstclass,$event);" class="seat" id="K12">K12</div>
-                <div *ngIf="booked" [style.background-color]="selectedK12? 'lightgray':'white'" class="seat">K12</div>
+                
 
-                <div *ngIf="!booked" [style.background-color]="selectedK13? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('K13') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('K13')?'none':'auto'}" [style.background-color]="selectedK13? 'deepskyblue':'white'"
                     (click)="selectedK13=changecolor(selectedK13,firstclass,$event);" class="seat" id="K13">K13</div>
-                <div *ngIf="booked" [style.background-color]="selectedK13? 'lightgray':'white'" class="seat">K13</div>
+                
 
-                <div *ngIf="!booked" [style.background-color]="selectedK14? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('K14') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('K14')?'none':'auto'}" [style.background-color]="selectedK14? 'deepskyblue':'white'"
                     (click)="selectedK14=changecolor(selectedK14,firstclass,$event);" class="seat" id="K14">K14</div>
-                <div *ngIf="booked" [style.background-color]="selectedK14? 'lightgray':'white'" class="seat">K14</div>
-
-                <div *ngIf="!booked" [style.background-color]="selectedK15? 'deepskyblue':'white'"
+                
+                <div [ngStyle]="{'background-color': bookedSeats.includes('K15') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('K15')?'none':'auto'}" [style.background-color]="selectedK15? 'deepskyblue':'white'"
                     (click)="selectedK15=changecolor(selectedK15,firstclass,$event);" class="seat" id="K15">K15</div>
-                <div *ngIf="booked" [style.background-color]="selectedK15? 'lightgray':'white'" class="seat">K15</div>
-
-                <div *ngIf="!booked" [style.background-color]="selectedK16? 'deepskyblue':'white'"
-                    (click)="selectedK16=changecolor(selectedK16,firstclass,$event);" class="seat" value="K16" id="K16">
-                    K16</div>
-                <div *ngIf="booked" [style.background-color]="selectedK16? 'lightgray':'white'" class="seat"
-                    value="K16">A16</div>
-
-                <div *ngIf="!booked" [style.background-color]="selectedK17? 'deepskyblue':'white'"
-                    (click)="selectedK17=changecolor(selectedK17,firstclass,$event);" class="seat" value="K17" id="K17">
-                    K17</div>
-                <div *ngIf="booked" [style.background-color]="selectedK17? 'lightgray':'white'" class="seat"
-                    value="K17">K17</div>
-
-                <div *ngIf="!booked" [style.background-color]="selectedK18? 'deepskyblue':'white'"
+                
+                <div [ngStyle]="{'background-color': bookedSeats.includes('K16') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('K16')?'none':'auto'}"[style.background-color]="selectedK16? 'deepskyblue':'white'"
+                    (click)="selectedK16=changecolor(selectedK16,firstclass,$event);" class="seat"  id="K16">K16</div>
+               
+                <div [ngStyle]="{'background-color': bookedSeats.includes('K17') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('K17')?'none':'auto'}" [style.background-color]="selectedK17? 'deepskyblue':'white'"
+                    (click)="selectedK17=changecolor(selectedK17,firstclass,$event);" class="seat"  id="K17">K17</div>
+              
+                <div [ngStyle]="{'background-color': bookedSeats.includes('K18') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('K18')?'none':'auto'}" [style.background-color]="selectedK18? 'deepskyblue':'white'"
                     (click)="selectedK18=changecolor(selectedK18,firstclass,$event);" class="seat" id="K18">K18</div>
-                <div *ngIf="booked" [style.background-color]="selectedK18? 'lightgray':'white'" class="seat">K18</div>
+              
 
-                <div *ngIf="!booked" [style.background-color]="selectedK19? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('K19') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('K19')?'none':'auto'}"[style.background-color]="selectedK19? 'deepskyblue':'white'"
                     (click)="selectedK19=changecolor(selectedK19,firstclass,$event);" class="seat" id="K19">K19</div>
-                <div *ngIf="booked" [style.background-color]="selectedK19? 'lightgray':'white'" class="seat">K19</div>
+                
 
-                <div *ngIf="!booked" [style.background-color]="selectedK20? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('K20') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('K20')?'none':'auto'}" [style.background-color]="selectedK20? 'deepskyblue':'white'"
                     (click)="selectedK20=changecolor(selectedK20,firstclass,$event);" class="seat" id="K20">K20</div>
-                <div *ngIf="booked" [style.background-color]="selectedK20? 'lightgray':'white'" class="seat">K20</div>
-
+              
             </div>
             <div class="gap">
                 Space
             </div>
+            
             <div class="grid-container row12">
-                <div *ngIf="!booked" [style.background-color]="selectedL1? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('L1') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('L1')?'none':'auto'}"  [style.background-color]="selectedL1? 'deepskyblue':'white'"
                     (click)="selectedL1=changecolor(selectedL1,firstclass,$event);" class="seat" id="L1">L1</div>
-                <div *ngIf="booked" [style.background-color]="selectedL1? 'lightgray':'white'" class="seat" id="L1">L1
-                </div>
+               
 
-                <div *ngIf="!booked" [style.background-color]="selectedL2? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('L2') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('L2')?'none':'auto'}" [style.background-color]="selectedL2? 'deepskyblue':'white'"
                     (click)="selectedL2=changecolor(selectedL2,firstclass,$event);" class="seat" id="L2">L2</div>
-                <div *ngIf="booked" [style.background-color]="selectedL2? 'lightgray':'white'" class="seat">L2</div>
-
-                <div *ngIf="!booked" [style.background-color]="selectedL3? 'deepskyblue':'white'"
+                
+                <div [ngStyle]="{'background-color': bookedSeats.includes('L3') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('L3')?'none':'auto'}" [style.background-color]="selectedL3? 'deepskyblue':'white'"
                     (click)="selectedL3=changecolor(selectedL3,firstclass,$event);" class="seat" id="L3">L3</div>
-                <div *ngIf="booked" [style.background-color]="selectedL3? 'lightgray':'white'" class="seat">L3</div>
-
-                <div *ngIf="!booked" [style.background-color]="selectedL4? 'deepskyblue':'white'"
-                    (click)="selectedL4=changecolor(selectedL4,firstclass,$event);" class="seat" id="L4">L4</div>
-                <div *ngIf="booked" [style.background-color]="selectedL4? 'lightgray':'white'" class="seat">L4</div>
-
-                <div *ngIf="!booked" [style.background-color]="selectedL5? 'deepskyblue':'white'"
+                
+                <div [ngStyle]="{'background-color': bookedSeats.includes('L4') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('L4')?'none':'auto'}" [style.background-color]="selectedL4? 'deepskyblue':'white'"
+                 (click)="selectedL4=changecolor(selectedL4,firstclass,$event);" class="seat" id="L4">L4</div>
+                
+                <div [ngStyle]="{'background-color': bookedSeats.includes('L5') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('L5')?'none':'auto'}"[style.background-color]="selectedL5? 'deepskyblue':'white'"
                     (click)="selectedL5=changecolor(selectedL5,firstclass,$event);" class="seat" id="L5">L5</div>
-                <div *ngIf="booked" [style.background-color]="selectedL5? 'lightgray':'white'" class="seat">L5</div>
-
-                <div *ngIf="!booked" [style.background-color]="selectedL6? 'deepskyblue':'white'"
+                
+                <div [ngStyle]="{'background-color': bookedSeats.includes('L6') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('L6')?'none':'auto'}" [style.background-color]="selectedL6? 'deepskyblue':'white'"
                     (click)="selectedL6=changecolor(selectedL6,firstclass,$event);" class="seat" id="L6">L6</div>
-                <div *ngIf="booked" [style.background-color]="selectedL6? 'lightgray':'white'" class="seat">L6</div>
-
-                <div *ngIf="!booked" [style.background-color]="selectedL7? 'deepskyblue':'white'"
+                
+                <div [ngStyle]="{'background-color': bookedSeats.includes('L7') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('L7')?'none':'auto'}"[style.background-color]="selectedL7? 'deepskyblue':'white'"
                     (click)="selectedL7=changecolor(selectedL7,firstclass,$event);" class="seat" id="L7">L7</div>
-                <div *ngIf="booked" [style.background-color]="selectedL7? 'lightgray':'white'" class="seat">L7</div>
-
-                <div *ngIf="!booked" [style.background-color]="selectedL8? 'deepskyblue':'white'"
+                
+                <div [ngStyle]="{'background-color': bookedSeats.includes('L8') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('L8')?'none':'auto'}"[style.background-color]="selectedL8? 'deepskyblue':'white'"
                     (click)="selectedL8=changecolor(selectedL8,firstclass,$event);" class="seat" id="L8">L8</div>
-                <div *ngIf="booked" [style.background-color]="selectedL8? 'lightgray':'white'" class="seat">L8</div>
-
-                <div *ngIf="!booked" [style.background-color]="selectedL9? 'deepskyblue':'white'"
+                
+                <div [ngStyle]="{'background-color': bookedSeats.includes('L9') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('L9')?'none':'auto'}" [style.background-color]="selectedL9? 'deepskyblue':'white'"
                     (click)="selectedL9=changecolor(selectedL9,firstclass,$event);" class="seat" id="L9">L9</div>
-                <div *ngIf="booked" [style.background-color]="selectedL9? 'lightgray':'white'" class="seat">L9</div>
-
-                <div *ngIf="!booked" [style.background-color]="selectedL10? 'deepskyblue':'white'"
+                
+                <div [ngStyle]="{'background-color': bookedSeats.includes('L10') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('L10')?'none':'auto'}" [style.background-color]="selectedL10? 'deepskyblue':'white'"
                     (click)="selectedL10=changecolor(selectedL10,firstclass,$event);" class="seat" id="L10">L10</div>
-                <div *ngIf="booked" [style.background-color]="selectedL10? 'lightgray':'white'" class="seat">L10</div>
-
+               
                 <div class="space"></div>
                 <div class="space"></div>
-                <div *ngIf="!booked" [style.background-color]="selectedL11? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('L11') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('L12')?'none':'auto'}" [style.background-color]="selectedL11? 'deepskyblue':'white'"
                     (click)="selectedL11=changecolor(selectedL11,firstclass,$event);" class="seat" id="L11">L11</div>
-                <div *ngIf="booked" [style.background-color]="selectedL11? 'lightgray':'white'" class="seat">L11</div>
-
-                <div *ngIf="!booked" [style.background-color]="selectedL12? 'deepskyblue':'white'"
+               
+                <div [ngStyle]="{'background-color': bookedSeats.includes('L12') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('L12')?'none':'auto'}" [style.background-color]="selectedL12? 'deepskyblue':'white'"
                     (click)="selectedL12=changecolor(selectedL12,firstclass,$event);" class="seat" id="L12">L12</div>
-                <div *ngIf="booked" [style.background-color]="selectedL12? 'lightgray':'white'" class="seat">L12</div>
-
-                <div *ngIf="!booked" [style.background-color]="selectedL13? 'deepskyblue':'white'"
+               
+                <div [ngStyle]="{'background-color': bookedSeats.includes('L13') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('L13')?'none':'auto'}" [style.background-color]="selectedL13? 'deepskyblue':'white'"
                     (click)="selectedL13=changecolor(selectedL13,firstclass,$event);" class="seat" id="L13">L13</div>
-                <div *ngIf="booked" [style.background-color]="selectedL13? 'lightgray':'white'" class="seat">L13</div>
-
-                <div *ngIf="!booked" [style.background-color]="selectedL14? 'deepskyblue':'white'"
+                
+                <div [ngStyle]="{'background-color': bookedSeats.includes('L14') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('L14')?'none':'auto'}" [style.background-color]="selectedL14? 'deepskyblue':'white'"
                     (click)="selectedL14=changecolor(selectedL14,firstclass,$event);" class="seat" id="L14">L14</div>
-                <div *ngIf="booked" [style.background-color]="selectedL14? 'lightgray':'white'" class="seat">L14</div>
-
-                <div *ngIf="!booked" [style.background-color]="selectedL15? 'deepskyblue':'white'"
+                
+                <div [ngStyle]="{'background-color': bookedSeats.includes('L15') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('L15')?'none':'auto'}" [style.background-color]="selectedL15? 'deepskyblue':'white'"
                     (click)="selectedL15=changecolor(selectedL15,firstclass,$event);" class="seat" id="L15">L15</div>
-                <div *ngIf="booked" [style.background-color]="selectedL15? 'lightgray':'white'" class="seat">L15</div>
+               
+                <div [ngStyle]="{'background-color': bookedSeats.includes('L16') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('L16')?'none':'auto'}" [style.background-color]="selectedL16? 'deepskyblue':'white'"
+               (click)="selectedL16=changecolor(selectedL16,firstclass,$event);" class="seat" value="L16" id="L16">L16</div>
+                
+                <div [ngStyle]="{'background-color': bookedSeats.includes('L17') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('L17')?'none':'auto'}" [style.background-color]="selectedL17? 'deepskyblue':'white'"
+                    (click)="selectedL17=changecolor(selectedL17,firstclass,$event);" class="seat" id="L17">L17</div>
+                
 
-                <div *ngIf="!booked" [style.background-color]="selectedL16? 'deepskyblue':'white'"
-                    (click)="selectedL16=changecolor(selectedL16,firstclass,$event);" class="seat" value="L16" id="L16">
-                    L16</div>
-                <div *ngIf="booked" [style.background-color]="selectedL16? 'lightgray':'white'" class="seat"
-                    value="L16">A16</div>
-
-                <div *ngIf="!booked" [style.background-color]="selectedL17? 'deepskyblue':'white'"
-                    (click)="selectedL17=changecolor(selectedL17,firstclass,$event);" class="seat" value="L17" id="L17">
-                    L17</div>
-                <div *ngIf="booked" [style.background-color]="selectedL17? 'lightgray':'white'" class="seat"
-                    value="L17">L17</div>
-
-                <div *ngIf="!booked" [style.background-color]="selectedL18? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('L18') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('L18')?'none':'auto'}" [style.background-color]="selectedL18? 'deepskyblue':'white'"
                     (click)="selectedL18=changecolor(selectedL18,firstclass,$event);" class="seat" id="L18">L18</div>
-                <div *ngIf="booked" [style.background-color]="selectedL18? 'lightgray':'white'" class="seat">L18</div>
-
-                <div *ngIf="!booked" [style.background-color]="selectedL19? 'deepskyblue':'white'"
+                
+                <div [ngStyle]="{'background-color': bookedSeats.includes('L19') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('L19')?'none':'auto'}" [style.background-color]="selectedL19? 'deepskyblue':'white'"
                     (click)="selectedL19=changecolor(selectedL19,firstclass,$event);" class="seat" id="L19">L19</div>
-                <div *ngIf="booked" [style.background-color]="selectedL19? 'lightgray':'white'" class="seat">L19</div>
+               
 
-                <div *ngIf="!booked" [style.background-color]="selectedL20? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('L20') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('L20')?'none':'auto'}" [style.background-color]="selectedL20? 'deepskyblue':'white'"
                     (click)="selectedL20=changecolor(selectedL20,firstclass,$event);" class="seat" id="L20">L20</div>
-                <div *ngIf="booked" [style.background-color]="selectedL20? 'lightgray':'white'" class="seat">L20</div>
+                
 
             </div>
             <div class="grid-container row13">
-                <div *ngIf="!booked" [style.background-color]="selectedM1? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('M1') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('M1')?'none':'auto'}" [style.background-color]="selectedM1? 'deepskyblue':'white'"
                     (click)="selectedM1=changecolor(selectedM1,firstclass,$event);" class="seat" id="M1">M1</div>
-                <div *ngIf="booked" [style.background-color]="selectedM1? 'lightgray':'white'" class="seat" id="M1">M1
-                </div>
-
-                <div *ngIf="!booked" [style.background-color]="selectedM2? 'deepskyblue':'white'"
+               
+                <div [ngStyle]="{'background-color': bookedSeats.includes('M2') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('M2')?'none':'auto'}" [style.background-color]="selectedM2? 'deepskyblue':'white'"
                     (click)="selectedM2=changecolor(selectedM2,firstclass,$event);" class="seat" id="M2">M2</div>
-                <div *ngIf="booked" [style.background-color]="selectedM2? 'lightgray':'white'" class="seat">M2</div>
-
-                <div *ngIf="!booked" [style.background-color]="selectedM3? 'deepskyblue':'white'"
+               
+                <div [ngStyle]="{'background-color': bookedSeats.includes('M3') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('M3')?'none':'auto'}" [style.background-color]="selectedM3? 'deepskyblue':'white'"
                     (click)="selectedM3=changecolor(selectedM3,firstclass,$event);" class="seat" id="M3">M3</div>
-                <div *ngIf="booked" [style.background-color]="selectedM3? 'lightgray':'white'" class="seat">M3</div>
+               
 
-                <div *ngIf="!booked" [style.background-color]="selectedM4? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('M4') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('M4')?'none':'auto'}" [style.background-color]="selectedM4? 'deepskyblue':'white'"
                     (click)="selectedM4=changecolor(selectedM4,firstclass,$event);" class="seat" id="M4">M4</div>
-                <div *ngIf="booked" [style.background-color]="selectedM4? 'lightgray':'white'" class="seat">M4</div>
-
-                <div *ngIf="!booked" [style.background-color]="selectedM5? 'deepskyblue':'white'"
+                
+                <div [ngStyle]="{'background-color': bookedSeats.includes('M5') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('M5')?'none':'auto'}" [style.background-color]="selectedM5? 'deepskyblue':'white'"
                     (click)="selectedM5=changecolor(selectedM5,firstclass,$event);" class="seat" id="M5">M5</div>
-                <div *ngIf="booked" [style.background-color]="selectedM5? 'lightgray':'white'" class="seat">M5</div>
+               
 
-                <div *ngIf="!booked" [style.background-color]="selectedM6? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('M6') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('M6')?'none':'auto'}"[style.background-color]="selectedM6? 'deepskyblue':'white'"
                     (click)="selectedM6=changecolor(selectedM6,firstclass,$event);" class="seat" id="M6">M6</div>
-                <div *ngIf="booked" [style.background-color]="selectedM6? 'lightgray':'white'" class="seat">M6</div>
+                
 
-                <div *ngIf="!booked" [style.background-color]="selectedM7? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('M7') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('M7')?'none':'auto'}" [style.background-color]="selectedM7? 'deepskyblue':'white'"
                     (click)="selectedM7=changecolor(selectedM7,firstclass,$event);" class="seat" id="M7">M7</div>
-                <div *ngIf="booked" [style.background-color]="selectedM7? 'lightgray':'white'" class="seat">M7</div>
+                
 
-                <div *ngIf="!booked" [style.background-color]="selectedM8? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('M8') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('M8')?'none':'auto'}" [style.background-color]="selectedM8? 'deepskyblue':'white'"
                     (click)="selectedM8=changecolor(selectedM8,firstclass,$event);" class="seat" id="M8">M8</div>
-                <div *ngIf="booked" [style.background-color]="selectedM8? 'lightgray':'white'" class="seat">M8</div>
-
-                <div *ngIf="!booked" [style.background-color]="selectedM9? 'deepskyblue':'white'"
+                
+                <div [ngStyle]="{'background-color': bookedSeats.includes('M9') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('M9')?'none':'auto'}"[style.background-color]="selectedM9? 'deepskyblue':'white'"
                     (click)="selectedM9=changecolor(selectedM9,firstclass,$event);" class="seat" id="M9">M9</div>
-                <div *ngIf="booked" [style.background-color]="selectedM9? 'lightgray':'white'" class="seat">M9</div>
+                
 
-                <div *ngIf="!booked" [style.background-color]="selectedM10? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('M10') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('M10')?'none':'auto'}" [style.background-color]="selectedM10? 'deepskyblue':'white'"
                     (click)="selectedM10=changecolor(selectedM10,firstclass,$event);" class="seat" id="M10">M10</div>
-                <div *ngIf="booked" [style.background-color]="selectedM10? 'lightgray':'white'" class="seat">M10</div>
-
+               
                 <div class="space"></div>
                 <div class="space"></div>
-                <div *ngIf="!booked" [style.background-color]="selectedM11? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('M11') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('M11')?'none':'auto'}"
+                 [style.background-color]="selectedM11? 'deepskyblue':'white'"
                     (click)="selectedM11=changecolor(selectedM11,firstclass,$event);" class="seat" id="M11">M11</div>
-                <div *ngIf="booked" [style.background-color]="selectedM11? 'lightgray':'white'" class="seat">M11</div>
+               
 
-                <div *ngIf="!booked" [style.background-color]="selectedM12? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('M12') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('M12')?'none':'auto'}"[style.background-color]="selectedM12? 'deepskyblue':'white'"
                     (click)="selectedM12=changecolor(selectedM12,firstclass,$event);" class="seat" id="M12">M12</div>
-                <div *ngIf="booked" [style.background-color]="selectedM12? 'lightgray':'white'" class="seat">M12</div>
+               
 
-                <div *ngIf="!booked" [style.background-color]="selectedM13? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('M13') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('M13')?'none':'auto'}"[style.background-color]="selectedM13? 'deepskyblue':'white'"
                     (click)="selectedM13=changecolor(selectedM13,firstclass,$event);" class="seat" id="M13">M13</div>
-                <div *ngIf="booked" [style.background-color]="selectedM13? 'lightgray':'white'" class="seat">M13</div>
-
-                <div *ngIf="!booked" [style.background-color]="selectedM14? 'deepskyblue':'white'"
+                
+                <div [ngStyle]="{'background-color': bookedSeats.includes('M14') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('M14')?'none':'auto'}" [style.background-color]="selectedM14? 'deepskyblue':'white'"
                     (click)="selectedM14=changecolor(selectedM14,firstclass,$event);" class="seat" id="M14">M14</div>
-                <div *ngIf="booked" [style.background-color]="selectedM14? 'lightgray':'white'" class="seat">M14</div>
-
-                <div *ngIf="!booked" [style.background-color]="selectedM15? 'deepskyblue':'white'"
+               
+                <div [ngStyle]="{'background-color': bookedSeats.includes('M15') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('M15')?'none':'auto'}" [style.background-color]="selectedM15? 'deepskyblue':'white'"
                     (click)="selectedM15=changecolor(selectedM15,firstclass,$event);" class="seat" id="M15">M15</div>
-                <div *ngIf="booked" [style.background-color]="selectedM15? 'lightgray':'white'" class="seat">M15</div>
+               
 
-                <div *ngIf="!booked" [style.background-color]="selectedM16? 'deepskyblue':'white'"
-                    (click)="selectedM16=changecolor(selectedM16,firstclass,$event);" class="seat" value="M16" id="M16">
-                    M16</div>
-                <div *ngIf="booked" [style.background-color]="selectedM16? 'lightgray':'white'" class="seat"
-                    value="M16">A16</div>
-
-                <div *ngIf="!booked" [style.background-color]="selectedM17? 'deepskyblue':'white'"
-                    (click)="selectedM17=changecolor(selectedM17,firstclass,$event);" class="seat" value="M17" id="M17">
-                    M17</div>
-                <div *ngIf="booked" [style.background-color]="selectedM17? 'lightgray':'white'" class="seat"
-                    value="M17">M17</div>
-
-                <div *ngIf="!booked" [style.background-color]="selectedM18? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('M16') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('M16')?'none':'auto'}" [style.background-color]="selectedM16? 'deepskyblue':'white'"
+                    (click)="selectedM16=changecolor(selectedM16,firstclass,$event);" class="seat"  id="M16">M16</div>
+                
+                <div [ngStyle]="{'background-color': bookedSeats.includes('M17') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('M17')?'none':'auto'}" [style.background-color]="selectedM17? 'deepskyblue':'white'"
+                    (click)="selectedM17=changecolor(selectedM17,firstclass,$event);" class="seat"  id="M17">M17</div>
+               
+                <div [ngStyle]="{'background-color': bookedSeats.includes('M18') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('M18')?'none':'auto'}" [style.background-color]="selectedM18? 'deepskyblue':'white'"
                     (click)="selectedM18=changecolor(selectedM18,firstclass,$event);" class="seat" id="M18">M18</div>
-                <div *ngIf="booked" [style.background-color]="selectedM18? 'lightgray':'white'" class="seat">M18</div>
+               
 
-                <div *ngIf="!booked" [style.background-color]="selectedM19? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('M19') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('M19')?'none':'auto'}" [style.background-color]="selectedM19? 'deepskyblue':'white'"
                     (click)="selectedM19=changecolor(selectedM19,firstclass,$event);" class="seat" id="M19">M19</div>
-                <div *ngIf="booked" [style.background-color]="selectedM19? 'lightgray':'white'" class="seat">M19</div>
+               
 
-                <div *ngIf="!booked" [style.background-color]="selectedM20? 'deepskyblue':'white'"
+                <div [ngStyle]="{'background-color': bookedSeats.includes('M20') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('M20')?'none':'auto'}"[style.background-color]="selectedM20? 'deepskyblue':'white'"
                     (click)="selectedM20=changecolor(selectedM20,firstclass,$event);" class="seat" id="M20">M20</div>
-                <div *ngIf="booked" [style.background-color]="selectedM20? 'lightgray':'white'" class="seat">M20</div>
-            </div>
+                    </div>
+                
+           
             <div class="grid-container row14">
                 <div [ngStyle]="{'background-color': bookedSeats.includes('N1') ? 'lightgray' : 'transparent', 'pointer-events': bookedSeats.includes('N1')?'none':'auto'}" [style.background-color]="selectedN1? 'deepskyblue':'white'"
                     (click)="selectedN1=changecolor(selectedN1,firstclass,$event);" class="seat" id="N1">N1</div>
