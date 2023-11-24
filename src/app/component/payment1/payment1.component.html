@@ -66,7 +66,7 @@
                             <div class="exp-cvv">
                                 <div class="expiry text-start">
                                     <label for="validity" class="fs-6">Validity</label><br>
-                                    <input type="month" #validity="ngModel" [(ngModel)]="userdetails.validity" id="validity" name="validity" min="2023-11" value="2023-11" required>
+                                    <input type="month" #validity="ngModel" [(ngModel)]="userdetails.validity" id="validity" name="validity" min="2023-11" value="November" required>
                                     <div class="text-danger" *ngIf= "validity.dirty && validity.errors?.['required']">
                                         *Validity is required
                                     </div>
