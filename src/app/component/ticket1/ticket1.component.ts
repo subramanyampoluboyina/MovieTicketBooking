@@ -12,6 +12,7 @@ export class Ticket1Component implements OnInit {
 
   }
   public userdetails:any;
+  public userdetails2:any;
   ngOnInit(): void {
     this.getBookingDetails();
     // console.log(this.userdetails.seats);
@@ -21,6 +22,9 @@ export class Ticket1Component implements OnInit {
   getBookingDetails(){
     this.service.getBookingDetails().subscribe(data=>{
       this.userdetails=data;
+    })
+    this.service.getBookingDetails2().subscribe(data=>{
+      this.userdetails2=data;
     })
   }
   

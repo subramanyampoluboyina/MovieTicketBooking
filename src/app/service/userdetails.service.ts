@@ -43,14 +43,12 @@ export class UserdetailsService {
   getBookingDetails():Observable<UserDetails>{
     return this.http.get<UserDetails>('http://localhost:8082/bookingDetails');
   }
-  // getCurrentTicket(barcode: any):Observable<UserDetails>{
-  //   return this.http.get<UserDetails>(`http://localhost:8082/bookingDetails/${barcode}`);
-  // }
-
-  // getTicketDetails(){
-  //   this.getBookingDetails().subscribe(data=>{
-  //     this.bookingDetails=data;
-  //   })
-  // }
+  addBookingDetails2(userdetails:any){
+    return this.http.post('http://localhost:8083/addBookingDetails2',userdetails,{responseType:'text'});
+  }
+  getBookingDetails2():Observable<UserDetails>{
+    return this.http.get<UserDetails>('http://localhost:8083/bookingDetails2');
+  }
+  
 
 }

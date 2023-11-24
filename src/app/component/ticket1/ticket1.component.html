@@ -86,6 +86,28 @@
       </div>
     </div>
   </div>
+  <div class="ticket" *ngFor="let s of userdetails2">
+    <div class="movie-details">
+      <div class="movie-title">{{s.movie2}}</div>
+      <!-- <div class="movie-info">Showtime: Today at 7:00 PM</div> -->
+    </div>
+
+    <div class="ticket-info">
+      <div class="label">Seat:</div>
+      <div class="value"><span>{{s.seats2}}</span></div>
+    </div>
+
+    <div class="ticket-info">
+      <div class="label">Price:</div>
+      <div class="value"><span>&#x20B9;{{s.price2}}</span></div>
+    </div>
+
+    <div class="barcode">
+      <div class="barcode">
+        <span>Booking id: <span>{{s.barcode2}}</span></span>
+      </div>
+    </div>
+  </div>
 
 </body>
 </html>

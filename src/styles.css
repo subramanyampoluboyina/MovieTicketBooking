@@ -33,6 +33,9 @@ a{
     color: #0174c6;
     font-size: small;
 }
+.seat:hover{
+    cursor: pointer;
+}
 
 .balcony,.firstClass,.secondClass{
     text-align: center;
