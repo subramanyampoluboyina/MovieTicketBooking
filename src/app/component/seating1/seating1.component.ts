@@ -186,6 +186,7 @@ export class Seating1Component implements OnInit {
   public count=0;
   public totalprice=0;
   public barcode:any;
+  public movie="Salaar";
 
   public selected=new Map<string,string>();
   public selectedSeats:any[]=[];
@@ -252,6 +253,7 @@ export class Seating1Component implements OnInit {
     }
     else{
       this.booked=true;
+      this.service.currentMovie=this.movie;
       this.service.currentSeats=this.selectedSeats;
       this.service.currentPrice=this.totalprice;
       this.service.currentBarcode=this.barcode;

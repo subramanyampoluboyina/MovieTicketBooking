@@ -10,6 +10,7 @@ export class UserDetails{
     public barcode:any;
     public price:any;
     public count:any;
+    public movie:any;
     // public selected=new Map<string,string>();
     // public booked=new Map<string,string>();
     public cardOwnerName:any;

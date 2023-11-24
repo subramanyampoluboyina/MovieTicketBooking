@@ -17,9 +17,7 @@ export class Payment1Component implements OnInit{
   ngOnInit(): void {
     
   }
-  // seats:any[]=[];
-  // price:any;
-  // barcode:any;
+  movie=this.service.currentMovie;
   seats=this.service.currentSeats;
   price=this.service.currentPrice;
   barcode=this.service.currentBarcode;
@@ -28,19 +26,17 @@ export class Payment1Component implements OnInit{
 
   OnSubmit(form:NgForm){
     if(form.valid){
+      this.userdetails.movie=this.service.currentMovie
       this.userdetails.seats=this.service.currentSeats;
       this.userdetails.price=this.service.currentPrice;
       this.userdetails.barcode=this.service.currentBarcode;
       this.service.addBookingDetails(this.userdetails).subscribe(data=>{
       });
       Swal.fire('Booked','Tickets successfully booked','success');
+      this.router.navigateByUrl('/seating1');
     }
     else{
       Swal.fire('Invalid card details','','error');
-      // this.router.navigateByUrl('/movies');
-      // console.log(this.userdetails.seats);
-      // console.log(this.userdetails.price);
-      // console.log(this.userdetails.barcode);
     }
   }
 

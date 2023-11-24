@@ -10,6 +10,7 @@ export class UserdetailsService {
 
   public userdetails=new UserDetails;
   
+  public currentMovie:any;
   public currentSeats:any[]=[];
   public currentPrice:any;
   public currentBarcode:any;
